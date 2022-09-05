@@ -12,6 +12,7 @@ const config = {
 		addons.flip,
 		addons.insetCenter,
 		addons.overflowUnset,
+		addons.shortPlacements,
 	],
 }
 
