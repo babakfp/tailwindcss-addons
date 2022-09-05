@@ -11,6 +11,7 @@ const config = {
 		addons.drag,
 		addons.flip,
 		addons.insetCenter,
+		addons.minMaxWidthMinMaxHeightMergedWithSpacing,
 		addons.overflowUnset,
 		addons.shortPlacements,
 	],
