@@ -8,6 +8,7 @@ const config = {
   plugins: [
 		addons.dir,
 		addons.drag,
+		addons.flip,
 		addons.insetCenter,
 		addons.overflowUnset,
 	],
