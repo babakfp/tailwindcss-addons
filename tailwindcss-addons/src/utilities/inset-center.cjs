@@ -19,7 +19,7 @@ module.exports = plugin(({ addUtilities }) => {
 		},
 		'.inset-y-center': {
 			'inset': 'auto',
-			'right': '50%',
+			'top': '50%',
 			'--tw-translate-y': '-50%',
 			'transform': helpers.cssTransformValue,
 		},
