@@ -12,6 +12,7 @@ const config = {
 		addons.dir,
 		addons.drag,
 		addons.flip,
+		addons.hideShow,
 		addons.insetCenter,
 		addons.minMaxWidthMinMaxHeightMergedWithSpacing,
 		addons.overflowUnset,
