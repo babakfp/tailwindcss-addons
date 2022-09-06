@@ -9,6 +9,7 @@ const config = {
     extend: {},
   },
   plugins: [
+		addons.animateClick,
 		addons.dir,
 		addons.drag,
 		addons.flip,
