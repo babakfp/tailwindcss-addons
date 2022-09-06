@@ -1,5 +1,4 @@
 // Utilities
-const animateClick = require('./src/utilities/animateClick.cjs')
 const dir = require('./src/utilities/dir.cjs')
 const drag = require('./src/utilities/drag.cjs')
 const flip = require('./src/utilities/flip.cjs')
@@ -10,10 +9,10 @@ const overflowUnset = require('./src/utilities/overflowUnset.cjs')
 const shortPlacements = require('./src/utilities/shortPlacements.cjs')
 
 // Components
+const animateClick = require('./src/components/animateClick.cjs')
 const linkImg = require('./src/components/linkImg.cjs')
 
 module.exports = {
-	animateClick,
 	dir,
 	drag,
 	flip,
@@ -23,5 +22,6 @@ module.exports = {
 	overflowUnset,
 	shortPlacements,
 
+	animateClick,
 	linkImg,
 }
