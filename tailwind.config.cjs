@@ -1,23 +1,23 @@
 const addons = require('./tailwindcss-addons/index.cjs')
-const addonsPresets = require('./tailwindcss-addons/src/presets/index.cjs')
 
 /** @type {import('tailwindcss').Config} */
 const config = {
-	presets: [addonsPresets],
+	presets: [ addons.presets ],
   content: ['./src/**/*.{html,js,svelte,ts}'],
   theme: {
     extend: {},
   },
   plugins: [
-		addons.animateClick,
-		addons.dir,
-		addons.drag,
-		addons.flip,
-		addons.hideShow,
-		addons.insetCenter,
-		addons.minMaxWidthMinMaxHeightMergedWithSpacing,
-		addons.overflowUnset,
-		addons.shortPlacements,
+		addons.base,
+		addons.utilities.dir,
+		addons.utilities.drag,
+		addons.utilities.flip,
+		addons.utilities.hideShow,
+		addons.utilities.insetCenter,
+		addons.utilities.overflowUnset,
+		addons.utilities.shortPlacements,
+		addons.components.animateClick,
+		addons.components.linkImg,
 	],
 }
 

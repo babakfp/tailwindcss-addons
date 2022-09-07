@@ -15,6 +15,10 @@ module.exports = {
 				19: '4.75rem', // 76px
 				22: '5.5rem', // 88px
 			},
+			minWidth: ({ theme }) => (theme('spacing')),
+			maxWidth: ({ theme }) => (theme('spacing')),
+			minHeight: ({ theme }) => (theme('spacing')),
+			maxHeight: ({ theme }) => (theme('spacing')),
 			zIndex: {
 				1: '1',
 				2: '2',
