@@ -6,10 +6,7 @@ module.exports = plugin(({ addBase }) => {
 			'scroll-behavior': 'smooth', 
 		},
 		'body': {
-			'height': '100%',
-		},
-		'b, strong': {
-			'font-weight': '600',
+			'min-height': '100vh',
 		},
 	})
 })
