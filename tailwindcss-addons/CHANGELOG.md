@@ -1,3 +1,6 @@
+## 0.0.5
+- Added `:not()` variants
+
 ## 0.0.4
 - Added new value `3px` to `outlineOffset`
 
