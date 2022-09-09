@@ -1,6 +1,31 @@
 {
   "name": "tailwindcss-addons",
+	"description": "Adds missing config values, base styles, utilities, and variants to Tailwindcss.",
   "version": "0.0.5",
   "main": "index.cjs",
-  "license": "MIT"
+  "license": "MIT",
+	"keywords": [
+		"tailwindcss",
+		"tailwindcss plugins",
+		"tailwindcss dir",
+		"tailwindcss direction",
+		"tailwindcss drag",
+		"tailwindcss user-drag",
+		"tailwindcss flip",
+		"tailwindcss hide show",
+		"tailwindcss inset center",
+		"tailwindcss overflow unset",
+		"tailwindcss short placements",
+		"tailwindcss short align items",
+		"tailwindcss animate click",
+		"tailwindcss missing sizing utilities",
+		"tailwindcss not variants"
+	],
+	"repository": "github:babakfp/tailwindcss-addons",
+	"homepage": "https://github.com/babakfp/tailwindcss-addons/tree/main/tailwindcss-addons",
+	"bugs": "https://github.com/babakfp/tailwindcss-addons/issues",
+	"author": {
+		"name" : "babakfp",
+		"url" : "https://github.com/babakfp"
+	}
 }
