@@ -1,3 +1,6 @@
+## 0.0.4
+- Added new value `3px` to `outlineOffset`
+
 ## 0.0.3
 - Removed `height` from "base" styles `body`
 - Added `min-height: 100vh` to "base" styles `body`
