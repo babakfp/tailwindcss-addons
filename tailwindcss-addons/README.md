@@ -47,6 +47,10 @@ const addons = require('tailwindcss-addons')
 
 module.exports = {
   plugins: [
+		// include all
+		...Object.values(addons.utilities),
+
+		// or include one by one
 		addons.utilities.dir,
 		addons.utilities.drag,
 		addons.utilities.flip,
@@ -69,6 +73,10 @@ const addons = require('tailwindcss-addons')
 
 module.exports = {
   plugins: [
+		// include all
+		...Object.values(addons.components),
+
+		// or include one by one
 		addons.components.animateClick,
 		addons.components.linkImg,
 	],
@@ -85,6 +93,10 @@ const addons = require('tailwindcss-addons')
 
 module.exports = {
   plugins: [
+		// include all
+		...Object.values(addons.variants),
+
+		// or include one by one
 		addons.variants.notVariants,
 	],
 }
