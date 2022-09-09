@@ -74,3 +74,18 @@ module.exports = {
 	],
 }
 ```
+
+## Variants
+
+- `notVariants` [See what it includes](./src/variants/notVariants.cjs)
+
+```js
+// tailwind.config.cjs
+const addons = require('tailwindcss-addons')
+
+module.exports = {
+  plugins: [
+		addons.variants.notVariants,
+	],
+}
+```
