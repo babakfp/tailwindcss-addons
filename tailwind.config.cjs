@@ -18,6 +18,7 @@ const config = {
 		addons.utilities.shortPlacements,
 		addons.components.animateClick,
 		addons.components.linkImg,
+		addons.variants.notVariants,
 	],
 }
 
