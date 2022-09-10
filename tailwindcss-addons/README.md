@@ -37,6 +37,7 @@ module.exports = {
 - `drag` [See what it includes](./src/utilities/drag.cjs)
 - `flip` [See what it includes](./src/utilities/flip.cjs)
 - `hideShow` [See what it includes](./src/utilities/hideShow.cjs)
+- `inputHideArrows` [See what it includes](./src/utilities/inputHideArrows.cjs)
 - `insetCenter` [See what it includes](./src/utilities/insetCenter.cjs)
 - `overflowUnset` [See what it includes](./src/utilities/overflowUnset.cjs)
 - `shortPlacements` [See what it includes](./src/utilities/shortPlacements.cjs)
@@ -55,6 +56,7 @@ module.exports = {
 		addons.utilities.drag,
 		addons.utilities.flip,
 		addons.utilities.hideShow,
+		addons.utilities.inputHideArrows,
 		addons.utilities.insetCenter,
 		addons.utilities.overflowUnset,
 		addons.utilities.shortPlacements,
