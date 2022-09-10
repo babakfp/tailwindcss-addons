@@ -9,16 +9,9 @@ const config = {
   },
   plugins: [
 		addons.base,
-		addons.utilities.dir,
-		addons.utilities.drag,
-		addons.utilities.flip,
-		addons.utilities.hideShow,
-		addons.utilities.insetCenter,
-		addons.utilities.overflowUnset,
-		addons.utilities.shortPlacements,
-		addons.components.animateClick,
-		addons.components.linkImg,
-		addons.variants.notVariants,
+		...Object.values(addons.utilities),
+		...Object.values(addons.components),
+		...Object.values(addons.variants),
 	],
 }
 
