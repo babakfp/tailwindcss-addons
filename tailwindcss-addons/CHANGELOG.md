@@ -1,5 +1,6 @@
 ## 0.0.6
-- Added new `.input-hide-arrows` class
+- Added new `.number-input-reset` class
+- Added new `.search-input-reset` class
 
 ## 0.0.5
 - Added `:not()` variants
