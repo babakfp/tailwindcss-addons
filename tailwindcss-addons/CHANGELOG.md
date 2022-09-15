@@ -1,3 +1,7 @@
+## 0.0.7
+- Fixed .link-img component not working
+- Renamed `animate-click` to `simulate-click` and converted to component from utility
+
 ## 0.0.6
 - Added new `.number-input-reset` class
 - Added new `.search-input-reset` class
