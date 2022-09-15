@@ -66,7 +66,7 @@ module.exports = {
 
 ## Components
 
-- `animateClick` [See what it includes](./src/components/animateClick.cjs)
+- `simulateClick` [See what it includes](./src/components/simulateClick.cjs)
 - `linkImg` [See what it includes](./src/components/linkImg.cjs)
 
 ```js
@@ -79,7 +79,7 @@ module.exports = {
 		...Object.values(addons.components),
 
 		// or include one by one
-		addons.components.animateClick,
+		addons.components.simulateClick,
 		addons.components.linkImg,
 	],
 }

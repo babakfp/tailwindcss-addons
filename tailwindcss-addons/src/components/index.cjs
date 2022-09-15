@@ -1,7 +1,7 @@
-const animateClick = require('./animateClick.cjs')
+const simulateClick = require('./simulateClick.cjs')
 const linkImg = require('./linkImg.cjs')
 
 module.exports = {
-	animateClick,
+	simulateClick,
 	linkImg,
 }
