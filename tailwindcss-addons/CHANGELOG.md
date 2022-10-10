@@ -1,3 +1,6 @@
+## 0.0.9
+- Renamed `.link-img` to `.linked-img` and changed it's styles.
+
 ## 0.0.8
 - Removed `inset: auto` from `insetCenter` utilities.
 

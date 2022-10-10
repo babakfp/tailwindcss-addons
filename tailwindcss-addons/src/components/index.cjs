@@ -1,7 +1,7 @@
 const simulateClick = require('./simulateClick.cjs')
-const linkImg = require('./linkImg.cjs')
+const linkedImg = require('./linkedImg.cjs')
 
 module.exports = {
 	simulateClick,
-	linkImg,
+	linkedImg,
 }

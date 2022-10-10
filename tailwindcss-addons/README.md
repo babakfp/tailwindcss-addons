@@ -67,7 +67,7 @@ module.exports = {
 ## Components
 
 - `simulateClick` [See what it includes](./src/components/simulateClick.cjs)
-- `linkImg` [See what it includes](./src/components/linkImg.cjs)
+- `linkedImg` [See what it includes](./src/components/linkedImg.cjs)
 
 ```js
 // tailwind.config.cjs
@@ -80,7 +80,7 @@ module.exports = {
 
 		// or include one by one
 		addons.components.simulateClick,
-		addons.components.linkImg,
+		addons.components.linkedImg,
 	],
 }
 ```
