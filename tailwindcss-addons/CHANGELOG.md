@@ -1,3 +1,6 @@
+## 0.0.8
+- Removed `inset: auto` from `insetCenter` utilities.
+
 ## 0.0.7
 - Fixed .link-img component not working
 - Renamed `animate-click` to `simulate-click` and converted to component from utility
