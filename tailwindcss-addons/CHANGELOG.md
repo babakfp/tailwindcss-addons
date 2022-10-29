@@ -1,4 +1,5 @@
 ## 0.0.10
+- Simplified the way of using features.
 - `number-input-reset` and `search-input-reset` renamed to `reset-number-input` and `reset-search-input`.
 
 ## 0.0.9

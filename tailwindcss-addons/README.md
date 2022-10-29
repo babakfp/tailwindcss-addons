@@ -1,35 +1,60 @@
 # Tailwindcss Addons
 
+## How to use it
+
+```js
+const tailwindcssAddons = require('./tailwindcss-addons/index.cjs')
+const config = {
+	presets: [
+		tailwindcssAddons(),
+	],
+}
+```
+
+Using with options:
+
+```js
+tailwindcssAddons({
+	...
+})
+```
+
+## Default config
+
+To include, use `true`, to exclude, use `false`.
+
+```js
+const defaultConfig = {
+	base: true,
+	presets: true,
+	utilities: {
+		dir: true,
+		drag: true,
+		flip: true,
+		hideShow: true,
+		inputResets: true,
+		insetCenter: true,
+		overflowUnset: true,
+		shortPlacements: false,
+	},
+	components: {
+		linkedImg: true,
+		simulateClick: true,
+	},
+	variants: {
+		notVariants: true,
+	},
+}
+```
+
 ## Presets
 
 - [See what it includes](./src/presets/index.cjs)
 - [Learn about Presets](https://tailwindcss.com/docs/presets)
 
-```js
-// tailwind.config.cjs
-const addons = require('tailwindcss-addons')
-
-module.exports = {
-	presets: [
-		addons.presets,
-	],
-}
-```
-
 ## Base Styles
 
 - [See what it includes](./src/base/index.cjs)
-
-```js
-// tailwind.config.cjs
-const addons = require('tailwindcss-addons')
-
-module.exports = {
-  plugins: [
-		addons.base,
-	]
-}
-```
 
 ## Utilities
 
@@ -42,64 +67,11 @@ module.exports = {
 - `overflowUnset` [See what it includes](./src/utilities/overflowUnset.cjs)
 - `shortPlacements` [See what it includes](./src/utilities/shortPlacements.cjs)
 
-```js
-// tailwind.config.cjs
-const addons = require('tailwindcss-addons')
-
-module.exports = {
-  plugins: [
-		// include all
-		...Object.values(addons.utilities),
-
-		// or include one by one
-		addons.utilities.dir,
-		addons.utilities.drag,
-		addons.utilities.flip,
-		addons.utilities.hideShow,
-		addons.utilities.inputResets,
-		addons.utilities.insetCenter,
-		addons.utilities.overflowUnset,
-		addons.utilities.shortPlacements,
-	],
-}
-```
-
 ## Components
 
 - `simulateClick` [See what it includes](./src/components/simulateClick.cjs)
 - `linkedImg` [See what it includes](./src/components/linkedImg.cjs)
 
-```js
-// tailwind.config.cjs
-const addons = require('tailwindcss-addons')
-
-module.exports = {
-  plugins: [
-		// include all
-		...Object.values(addons.components),
-
-		// or include one by one
-		addons.components.simulateClick,
-		addons.components.linkedImg,
-	],
-}
-```
-
 ## Variants
 
 - `notVariants` [See what it includes](./src/variants/notVariants.cjs)
-
-```js
-// tailwind.config.cjs
-const addons = require('tailwindcss-addons')
-
-module.exports = {
-  plugins: [
-		// include all
-		...Object.values(addons.variants),
-
-		// or include one by one
-		addons.variants.notVariants,
-	],
-}
-```
