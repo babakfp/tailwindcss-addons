@@ -1,9 +1,18 @@
+let cssTransformValue = [
+  'translate(var(--tw-translate-x), var(--tw-translate-y))',
+  'rotate(var(--tw-rotate))',
+  'skewX(var(--tw-skew-x))',
+  'skewY(var(--tw-skew-y))',
+  'scaleX(var(--tw-scale-x))',
+  'scaleY(var(--tw-scale-y))',
+].join(' ')
+
 /**
- * @param {String} property - CSS property name
- * @param {String} value - CSS property value
- * @return {Object} - { <prefix>-<property>: <value>, ... }
+ * @param {string} property - CSS property name
+ * @param {string} value - CSS property value
+ * @returns {object} - { <prefix>-<property>: <value>, ... }
 **/
-const create_browser_compatible_values = ( property, value ) =>
+const createBrowserCompatibleValues = (property, value) =>
 {
 	const result = {}
 
@@ -18,41 +27,30 @@ const create_browser_compatible_values = ( property, value ) =>
 
 
 /**
- * @param {String} class_name - CSS class name (as prefix)
- * @param {String} property - CSS property name
- * @param {Array} values - CSS property value
- * @param {Boolean} browser_compatible - Create browser compatible properties or not
- * @return {Object} - { <class_name>: { <property>: <value> }, ... } OR { <class_name>: { <prefix>-<property>: <value> }, ... }
+ * @param {string} className - CSS class attribute name (as prefix)
+ * @param {string} property - CSS property name
+ * @param {array} values - CSS property value
+ * @param {boolean} browserCompatible - Create browser compatible properties or not
+ * @returns {object} - { <className>: { <property>: <value> }, ... } OR { <className>: { <prefix>-<property>: <value> }, ... }
 **/
-const create_classes = ( class_name, property, values, browser_compatible ) =>
+const createClass = (className, property, values, browserCompatible) =>
 {
 	const result = {}
 
 	values.forEach(value => {
-		if ( browser_compatible ) {
-			result[`.${class_name}-${value}`] = create_browser_compatible_values(property, value)
+		if (browserCompatible) {
+			result[`.${className}-${value}`] = createBrowserCompatibleValues(property, value)
 		} else {
-			result[`.${class_name}-${value}`] = {}
-			result[`.${class_name}-${value}`][property] = value
+			result[`.${className}-${value}`] = {}
+			result[`.${className}-${value}`][property] = value
 		}
 	})
 
 	return result
 }
 
-
-let cssTransformValue = [
-  'translate(var(--tw-translate-x), var(--tw-translate-y))',
-  'rotate(var(--tw-rotate))',
-  'skewX(var(--tw-skew-x))',
-  'skewY(var(--tw-skew-y))',
-  'scaleX(var(--tw-scale-x))',
-  'scaleY(var(--tw-scale-y))',
-].join(' ')
-
-
 module.exports = {
-	create_browser_compatible_values,
-	create_classes,
+	createClass,
 	cssTransformValue,
+	createBrowserCompatibleValues,
 }

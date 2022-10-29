@@ -2,6 +2,7 @@ const plugin = require('tailwindcss/plugin')
 const helpers = require('../lib/helpers.cjs')
 
 module.exports = plugin(({ addUtilities }) => {
-	const classes = helpers.create_classes('dir', 'direction', [ 'rtl', 'ltr' ])
-	addUtilities(classes)
+	addUtilities(
+		helpers.createClass('dir', 'direction', [ 'rtl', 'ltr' ])
+	)
 })
