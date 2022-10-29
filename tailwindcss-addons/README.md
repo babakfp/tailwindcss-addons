@@ -3,7 +3,7 @@
 ## How to use it
 
 ```js
-const tailwindcssAddons = require('./tailwindcss-addons/index.cjs')
+const tailwindcssAddons = require('tailwindcss-addons')
 const config = {
 	presets: [
 		tailwindcssAddons(),
