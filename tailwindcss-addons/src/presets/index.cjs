@@ -1,24 +1,30 @@
+/**
+	* @param {number[]} values - a list of numbers to convert it to rem size
+	* @returns {{}} '4.5': '1.125rem'
+*/
+const generateSpacing = (values) =>
+{
+	/** @type {{}} */
+	const spacing = {}
+
+	values.forEach(value => {
+		spacing[value] = `${value / 4}rem`
+	})
+
+	return spacing
+}
+
 module.exports = {
   theme: {
     extend: {
-			spacing: {
-				4.5: '1.125rem', // 18px
-				5.5: '1.375rem', // 22px
-				6.5: '1.625rem', // 26px
-				7.5: '1.875rem', // 30px
-				8.5: '2.125rem', // 34px
-				9.5: '2.375rem', // 38px
-				13: '3.25rem', // 52px
-				15: '3.75rem', // 60px
-				17: '4.25rem', // 68px
-				18: '4.5rem', // 72px
-				19: '4.75rem', // 76px
-				22: '5.5rem', // 88px
-			},
-			minWidth: ({ theme }) => (theme('spacing')),
-			maxWidth: ({ theme }) => (theme('spacing')),
-			minHeight: ({ theme }) => (theme('spacing')),
-			maxHeight: ({ theme }) => (theme('spacing')),
+			spacing: generateSpacing([
+				4.5, 5.5, 6.5, 7.5, 8.5, 9.5,
+				13, 15, 17, 18, 19, 21, 22, 23,
+			]),
+			minWidth: ({ theme }) => theme('spacing'),
+			maxWidth: ({ theme }) => theme('spacing'),
+			minHeight: ({ theme }) => theme('spacing'),
+			maxHeight: ({ theme }) => theme('spacing'),
 			zIndex: {
 				1: '1',
 				2: '2',
