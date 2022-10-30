@@ -46,7 +46,7 @@ const defaultConfig = {
 ## Presets
 
 - [See what it includes](./src/presets/index.cjs)
-- [Learn about Presets](https://tailwindcss.com/docs/presets)
+- [Learn about TailwindCSS Presets](https://tailwindcss.com/docs/presets)
 
 ## Base Styles
 
