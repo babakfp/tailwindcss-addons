@@ -56,12 +56,12 @@ const tailwindcssAddons = (userConfig={}) => {
 			config.variants.notVariants && variants.notVariants,
 		],
 		corePlugins: {
-			placeContent: config.utilities.shortPlacements,
-			placeItems: config.utilities.shortPlacements,
-			alignContent: config.utilities.shortPlacements,
-			alignItems: config.utilities.shortPlacements,
-			justifyContent: config.utilities.shortPlacements,
-			justifyItems: config.utilities.shortPlacements,
+			placeContent: config.utilities.shortPlacements ? false : undefined,
+			placeItems: config.utilities.shortPlacements ? false : undefined,
+			alignContent: config.utilities.shortPlacements ? false : undefined,
+			alignItems: config.utilities.shortPlacements ? false : undefined,
+			justifyContent: config.utilities.shortPlacements ? false : undefined,
+			justifyItems: config.utilities.shortPlacements ? false : undefined,
 		},
 	}
 }
