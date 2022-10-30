@@ -1,5 +1,5 @@
 const plugin = require('tailwindcss/plugin')
-const helpers = require('../lib/helpers.cjs')
+const cssTransformValue = require('../lib/cssTransformValue.cjs')
 
 module.exports = plugin(({ addUtilities }) => {
 	addUtilities({
@@ -8,17 +8,17 @@ module.exports = plugin(({ addUtilities }) => {
 			'right': '50%',
 			'--tw-translate-x': '50%',
 			'--tw-translate-y': '-50%',
-			'transform': helpers.cssTransformValue,
+			'transform': cssTransformValue,
 		},
 		'.inset-x-center': {
 			'right': '50%',
 			'--tw-translate-x': '50%',
-			'transform': helpers.cssTransformValue,
+			'transform': cssTransformValue,
 		},
 		'.inset-y-center': {
 			'top': '50%',
 			'--tw-translate-y': '-50%',
-			'transform': helpers.cssTransformValue,
+			'transform': cssTransformValue,
 		},
 	})
 })

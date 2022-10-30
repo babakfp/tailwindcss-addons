@@ -1,20 +1,4 @@
-const helpers = require('./src/lib/helpers.cjs')
-
-const base = require('./src/base/index.cjs')
-const presets = require('./src/presets/index.cjs')
-const utilities = {
-	dir: require('./src/utilities/dir.cjs'),
-	drag: require('./src/utilities/drag.cjs'),
-	flip: require('./src/utilities/flip.cjs'),
-	hideShow: require('./src/utilities/hideShow.cjs'),
-	inputResets: require('./src/utilities/inputResets.cjs'),
-	insetCenter: require('./src/utilities/insetCenter.cjs'),
-	overflowUnset: require('./src/utilities/overflowUnset.cjs'),
-	shortPlacements: require('./src/utilities/shortPlacements.cjs'),
-}
-const variants = {
-	notVariants: require('./src/variants/notVariants.cjs'),
-}
+const deepMerge = require('./src/lib/deepMerge.cjs')
 
 const defaultConfig = {
 	base: true,
@@ -35,25 +19,25 @@ const defaultConfig = {
 }
 
 const tailwindcssAddons = (userConfig={}) => {
-	const config = helpers.deepMerge(defaultConfig, userConfig)
+	const config = deepMerge(defaultConfig, userConfig)
 
 	return {
 		presets: [
-			config.presets && presets,
+			config.presets && require('./src/presets/index.cjs'),
 		],
 		plugins: [
-			config.base && base,
+			config.base && require('./src/base/index.cjs'),
 
-			config.utilities.dir && utilities.dir,
-			config.utilities.drag && utilities.drag,
-			config.utilities.flip && utilities.flip,
-			config.utilities.hideShow && utilities.hideShow,
-			config.utilities.inputResets && utilities.inputResets,
-			config.utilities.insetCenter && utilities.insetCenter,
-			config.utilities.overflowUnset && utilities.overflowUnset,
-			config.utilities.shortPlacements && utilities.shortPlacements,
+			config.utilities.dir && require('./src/utilities/dir.cjs'),
+			config.utilities.drag && require('./src/utilities/drag.cjs'),
+			config.utilities.flip && require('./src/utilities/flip.cjs'),
+			config.utilities.hideShow && require('./src/utilities/hideShow.cjs'),
+			config.utilities.inputResets && require('./src/utilities/inputResets.cjs'),
+			config.utilities.insetCenter && require('./src/utilities/insetCenter.cjs'),
+			config.utilities.overflowUnset && require('./src/utilities/overflowUnset.cjs'),
+			config.utilities.shortPlacements && require('./src/utilities/shortPlacements.cjs'),
 
-			config.variants.notVariants && variants.notVariants,
+			config.variants.notVariants && require('./src/variants/notVariants.cjs'),
 		],
 		corePlugins: {
 			placeContent: config.utilities.shortPlacements ? false : undefined,

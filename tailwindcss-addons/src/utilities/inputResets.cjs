@@ -1,5 +1,4 @@
 const plugin = require('tailwindcss/plugin')
-const helpers = require('../lib/helpers.cjs')
 
 module.exports = plugin(({ addUtilities }) => {
 	addUtilities({
@@ -15,8 +14,8 @@ module.exports = plugin(({ addUtilities }) => {
 				'-moz-appearance': 'textfield',
 			},
 		},
-		'.reset-search-input': {
-			'&[type=search]::-webkit-search-decoration, &[type=search]::-webkit-search-cancel-button, &[type=search]::-webkit-search-results-button, &[type=search]::-webkit-search-results-decoration': {
+		'.reset-search-input[type=search]::-webkit-search': {
+			'&-decoration, &-cancel-button, &-results-button, &-results-decoration': {
 				'-webkit-appearance': 'none',
 			},
 		},
