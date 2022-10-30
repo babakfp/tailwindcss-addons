@@ -5,7 +5,7 @@
   "main": "index.cjs",
   "license": "MIT",
 	"keywords": [
-		"tailwindcss",
+		"tailwindcss", "addons",
 		"tailwindcss plugins",
 		"tailwindcss dir",
 		"tailwindcss direction",
