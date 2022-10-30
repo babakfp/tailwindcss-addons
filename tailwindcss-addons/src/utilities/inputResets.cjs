@@ -8,14 +8,12 @@ module.exports = plugin(({ addUtilities }) => {
 				'-webkit-appearance': 'none',
 				//  Apparently some margin are still there even though it's hidden
 				'margin': '0',
-			},
-			'&[type=number]': {
 				// Firefox
 				'-moz-appearance': 'textfield',
 			},
 		},
-		'.reset-search-input[type=search]::-webkit-search': {
-			'&-decoration, &-cancel-button, &-results-button, &-results-decoration': {
+		'.reset-search-input': {
+			'&::-webkit-search-decoration, &::-webkit-search-cancel-button, &::-webkit-search-results-button, &::-webkit-search-results-decoration': {
 				'-webkit-appearance': 'none',
 			},
 		},

@@ -1,3 +1,6 @@
+## 0.0.12
+- Modified reset input utilities.
+
 ## 0.0.11
 - Removed unused file.
 
