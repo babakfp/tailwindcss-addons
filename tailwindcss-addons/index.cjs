@@ -12,10 +12,6 @@ const utilities = {
 	overflowUnset: require('./src/utilities/overflowUnset.cjs'),
 	shortPlacements: require('./src/utilities/shortPlacements.cjs'),
 }
-const components = {
-	linkedImg: require('./src/components/linkedImg.cjs'),
-	simulateClick: require('./src/components/simulateClick.cjs'),
-}
 const variants = {
 	notVariants: require('./src/variants/notVariants.cjs'),
 }
@@ -32,10 +28,6 @@ const defaultConfig = {
 		insetCenter: true,
 		overflowUnset: true,
 		shortPlacements: false,
-	},
-	components: {
-		linkedImg: true,
-		simulateClick: true,
 	},
 	variants: {
 		notVariants: true,
@@ -60,9 +52,6 @@ const tailwindcssAddons = (userConfig={}) => {
 			config.utilities.insetCenter && utilities.insetCenter,
 			config.utilities.overflowUnset && utilities.overflowUnset,
 			config.utilities.shortPlacements && utilities.shortPlacements,
-
-			config.components.linkedImg && components.linkedImg,
-			config.components.simulateClick && components.simulateClick,
 
 			config.variants.notVariants && variants.notVariants,
 		],

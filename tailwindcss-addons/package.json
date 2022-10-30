@@ -17,7 +17,6 @@
 		"tailwindcss overflow unset",
 		"tailwindcss short placements",
 		"tailwindcss short align items",
-		"tailwindcss animate click",
 		"tailwindcss missing sizing utilities",
 		"tailwindcss not variants"
 	],

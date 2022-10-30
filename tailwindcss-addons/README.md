@@ -37,10 +37,6 @@ const defaultConfig = {
 		overflowUnset: true,
 		shortPlacements: false,
 	},
-	components: {
-		linkedImg: true,
-		simulateClick: true,
-	},
 	variants: {
 		notVariants: true,
 	},
@@ -66,11 +62,6 @@ const defaultConfig = {
 - `insetCenter` [See what it includes](./src/utilities/insetCenter.cjs)
 - `overflowUnset` [See what it includes](./src/utilities/overflowUnset.cjs)
 - `shortPlacements` [See what it includes](./src/utilities/shortPlacements.cjs)
-
-## Components
-
-- `simulateClick` [See what it includes](./src/components/simulateClick.cjs)
-- `linkedImg` [See what it includes](./src/components/linkedImg.cjs)
 
 ## Variants
 
