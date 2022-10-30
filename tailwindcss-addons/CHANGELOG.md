@@ -1,3 +1,6 @@
+## 0.0.11
+- Removed unused file.
+
 ## 0.0.10
 - [breaking] Removed all components (`linked-img`, `simulate-click`).
 - [breaking] `number-input-reset` and `search-input-reset` renamed to `reset-number-input` and `reset-search-input`.
