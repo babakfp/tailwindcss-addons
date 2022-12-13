@@ -1,1 +1,3 @@
-[GO TO MAIN REPO](https://github.com/babakfp/tailwindcss-addons/tree/main/tailwindcss-addons)
+# Tailwindcss Addons
+
+[Documentation](https://babakfp.ir/docs/tailwindcss-addons)
