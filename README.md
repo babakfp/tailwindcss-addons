@@ -1,3 +1,3 @@
-# Tailwindcss Addons
+## Documentation
 
-[Documentation](https://babakfp.ir/docs/tailwindcss-addons)
+Visit [Documentation](https://babakfp.ir/docs/tailwindcss-addons).
