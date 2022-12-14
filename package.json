@@ -1,9 +1,15 @@
 {
-  "name": "tailwindcss-addons",
+	"name": "tailwindcss-addons",
 	"description": "A Tailwindcss plugin that adds extra utilities and more.",
-  "version": "0.0.14",
-  "main": "index.cjs",
-  "license": "MIT",
+	"version": "0.0.15",
+	"main": "index.cjs",
+	"license": "MIT",
 	"repository": "github:babakfp/tailwindcss-addons",
-	"homepage": "https://babakfp.ir/docs/tailwindcss-addons"
+	"homepage": "https://babakfp.ir/docs/tailwindcss-addons",
+	"peerDependencies": {
+		"tailwindcss": "3.x"
+	},
+	"devDependencies": {
+		"tailwindcss": "3.2.4"
+	}
 }
