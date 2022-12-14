@@ -1,31 +1,9 @@
 {
   "name": "tailwindcss-addons",
 	"description": "A Tailwindcss plugin that adds extra utilities and more.",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "main": "index.cjs",
   "license": "MIT",
 	"repository": "github:babakfp/tailwindcss-addons",
-	"homepage": "https://babakfp.ir/docs/tailwindcss-addons",
-	"bugs": "https://github.com/babakfp/tailwindcss-addons/issues",
-	"author": {
-		"name" : "babakfp",
-		"url" : "https://github.com/babakfp"
-	},
-	"keywords": [
-		"tailwindcss",
-		"addons",
-		"tailwindcss plugins",
-		"tailwindcss dir",
-		"tailwindcss direction",
-		"tailwindcss drag",
-		"tailwindcss user-drag",
-		"tailwindcss flip",
-		"tailwindcss hide show",
-		"tailwindcss inset center",
-		"tailwindcss overflow unset",
-		"tailwindcss short placements",
-		"tailwindcss short align items",
-		"tailwindcss missing sizing utilities",
-		"tailwindcss not variants"
-	]
+	"homepage": "https://babakfp.ir/docs/tailwindcss-addons"
 }
