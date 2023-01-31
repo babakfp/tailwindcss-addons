@@ -13,6 +13,7 @@ const defaultConfig = {
 		insetCenter: true,
 		overflowUnset: true,
 		fontWeightRegular: false,
+		tapHighlightTransparent: true,
 	},
 	variants: {
 		notVariants: true,
@@ -52,6 +53,7 @@ const tailwindcssAddons = (userConfig={}) => {
 			config.utilities.inputResets && require('./src/utilities/inputResets.cjs'),
 			config.utilities.insetCenter && require('./src/utilities/insetCenter.cjs'),
 			config.utilities.overflowUnset && require('./src/utilities/overflowUnset.cjs'),
+			config.utilities.tapHighlightTransparent && require('./src/utilities/tapHighlightTransparent.cjs'),
 
 			config.variants.notVariants && require('./src/variants/notVariants.cjs'),
 		],
