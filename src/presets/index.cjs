@@ -1,6 +1,6 @@
 /**
-	* @param {number[]} values - a list of numbers to convert it to rem size
-	* @returns {{}} '4.5': '1.125rem'
+ * @param {number[]} values - a list of numbers to convert it to rem size
+ * @returns {{}} '4.5': '1.125rem'
 */
 const generateSpacing = (values) =>
 {
@@ -15,8 +15,8 @@ const generateSpacing = (values) =>
 }
 
 module.exports = {
-  theme: {
-    extend: {
+	theme: {
+		extend: {
 			spacing: generateSpacing([
 				4.5, 5.5, 6.5, 7.5, 8.5, 9.5,
 				13, 15, 17, 18, 19, 21, 22, 23,
@@ -39,8 +39,8 @@ module.exports = {
 				3: '3px',
 			},
 			ringWidth: {
-        3: '3px',
-      },
+				3: '3px',
+			},
 			outlineOffset: {
 				'-1': '-1px',
 				'-2': '-2px',
@@ -56,7 +56,7 @@ module.exports = {
 				'widest-4': '.75em',
 				'widest-5': '1em',
 			},
-    },
-  },
-  plugins: [],
+		},
+	},
+	plugins: [],
 }
