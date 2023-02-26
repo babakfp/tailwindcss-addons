@@ -1,9 +1,19 @@
 const plugin = require('tailwindcss/plugin')
 
-module.exports = plugin(({ addUtilities }) => {
-	addUtilities({
-		".tap-highlight-transparent": {
-			"-webkit-tap-highlight-color": "transparent",
+module.exports = plugin(({ matchUtilities, theme }) => {
+	matchUtilities(
+		{
+			'tap-highlight': value => ({
+				'-webkit-tap-highlight-color': value,
+			}),
 		},
-	})
+		{
+			values: flattenColorPalette({
+				transparent: 'transparent',
+				black: '#000',
+				white: '#fff',
+			}),
+			type: 'color',
+		}
+	)
 })
