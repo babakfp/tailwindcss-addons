@@ -1,4 +1,7 @@
 const plugin = require('tailwindcss/plugin')
+const {
+	default: flattenColorPalette,
+} = require("tailwindcss/lib/util/flattenColorPalette")
 
 module.exports = plugin(({ matchUtilities, theme }) => {
 	matchUtilities(
@@ -8,11 +11,7 @@ module.exports = plugin(({ matchUtilities, theme }) => {
 			}),
 		},
 		{
-			values: flattenColorPalette({
-				transparent: 'transparent',
-				black: '#000',
-				white: '#fff',
-			}),
+			values: flattenColorPalette(theme('colors')),
 			type: 'color',
 		}
 	)
