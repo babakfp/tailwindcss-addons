@@ -1,8 +1,22 @@
-const plugin = require('tailwindcss/plugin')
+const plugin = require("tailwindcss/plugin")
 
-module.exports = plugin(({ addVariant }) => {
-	addVariant('not-first', '&:not(:first-child)')
-	addVariant('not-last', '&:not(:last-child)')
-	addVariant('not-first-of-type', '&:not(:first-of-type)')
-	addVariant('not-last-of-type', '&:not(:last-of-type)')
+module.exports = plugin(({ matchVariant }) => {
+	matchVariant(
+		"not",
+		value => {
+			if (value === "first") return "&:not(:first-child)"
+			if (value === "last") return "&:not(:last-child)"
+			if (value === "first-of-type") return "&:not(:first-of-type)"
+			if (value === "last-of-type") return "&:not(:last-of-type)"
+			return `&:not(${value})`
+		},
+		{
+			values: {
+				first: "first",
+				last: "last",
+				"first-of-type": "first-of-type",
+				"last-of-type": "last-of-type",
+			},
+		}
+	)
 })
