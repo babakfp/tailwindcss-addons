@@ -1,7 +1,6 @@
 const deepMerge = require('./src/lib/deepMerge.cjs')
 
 const defaultConfig = {
-	base: true,
 	presets: true,
 	utilities: {
 		dir: true,
@@ -43,8 +42,6 @@ const tailwindcssAddons = (userConfig={}) => {
 			} : {}),
 		},
 		plugins: [
-			config.base && require('./src/base/index.cjs'),
-
 			config.utilities.dir && require('./src/utilities/dir.cjs'),
 			config.utilities.drag && require('./src/utilities/drag.cjs'),
 			config.utilities.flexGrid && require('./src/utilities/flexGrid.cjs'),
