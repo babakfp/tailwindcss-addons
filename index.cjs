@@ -2,6 +2,7 @@ const deepMerge = require('./src/lib/deepMerge.cjs')
 
 const defaultConfig = {
 	presets: true,
+	dynamicViewFix: false,
 	utilities: {
 		dir: true,
 		drag: true,
@@ -25,6 +26,7 @@ const tailwindcssAddons = (userConfig={}) => {
 	return {
 		presets: [
 			config.presets && require('./src/presets/index.cjs'),
+			config.dynamicViewFix && require('./src/presets/dynamicViewFix.cjs'),
 		],
 		theme: {
 			...(config.utilities.fontWeightRegular ? {
