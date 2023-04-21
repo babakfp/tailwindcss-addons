@@ -42,10 +42,7 @@ module.exports = {
 				3: '3px',
 			},
 			outlineOffset: {
-				'-1': '-1px',
-				'-2': '-2px',
-				'-3': '-3px',
-				'-4': '-4px',
+				3: '3px',
 			},
 			fontSize: {
 				'2xs': ['0.625rem', { lineHeight: '1' }],
