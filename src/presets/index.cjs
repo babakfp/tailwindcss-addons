@@ -41,6 +41,9 @@ module.exports = {
 			ringWidth: {
 				3: '3px',
 			},
+			ringOffsetWidth: {
+				3: '3px',
+			},
 			outlineOffset: {
 				3: '3px',
 			},
