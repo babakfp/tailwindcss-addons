@@ -9,11 +9,11 @@ const defaultConfig = {
         drag: true,
         flexGrid: false,
         flip: true,
+        fontWeightRegular: false,
         hideShow: true,
         inputResets: true,
         insetCenter: true,
         overflowUnset: true,
-        fontWeightRegular: false,
         tapHighlight: true,
     },
     variants: {
@@ -32,19 +32,7 @@ const tailwindcssAddons = (userConfig = {}) => {
         ],
         theme: {
             ...(config.utilities.fontWeightRegular
-                ? {
-                      fontWeight: {
-                          thin: "100",
-                          extralight: "200",
-                          light: "300",
-                          regular: "400", // Replacing `normal` with `regular`
-                          medium: "500",
-                          semibold: "600",
-                          bold: "700",
-                          extrabold: "800",
-                          black: "900",
-                      },
-                  }
+                ? require("./src/utilities/fontWeightRegular.cjs")
                 : {}),
         },
         plugins: [
