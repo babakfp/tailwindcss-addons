@@ -6,7 +6,14 @@
 	"main": "index.cjs",
 	"repository": "github:babakfp/tailwindcss-addons",
 	"homepage": "https://babakfp.ir/docs/tailwindcss-addons",
+	"scripts": {
+        "format": "prettier --plugin-search-dir . --write ."
+	},
 	"peerDependencies": {
 		"tailwindcss": "3.x"
+	},
+	"devDependencies": {
+		"prettier": "2.8.8",
+		"prettier-plugin-svelte": "2.10.1"
 	}
 }
