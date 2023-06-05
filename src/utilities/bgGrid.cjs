@@ -9,7 +9,7 @@ module.exports = plugin(({ matchUtilities, theme }) => {
             "bg-grid": value => ({
                 "--tw-bg-grid-w": "32px",
                 "--tw-bg-grid-h": "32px",
-                "background-size": "var(--tw-bg-grid-w) var(--tw-bg-grid-h)",
+                "background-size": "var(--tw-bg-grid-size, var(--tw-bg-grid-w)) var(--tw-bg-grid-size, var(--tw-bg-grid-h))",
                 "--tw-bg-grid-border-w": "1px",
                 "background-image": `
 					linear-gradient(to right, ${value} var(--tw-bg-grid-border-w), transparent 0px),
@@ -17,6 +17,14 @@ module.exports = plugin(({ matchUtilities, theme }) => {
             }),
         },
         { values: flattenColorPalette(theme("colors")), type: "color" }
+    )
+	matchUtilities(
+        {
+            "bg-grid": value => ({
+                "--tw-bg-grid-size": value,
+            }),
+        },
+        { values: theme("spacing") }
     )
     matchUtilities(
         {
