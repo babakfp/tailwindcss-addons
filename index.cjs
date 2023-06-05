@@ -5,6 +5,7 @@ const defaultConfig = {
     dynamicViewFix: false,
     utilities: {
         bgGrid: true,
+        bgRadial: true,
         dir: true,
         drag: true,
         flexGrid: false,
@@ -37,6 +38,7 @@ const tailwindcssAddons = (userConfig = {}) => {
         },
         plugins: [
             config.utilities.bgGrid && require("./src/utilities/bgGrid.cjs"),
+            config.utilities.bgRadial && require("./src/utilities/bgRadial.cjs"),
             config.utilities.dir && require("./src/utilities/dir.cjs"),
             config.utilities.drag && require("./src/utilities/drag.cjs"),
             config.utilities.flexGrid &&
