@@ -4,6 +4,7 @@ const defaultConfig = {
 	presets: true,
 	dynamicViewFix: false,
 	utilities: {
+		bgGrid: true,
 		dir: true,
 		drag: true,
 		flexGrid: false,
@@ -44,6 +45,7 @@ const tailwindcssAddons = (userConfig={}) => {
 			} : {}),
 		},
 		plugins: [
+			config.utilities.bgGrid && require('./src/utilities/bgGrid.cjs'),
 			config.utilities.dir && require('./src/utilities/dir.cjs'),
 			config.utilities.drag && require('./src/utilities/drag.cjs'),
 			config.utilities.flexGrid && require('./src/utilities/flexGrid.cjs'),
