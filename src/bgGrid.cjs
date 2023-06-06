@@ -42,7 +42,7 @@ module.exports = plugin(({ matchUtilities, theme }) => {
     )
     matchUtilities(
         {
-            "bg-grid-border-w": value => ({
+            "bg-grid-border": value => ({
                 "--tw-bg-grid-border-w": value,
             }),
         },

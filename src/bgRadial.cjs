@@ -40,7 +40,7 @@ module.exports = plugin(({ matchUtilities, theme }) => {
     )
     matchUtilities(
         {
-            "bg-radial-circle-size": value => ({
+            "bg-radial-circle": value => ({
                 "--tw-bg-radial-circle-size": value,
             }),
         },
