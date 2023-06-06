@@ -1,18 +1,3 @@
-/**
- * @param {number[]} values - a list of numbers to convert it to rem size
- * @returns {{}} '4.5': '1.125rem'
- */
-const generateSpacing = values => {
-    /** @type {{}} */
-    const spacing = {}
-
-    values.forEach(value => {
-        spacing[value] = `${value / 4}rem`
-    })
-
-    return spacing
-}
-
 module.exports = {
     theme: {
         extend: {
@@ -57,4 +42,19 @@ module.exports = {
         },
     },
     plugins: [],
+}
+
+/**
+ * @param {number[]} values - a list of numbers to convert it to rem size
+ * @returns {{}} '4.5': '1.125rem'
+ */
+function generateSpacing(values) {
+    /** @type {{}} */
+    const spacing = {}
+
+    values.forEach(value => {
+        spacing[value] = `${value / 4}rem`
+    })
+
+    return spacing
 }

@@ -1,7 +1,7 @@
 const deepMerge = require("./src/lib/deepMerge.cjs")
 
 const defaultConfig = {
-    presets: true,
+    extendedValues: true,
     dynamicViewFix: false,
     utilities: {
         bgGrid: true,
@@ -27,7 +27,7 @@ const tailwindcssAddons = (userConfig = {}) => {
 
     return {
         presets: [
-            config.presets && require("./src/index.cjs"),
+            config.extendedValues && require("./src/extendedValues.cjs"),
             config.dynamicViewFix && require("./src/dynamicViewFix.cjs"),
         ],
         theme: {
