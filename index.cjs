@@ -28,8 +28,7 @@ const tailwindcssAddons = (userConfig = {}) => {
     return {
         presets: [
             config.presets && require("./src/index.cjs"),
-            config.dynamicViewFix &&
-                require("./src/dynamicViewFix.cjs"),
+            config.dynamicViewFix && require("./src/dynamicViewFix.cjs"),
         ],
         theme: {
             ...(config.utilities.fontWeightRegular
@@ -41,22 +40,16 @@ const tailwindcssAddons = (userConfig = {}) => {
             config.utilities.bgRadial && require("./src/bgRadial.cjs"),
             config.utilities.dir && require("./src/dir.cjs"),
             config.utilities.drag && require("./src/drag.cjs"),
-            config.utilities.flexGrid &&
-                require("./src/flexGrid.cjs"),
+            config.utilities.flexGrid && require("./src/flexGrid.cjs"),
             config.utilities.flip && require("./src/flip.cjs"),
-            config.utilities.hideShow &&
-                require("./src/hideShow.cjs"),
-            config.utilities.inputResets &&
-                require("./src/inputResets.cjs"),
-            config.utilities.insetCenter &&
-                require("./src/insetCenter.cjs"),
+            config.utilities.hideShow && require("./src/hideShow.cjs"),
+            config.utilities.inputResets && require("./src/inputResets.cjs"),
+            config.utilities.insetCenter && require("./src/insetCenter.cjs"),
             config.utilities.overflowUnset &&
                 require("./src/overflowUnset.cjs"),
-            config.utilities.tapHighlight &&
-                require("./src/tapHighlight.cjs"),
+            config.utilities.tapHighlight && require("./src/tapHighlight.cjs"),
 
-            config.variants.notVariants &&
-                require("./src/notVariants.cjs"),
+            config.variants.notVariants && require("./src/notVariants.cjs"),
         ],
         corePlugins: {
             ...(config.utilities.flexGrid

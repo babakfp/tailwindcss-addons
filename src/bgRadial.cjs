@@ -7,13 +7,14 @@ module.exports = plugin(({ matchUtilities, theme }) => {
     matchUtilities(
         {
             "bg-radial": value => ({
-                "background-size": "var(--tw-bg-radial-size, var(--tw-bg-radial-w, 32px)) var(--tw-bg-radial-size, var(--tw-bg-radial-h, 32px))",
+                "background-size":
+                    "var(--tw-bg-radial-size, var(--tw-bg-radial-w, 32px)) var(--tw-bg-radial-size, var(--tw-bg-radial-h, 32px))",
                 "background-image": `radial-gradient(circle, ${value} var(--tw-bg-radial-circle-size, 1px), transparent 0px)`,
             }),
         },
         { values: flattenColorPalette(theme("colors")), type: "color" }
     )
-	matchUtilities(
+    matchUtilities(
         {
             "bg-radial": value => ({
                 "--tw-bg-radial-size": value,
