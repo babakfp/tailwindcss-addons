@@ -45,11 +45,12 @@ module.exports = {
 }
 
 /**
- * @param {number[]} values - a list of numbers to convert it to rem size
- * @returns {{}} '4.5': '1.125rem'
+ * Converts a list of numbers to rem size values.
+ *
+ * @param {number[]} values - A list of numbers to convert to rem size.
+ * @returns {Record<string, string>} - An object mapping the original values to their rem size equivalents.
  */
 function generateSpacing(values) {
-    /** @type {{}} */
     const spacing = {}
 
     values.forEach(value => {
