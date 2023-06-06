@@ -27,36 +27,36 @@ const tailwindcssAddons = (userConfig = {}) => {
 
     return {
         presets: [
-            config.presets && require("./src/presets/index.cjs"),
+            config.presets && require("./src/index.cjs"),
             config.dynamicViewFix &&
-                require("./src/presets/dynamicViewFix.cjs"),
+                require("./src/dynamicViewFix.cjs"),
         ],
         theme: {
             ...(config.utilities.fontWeightRegular
-                ? require("./src/utilities/fontWeightRegular.cjs")
+                ? require("./src/fontWeightRegular.cjs")
                 : {}),
         },
         plugins: [
-            config.utilities.bgGrid && require("./src/utilities/bgGrid.cjs"),
-            config.utilities.bgRadial && require("./src/utilities/bgRadial.cjs"),
-            config.utilities.dir && require("./src/utilities/dir.cjs"),
-            config.utilities.drag && require("./src/utilities/drag.cjs"),
+            config.utilities.bgGrid && require("./src/bgGrid.cjs"),
+            config.utilities.bgRadial && require("./src/bgRadial.cjs"),
+            config.utilities.dir && require("./src/dir.cjs"),
+            config.utilities.drag && require("./src/drag.cjs"),
             config.utilities.flexGrid &&
-                require("./src/utilities/flexGrid.cjs"),
-            config.utilities.flip && require("./src/utilities/flip.cjs"),
+                require("./src/flexGrid.cjs"),
+            config.utilities.flip && require("./src/flip.cjs"),
             config.utilities.hideShow &&
-                require("./src/utilities/hideShow.cjs"),
+                require("./src/hideShow.cjs"),
             config.utilities.inputResets &&
-                require("./src/utilities/inputResets.cjs"),
+                require("./src/inputResets.cjs"),
             config.utilities.insetCenter &&
-                require("./src/utilities/insetCenter.cjs"),
+                require("./src/insetCenter.cjs"),
             config.utilities.overflowUnset &&
-                require("./src/utilities/overflowUnset.cjs"),
+                require("./src/overflowUnset.cjs"),
             config.utilities.tapHighlight &&
-                require("./src/utilities/tapHighlight.cjs"),
+                require("./src/tapHighlight.cjs"),
 
             config.variants.notVariants &&
-                require("./src/variants/notVariants.cjs"),
+                require("./src/notVariants.cjs"),
         ],
         corePlugins: {
             ...(config.utilities.flexGrid
