@@ -1,18 +1,5 @@
 const deepMerge = require("./src/lib/deepMerge.cjs")
 
-const bgGrid = require("./src/bgGrid.cjs")
-const bgRadial = require("./src/bgRadial.cjs")
-const dir = require("./src/dir.cjs")
-const drag = require("./src/drag.cjs")
-const flexGrid = require("./src/flexGrid.cjs")
-const flip = require("./src/flip.cjs")
-const hideShow = require("./src/hideShow.cjs")
-const inputResets = require("./src/inputResets.cjs")
-const insetCenter = require("./src/insetCenter.cjs")
-const overflowUnset = require("./src/overflowUnset.cjs")
-const tapHighlight = require("./src/tapHighlight.cjs")
-const notVariants = require("./src/notVariants.cjs")
-
 const defaultConfig = {
 	presets: {
 		fontWeightRegular: false,
@@ -47,19 +34,19 @@ const tailwindcssAddons = (userConfig = {}) => {
             config.presets.screenSizeFix && require("./src/presets/screenSizeFix.cjs"),
         ],
         plugins: [
-            config.utilities.bgGrid && bgGrid,
-            config.utilities.bgRadial && bgRadial,
-            config.utilities.dir && dir,
-            config.utilities.drag && drag,
-            config.utilities.flexGrid && flexGrid,
-            config.utilities.flip && flip,
-            config.utilities.hideShow && hideShow,
-            config.utilities.inputResets && inputResets,
-            config.utilities.insetCenter && insetCenter,
-            config.utilities.overflowUnset && overflowUnset,
-            config.utilities.tapHighlight && tapHighlight,
+            config.utilities.bgGrid && require("./src/bgGrid.cjs"),
+            config.utilities.bgRadial && require("./src/bgRadial.cjs"),
+            config.utilities.dir && require("./src/dir.cjs"),
+            config.utilities.drag && require("./src/drag.cjs"),
+            config.utilities.flexGrid && require("./src/flexGrid.cjs"),
+            config.utilities.flip && require("./src/flip.cjs"),
+            config.utilities.hideShow && require("./src/hideShow.cjs"),
+            config.utilities.inputResets && require("./src/inputResets.cjs"),
+            config.utilities.insetCenter && require("./src/insetCenter.cjs"),
+            config.utilities.overflowUnset && require("./src/overflowUnset.cjs"),
+            config.utilities.tapHighlight && require("./src/tapHighlight.cjs"),
 
-            config.variants.notVariants && notVariants,
+            config.variants.notVariants && require("./src/variants/notVariants.cjs"),
         ],
         corePlugins: {
             ...(config.utilities.flexGrid
