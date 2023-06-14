@@ -43,8 +43,8 @@ const tailwindcssAddons = (userConfig = {}) => {
 
     return {
         presets: [
-            config.presets.moreDefaultValues && require("./src/presets/moreDefaultValues.cjs"),
             config.presets.dynamicViewFix && require("./src/presets/dynamicViewFix.cjs"),
+            config.presets.moreDefaultValues && require("./src/presets/moreDefaultValues.cjs"),
         ],
         theme: {
             ...(config.utilities.fontWeightRegular ? fontWeightRegular : {}),
