@@ -1,4 +1,4 @@
-module.exports = () => ({
+module.exports = {
     theme: {
         extend: {
             height: { screen: "var(--tw-screen-h)" },
@@ -23,4 +23,4 @@ module.exports = () => ({
             })
         },
     ],
-})
+}

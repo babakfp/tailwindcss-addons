@@ -1,6 +1,6 @@
 const plugin = require("tailwindcss/plugin")
 
-module.exports = () => ({
+module.exports = {
     plugins: [
         plugin(({ addUtilities }) => {
             addUtilities({
@@ -71,4 +71,4 @@ module.exports = () => ({
         justifyContent: false,
         justifyItems: false,
     },
-})
+}
