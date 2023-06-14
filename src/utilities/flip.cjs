@@ -1,5 +1,5 @@
 const plugin = require("tailwindcss/plugin")
-const cssTransformValue = require("./lib/cssTransformValue.cjs")
+const cssTransformValue = require("../lib/cssTransformValue.cjs")
 
 module.exports = plugin(({ addUtilities }) => {
     addUtilities({
