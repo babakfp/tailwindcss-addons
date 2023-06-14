@@ -1,7 +1,5 @@
 const deepMerge = require("./src/lib/deepMerge.cjs")
 
-const extendedValues = require("./src/extendedValues.cjs")
-const dynamicViewFix = require("./src/dynamicViewFix.cjs")
 const fontWeightRegular = require("./src/fontWeightRegular.cjs")
 const bgGrid = require("./src/bgGrid.cjs")
 const bgRadial = require("./src/bgRadial.cjs")
@@ -17,8 +15,10 @@ const tapHighlight = require("./src/tapHighlight.cjs")
 const notVariants = require("./src/notVariants.cjs")
 
 const defaultConfig = {
-    extendedValues: true,
-    dynamicViewFix: false,
+	presets: {
+		dynamicViewFix: false,
+		moreDefaultValues: true,
+	},
     utilities: {
         bgGrid: true,
         bgRadial: true,
@@ -43,8 +43,8 @@ const tailwindcssAddons = (userConfig = {}) => {
 
     return {
         presets: [
-            config.extendedValues && extendedValues,
-            config.dynamicViewFix && dynamicViewFix,
+            config.presets.moreDefaultValues && require("./src/presets/moreDefaultValues.cjs"),
+            config.presets.dynamicViewFix && require("./src/presets/dynamicViewFix.cjs"),
         ],
         theme: {
             ...(config.utilities.fontWeightRegular ? fontWeightRegular : {}),
