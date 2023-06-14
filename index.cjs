@@ -2,6 +2,7 @@ const deepMerge = require("./src/lib/deepMerge.cjs")
 
 const defaultConfig = {
 	presets: {
+        flexGrid: false,
 		fontWeightRegular: false,
 		moreDefaultValues: true,
 		screenSizeFix: false,
@@ -11,7 +12,6 @@ const defaultConfig = {
         bgRadial: true,
         dir: true,
         drag: true,
-        flexGrid: false,
         flip: true,
         hideShow: true,
         inputResets: true,
@@ -29,6 +29,7 @@ const tailwindcssAddons = (userConfig = {}) => {
 
     return {
         presets: [
+			config.presets.flexGrid && require("./src/presets/flexGrid.cjs"),
 			config.presets.fontWeightRegular && require("./src/presets/fontWeightRegular.cjs"),
 			config.presets.moreDefaultValues && require("./src/presets/moreDefaultValues.cjs"),
             config.presets.screenSizeFix && require("./src/presets/screenSizeFix.cjs"),
@@ -38,7 +39,6 @@ const tailwindcssAddons = (userConfig = {}) => {
             config.utilities.bgRadial && require("./src/bgRadial.cjs"),
             config.utilities.dir && require("./src/dir.cjs"),
             config.utilities.drag && require("./src/drag.cjs"),
-            config.utilities.flexGrid && require("./src/flexGrid.cjs"),
             config.utilities.flip && require("./src/flip.cjs"),
             config.utilities.hideShow && require("./src/hideShow.cjs"),
             config.utilities.inputResets && require("./src/inputResets.cjs"),
@@ -48,18 +48,6 @@ const tailwindcssAddons = (userConfig = {}) => {
 
             config.variants.notVariants && require("./src/variants/notVariants.cjs"),
         ],
-        corePlugins: {
-            ...(config.utilities.flexGrid
-                ? {
-                      placeContent: false,
-                      placeItems: false,
-                      alignContent: false,
-                      alignItems: false,
-                      justifyContent: false,
-                      justifyItems: false,
-                  }
-                : {}),
-        },
     }
 }
 
