@@ -16,8 +16,8 @@ const notVariants = require("./src/notVariants.cjs")
 
 const defaultConfig = {
 	presets: {
-		dynamicViewFix: false,
 		moreDefaultValues: true,
+		screenSizeFix: false,
 	},
     utilities: {
         bgGrid: true,
@@ -43,8 +43,8 @@ const tailwindcssAddons = (userConfig = {}) => {
 
     return {
         presets: [
-            config.presets.dynamicViewFix && require("./src/presets/dynamicViewFix.cjs"),
-            config.presets.moreDefaultValues && require("./src/presets/moreDefaultValues.cjs"),
+			config.presets.moreDefaultValues && require("./src/presets/moreDefaultValues.cjs"),
+            config.presets.screenSizeFix && require("./src/presets/screenSizeFix.cjs"),
         ],
         theme: {
             ...(config.utilities.fontWeightRegular ? fontWeightRegular : {}),
