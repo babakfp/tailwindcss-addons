@@ -1,4 +1,4 @@
-module.exports = () => ({
+module.exports = {
     theme: {
         fontWeight: {
             thin: "100",
@@ -12,4 +12,4 @@ module.exports = () => ({
             black: "900",
         },
     },
-})
+}
