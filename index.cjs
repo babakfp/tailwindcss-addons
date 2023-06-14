@@ -24,7 +24,7 @@ const defaultConfig = {
     },
 }
 
-const tailwindcssAddons = (userConfig = {}) => {
+module.exports = (userConfig = {}) => {
     const config = deepMerge(defaultConfig, userConfig)
 
     return {
@@ -50,5 +50,3 @@ const tailwindcssAddons = (userConfig = {}) => {
         ],
     }
 }
-
-module.exports = tailwindcssAddons
