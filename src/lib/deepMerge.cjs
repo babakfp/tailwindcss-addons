@@ -5,7 +5,7 @@
  * @param {Object} source - The source object to merge from.
  * @returns {Object} - The merged object.
  */
-function deepMerge(target, source) {
+module.exports = function deepMerge(target, source) {
     for (const key of Object.keys(source)) {
         if (source[key] instanceof Object) {
             // If the property is an object, recursively merge it with the corresponding property in the target object.
@@ -17,5 +17,3 @@ function deepMerge(target, source) {
     Object.assign(target || {}, source)
     return target
 }
-
-module.exports = deepMerge

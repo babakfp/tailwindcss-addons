@@ -1,4 +1,4 @@
-const cssTransformValue = [
+module.exports = [
     "translate(var(--tw-translate-x), var(--tw-translate-y))",
     "rotate(var(--tw-rotate))",
     "skewX(var(--tw-skew-x))",
@@ -6,5 +6,3 @@ const cssTransformValue = [
     "scaleX(var(--tw-scale-x))",
     "scaleY(var(--tw-scale-y))",
 ].join(" ")
-
-module.exports = cssTransformValue
