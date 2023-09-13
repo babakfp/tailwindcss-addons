@@ -30,7 +30,7 @@ module.exports = (userConfig = {}) => {
     return {
         presets: [
             config.presets.flexGrid && require("./src/presets/flexGrid.cjs"),
-			// TODO: In TailwindCSS v3.3.2 there is a bug: https://github.com/tailwindlabs/tailwindcss/issues/11428
+            // TODO: In TailwindCSS v3.3.2 there is a bug: https://github.com/tailwindlabs/tailwindcss/issues/11428
             config.presets.fontWeightRegular &&
                 require("./src/presets/fontWeightRegular.cjs"),
             config.presets.moreDefaultValues &&
