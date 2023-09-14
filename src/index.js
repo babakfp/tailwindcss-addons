@@ -47,8 +47,8 @@ export default (userConfig = {}) => {
         theme: {
             ...(config.presets.fontWeightRegular ? fontWeightRegular : []),
             extend: {
-                ...(config.presets.moreDefaultValues ? [ moreDefaultValues ] : []),
-                ...(config.presets.screenSizeFix ? [ screenSizeFixExtend ] : []),
+                ...(config.presets.moreDefaultValues ? moreDefaultValues : {}),
+                ...(config.presets.screenSizeFix ? screenSizeFixExtend : {}),
             },
         },
         plugins: [
