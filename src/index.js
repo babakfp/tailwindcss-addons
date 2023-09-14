@@ -52,8 +52,8 @@ export default (userConfig = {}) => {
             },
         },
         plugins: [
-            ...(config.presets.flexGrid ? [ flexGridPlugin() ] : []),
-            ...(config.presets.screenSizeFix ? [ screenSizeFixPlugin() ] : []),
+            ...(config.presets.flexGrid ? [ flexGridPlugin ] : []),
+            ...(config.presets.screenSizeFix ? [ screenSizeFixPlugin ] : []),
 
             ...(config.utilities.bgGrid ? [ bgGrid ] : []),
             ...(config.utilities.bgRadial ? [ bgRadial ] : []),
