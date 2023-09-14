@@ -45,11 +45,13 @@ export default (userConfig = {}) => {
 
     return {
         presets: [
-            ...(config.presets.moreDefaultValues ? [ moreDefaultValues ] : []),
             ...(config.presets.screenSizeFix ? [ screenSizeFix ] : []),
         ],
         theme: {
             ...(config.presets.fontWeightRegular ? fontWeightRegular : []),
+            extend: {
+                ...(config.presets.moreDefaultValues ? [ moreDefaultValues ] : []),
+            },
         },
         plugins: [
             ...(config.presets.flexGrid ? [
