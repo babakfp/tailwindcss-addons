@@ -1,5 +1,21 @@
 import deepMerge from "./lib/deepMerge.js"
 
+import flexGrid from "./presets/flexGrid.js"
+import fontWeightRegular from "./presets/fontWeightRegular.js"
+import moreDefaultValues from "./presets/moreDefaultValues.js"
+import screenSizeFix from "./presets/screenSizeFix.js"
+import bgGrid from "./utilities/bgGrid.js"
+import bgRadial from "./utilities/bgRadial.js"
+import dir from "./utilities/dir.js"
+import drag from "./utilities/drag.js"
+import flip from "./utilities/flip.js"
+import hideShow from "./utilities/hideShow.js"
+import inputResets from "./utilities/inputResets.js"
+import insetCenter from "./utilities/insetCenter.js"
+import overflowUnset from "./utilities/overflowUnset.js"
+import tapHighlight from "./utilities/tapHighlight.js"
+import notVariants from "./variants/notVariants.js"
+
 const defaultConfig = {
     presets: {
         flexGrid: false,
@@ -29,25 +45,24 @@ export default (userConfig = {}) => {
 
     return {
         presets: [
-            (async () => config.presets.flexGrid && await import("./presets/flexGrid.js"))(),
-            // TODO: In TailwindCSS v3.3.2 there is a bug: https://github.com/tailwindlabs/tailwindcss/issues/11428
-            (async () => config.presets.fontWeightRegular && await import("./presets/fontWeightRegular.js"))(),
-            (async () => config.presets.moreDefaultValues && await import("./presets/moreDefaultValues.js"))(),
-            (async () => config.presets.screenSizeFix && await import("./presets/screenSizeFix.js"))(),
+            config.presets.flexGrid && flexGrid,
+            config.presets.fontWeightRegular && fontWeightRegular,
+            config.presets.moreDefaultValues && moreDefaultValues,
+            config.presets.screenSizeFix && screenSizeFix,
         ],
         plugins: [
-            (async () => config.utilities.bgGrid && await import("./utilities/bgGrid.js"))(),
-            (async () => config.utilities.bgRadial && await import("./utilities/bgRadial.js"))(),
-            (async () => config.utilities.dir && await import("./utilities/dir.js"))(),
-            (async () => config.utilities.drag && await import("./utilities/drag.js"))(),
-            (async () => config.utilities.flip && await import("./utilities/flip.js"))(),
-            (async () => config.utilities.hideShow && await import("./utilities/hideShow.js"))(),
-            (async () => config.utilities.inputResets && await import("./utilities/inputResets.js"))(),
-            (async () => config.utilities.insetCenter && await import("./utilities/insetCenter.js"))(),
-            (async () => config.utilities.overflowUnset && await import("./utilities/overflowUnset.js"))(),
-            (async () => config.utilities.tapHighlight && await import("./utilities/tapHighlight.js"))(),
+            config.utilities.bgGrid && bgGrid,
+            config.utilities.bgRadial && bgRadial,
+            config.utilities.dir && dir,
+            config.utilities.drag && drag,
+            config.utilities.flip && flip,
+            config.utilities.hideShow && hideShow,
+            config.utilities.inputResets && inputResets,
+            config.utilities.insetCenter && insetCenter,
+            config.utilities.overflowUnset && overflowUnset,
+            config.utilities.tapHighlight && tapHighlight,
 
-            (async () => config.variants.notVariants && await import("./variants/notVariants.js"))(),
+            config.variants.notVariants && notVariants,
         ],
     }
 }
