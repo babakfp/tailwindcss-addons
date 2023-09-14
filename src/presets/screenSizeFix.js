@@ -1,3 +1,5 @@
+import plugin from "tailwindcss/plugin"
+
 export const extend = {
     height: { screen: "var(--tw-screen-h)" },
     maxHeight: { screen: "var(--tw-screen-h)" },
@@ -5,7 +7,7 @@ export const extend = {
     width: { screen: "var(--tw-screen-w)" },
 }
 
-export const plugin = ({ addBase }) => {
+export const plugin = plugin(({ addBase }) => {
     addBase({
         ":root": {
             "--tw-screen-h": "100vh",
@@ -18,4 +20,4 @@ export const plugin = ({ addBase }) => {
             "--tw-screen-w": "100dvw",
         },
     })
-}
+})
