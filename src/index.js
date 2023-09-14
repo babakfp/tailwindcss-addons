@@ -1,6 +1,6 @@
 import deepMerge from "./lib/deepMerge.js"
 
-import flexGrid from "./presets/flexGrid.js"
+import { plugin as flexGridPlugin, corePlugins as flexGridCorePlugins } from "./presets/flexGrid.js"
 import fontWeightRegular from "./presets/fontWeightRegular.js"
 import moreDefaultValues from "./presets/moreDefaultValues.js"
 import screenSizeFix from "./presets/screenSizeFix.js"
@@ -45,12 +45,15 @@ export default (userConfig = {}) => {
 
     return {
         presets: [
-            ...(config.presets.flexGrid ? [ flexGrid ] : []),
             ...(config.presets.fontWeightRegular ? [ fontWeightRegular ] : []),
             ...(config.presets.moreDefaultValues ? [ moreDefaultValues ] : []),
             ...(config.presets.screenSizeFix ? [ screenSizeFix ] : []),
         ],
         plugins: [
+            ...(config.presets.flexGrid ? [
+                flexGridPlugin()
+            ] : []),
+
             ...(config.utilities.bgGrid ? [ bgGrid ] : []),
             ...(config.utilities.bgRadial ? [ bgRadial ] : []),
             ...(config.utilities.dir ? [ dir ] : []),
@@ -64,5 +67,8 @@ export default (userConfig = {}) => {
 
             ...(config.variants.notVariants ? [ notVariants ] : []),
         ],
+        corePlugins: {
+            ...(config.presets.flexGrid ? flexGridCorePlugins : {}),
+        },
     }
 }
