@@ -1,6 +1,6 @@
-const plugin = require("tailwindcss/plugin")
+import plugin from "tailwindcss/plugin"
 
-module.exports = plugin(({ addUtilities }) => {
+export default plugin(({ addUtilities }) => {
     addUtilities({
         ".hide": {
             visibility: "hidden",

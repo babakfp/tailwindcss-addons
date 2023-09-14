@@ -1,4 +1,4 @@
-const deepMerge = require("./src/lib/deepMerge.cjs")
+const deepMerge = require("./src/lib/deepMerge.js")
 
 const defaultConfig = {
     presets: {
@@ -24,40 +24,40 @@ const defaultConfig = {
     },
 }
 
-module.exports = (userConfig = {}) => {
+export default(userConfig = {}) => {
     const config = deepMerge(defaultConfig, userConfig)
 
     return {
         presets: [
-            config.presets.flexGrid && require("./src/presets/flexGrid.cjs"),
+            config.presets.flexGrid && require("./src/presets/flexGrid.js"),
             // TODO: In TailwindCSS v3.3.2 there is a bug: https://github.com/tailwindlabs/tailwindcss/issues/11428
             config.presets.fontWeightRegular &&
-                require("./src/presets/fontWeightRegular.cjs"),
+                require("./src/presets/fontWeightRegular.js"),
             config.presets.moreDefaultValues &&
-                require("./src/presets/moreDefaultValues.cjs"),
+                require("./src/presets/moreDefaultValues.js"),
             config.presets.screenSizeFix &&
-                require("./src/presets/screenSizeFix.cjs"),
+                require("./src/presets/screenSizeFix.js"),
         ],
         plugins: [
-            config.utilities.bgGrid && require("./src/utilities/bgGrid.cjs"),
+            config.utilities.bgGrid && require("./src/utilities/bgGrid.js"),
             config.utilities.bgRadial &&
-                require("./src/utilities/bgRadial.cjs"),
-            config.utilities.dir && require("./src/utilities/dir.cjs"),
-            config.utilities.drag && require("./src/utilities/drag.cjs"),
-            config.utilities.flip && require("./src/utilities/flip.cjs"),
+                require("./src/utilities/bgRadial.js"),
+            config.utilities.dir && require("./src/utilities/dir.js"),
+            config.utilities.drag && require("./src/utilities/drag.js"),
+            config.utilities.flip && require("./src/utilities/flip.js"),
             config.utilities.hideShow &&
-                require("./src/utilities/hideShow.cjs"),
+                require("./src/utilities/hideShow.js"),
             config.utilities.inputResets &&
-                require("./src/utilities/inputResets.cjs"),
+                require("./src/utilities/inputResets.js"),
             config.utilities.insetCenter &&
-                require("./src/utilities/insetCenter.cjs"),
+                require("./src/utilities/insetCenter.js"),
             config.utilities.overflowUnset &&
-                require("./src/utilities/overflowUnset.cjs"),
+                require("./src/utilities/overflowUnset.js"),
             config.utilities.tapHighlight &&
-                require("./src/utilities/tapHighlight.cjs"),
+                require("./src/utilities/tapHighlight.js"),
 
             config.variants.notVariants &&
-                require("./src/variants/notVariants.cjs"),
+                require("./src/variants/notVariants.js"),
         ],
     }
 }

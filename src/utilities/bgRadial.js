@@ -1,9 +1,7 @@
-const plugin = require("tailwindcss/plugin")
-const {
-    default: flattenColorPalette,
-} = require("tailwindcss/lib/util/flattenColorPalette")
+import plugin from "tailwindcss/plugin"
+import { flattenColorPalette } from "tailwindcss/lib/util/flattenColorPalette"
 
-module.exports = plugin(({ matchUtilities, theme }) => {
+export default plugin(({ matchUtilities, theme }) => {
     matchUtilities(
         {
             "bg-radial": value => ({

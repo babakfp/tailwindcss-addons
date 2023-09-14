@@ -1,6 +1,6 @@
-const plugin = require("tailwindcss/plugin")
+import plugin from "tailwindcss/plugin"
 
-module.exports = {
+export default {
     presets: [],
     plugins: [
         plugin(({ addUtilities }) => {
