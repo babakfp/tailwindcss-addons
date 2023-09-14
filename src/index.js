@@ -45,24 +45,24 @@ export default (userConfig = {}) => {
 
     return {
         presets: [
-            config.presets.flexGrid && flexGrid,
-            config.presets.fontWeightRegular && fontWeightRegular,
-            config.presets.moreDefaultValues && moreDefaultValues,
-            config.presets.screenSizeFix && screenSizeFix,
+            ...(config.presets.flexGrid ? [ flexGrid ] : []),
+            ...(config.presets.fontWeightRegular ? [ fontWeightRegular ] : []),
+            ...(config.presets.moreDefaultValues ? [ moreDefaultValues ] : []),
+            ...(config.presets.screenSizeFix ? [ screenSizeFix ] : []),
         ],
         plugins: [
-            config.utilities.bgGrid && bgGrid,
-            config.utilities.bgRadial && bgRadial,
-            config.utilities.dir && dir,
-            config.utilities.drag && drag,
-            config.utilities.flip && flip,
-            config.utilities.hideShow && hideShow,
-            config.utilities.inputResets && inputResets,
-            config.utilities.insetCenter && insetCenter,
-            config.utilities.overflowUnset && overflowUnset,
-            config.utilities.tapHighlight && tapHighlight,
+            ...(config.utilities.bgGrid ? [ bgGrid ] : []),
+            ...(config.utilities.bgRadial ? [ bgRadial ] : []),
+            ...(config.utilities.dir ? [ dir ] : []),
+            ...(config.utilities.drag ? [ drag ] : []),
+            ...(config.utilities.flip ? [ flip ] : []),
+            ...(config.utilities.hideShow ? [ hideShow ] : []),
+            ...(config.utilities.inputResets ? [ inputResets ] : []),
+            ...(config.utilities.insetCenter ? [ insetCenter ] : []),
+            ...(config.utilities.overflowUnset ? [ overflowUnset ] : []),
+            ...(config.utilities.tapHighlight ? [ tapHighlight ] : []),
 
-            config.variants.notVariants && notVariants,
+            ...(config.variants.notVariants ? [ notVariants ] : []),
         ],
     }
 }
