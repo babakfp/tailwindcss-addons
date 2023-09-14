@@ -1,13 +1,21 @@
+import { fontWeight } from 'tailwindcss/defaultTheme.js'
+
 export default {
-    fontWeight: {
-        thin: "100",
-        extralight: "200",
-        light: "300",
-        regular: "400", // Replacing `normal` with `regular`
-        medium: "500",
-        semibold: "600",
-        bold: "700",
-        extrabold: "800",
-        black: "900",
-    }
+    fontWeight: renameKey(fontWeight, {
+        normal: 'regular',
+    })
+}
+
+/**
+ * Renames the keys of an object type.
+ * @arg {object} source - The object that you want to change it's key name
+ * @arg {object} guide - { OLD_KEY_NAME: NEW_KEY_NAME }
+ * @return {object}
+ */
+function renameKey(source, guide) {
+    // [ [ KEY, VALUE ] ]
+    source = Object.entries(source)
+    source = source.map(([ key, value ]) => [guide[key] || key, value])
+    source = Object.fromEntries(source)
+    return source
 }
