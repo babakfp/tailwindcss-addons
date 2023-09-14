@@ -1,4 +1,5 @@
 module.exports = {
+    presets: [],
     theme: {
         extend: {
             height: { screen: "var(--tw-screen-h)" },

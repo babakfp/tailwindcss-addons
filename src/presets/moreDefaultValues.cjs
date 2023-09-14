@@ -1,4 +1,5 @@
 module.exports = {
+    presets: [],
     theme: {
         extend: {
             spacing: generateSpacing([

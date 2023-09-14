@@ -1,4 +1,5 @@
 module.exports = {
+    presets: [],
     theme: {
         fontWeight: {
             thin: "100",
