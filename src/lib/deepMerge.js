@@ -5,7 +5,7 @@
  * @arg {object} source - The source object to merge from.
  * @return {object} - The merged object.
  */
-export default (target, source) => {
+export default function deepMerge(target, source) {
     for (const key of Object.keys(source)) {
         if (source[key] instanceof Object) {
             // If the property is an object, recursively merge it with the corresponding property in the target object.
