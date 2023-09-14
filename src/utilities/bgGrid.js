@@ -12,7 +12,7 @@ export default plugin(({ matchUtilities, theme }) => {
 					linear-gradient(to bottom, ${value} var(--tw-bg-grid-border-w, 1px), transparent 0px)`,
             }),
         },
-        { values: flattenColorPalette(theme("colors")), type: "color" }
+        { values: flattenColorPalette(theme("colors")), type: "color" },
     )
     matchUtilities(
         {
@@ -20,7 +20,7 @@ export default plugin(({ matchUtilities, theme }) => {
                 "--tw-bg-grid-size": value,
             }),
         },
-        { values: theme("spacing") }
+        { values: theme("spacing") },
     )
     matchUtilities(
         {
@@ -28,7 +28,7 @@ export default plugin(({ matchUtilities, theme }) => {
                 "--tw-bg-grid-w": value,
             }),
         },
-        { values: theme("spacing") }
+        { values: theme("spacing") },
     )
     matchUtilities(
         {
@@ -36,7 +36,7 @@ export default plugin(({ matchUtilities, theme }) => {
                 "--tw-bg-grid-h": value,
             }),
         },
-        { values: theme("spacing") }
+        { values: theme("spacing") },
     )
     matchUtilities(
         {
@@ -44,6 +44,6 @@ export default plugin(({ matchUtilities, theme }) => {
                 "--tw-bg-grid-border-w": value,
             }),
         },
-        { values: theme("borderWidth") }
+        { values: theme("borderWidth") },
     )
 })

@@ -17,6 +17,6 @@ export default plugin(({ matchVariant }) => {
                 "first-of-type": "first-of-type",
                 "last-of-type": "last-of-type",
             },
-        }
+        },
     )
 })

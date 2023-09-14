@@ -11,6 +11,6 @@ export default plugin(({ matchUtilities, theme }) => {
         {
             values: flattenColorPalette(theme("colors")),
             type: "color",
-        }
+        },
     )
 })

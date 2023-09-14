@@ -10,7 +10,7 @@ export default plugin(({ matchUtilities, theme }) => {
                 "background-image": `radial-gradient(circle, ${value} var(--tw-bg-radial-circle-size, 1px), transparent 0px)`,
             }),
         },
-        { values: flattenColorPalette(theme("colors")), type: "color" }
+        { values: flattenColorPalette(theme("colors")), type: "color" },
     )
     matchUtilities(
         {
@@ -18,7 +18,7 @@ export default plugin(({ matchUtilities, theme }) => {
                 "--tw-bg-radial-size": value,
             }),
         },
-        { values: theme("spacing") }
+        { values: theme("spacing") },
     )
     matchUtilities(
         {
@@ -26,7 +26,7 @@ export default plugin(({ matchUtilities, theme }) => {
                 "--tw-bg-radial-w": value,
             }),
         },
-        { values: theme("spacing") }
+        { values: theme("spacing") },
     )
     matchUtilities(
         {
@@ -34,7 +34,7 @@ export default plugin(({ matchUtilities, theme }) => {
                 "--tw-bg-radial-h": value,
             }),
         },
-        { values: theme("spacing") }
+        { values: theme("spacing") },
     )
     matchUtilities(
         {
@@ -42,6 +42,6 @@ export default plugin(({ matchUtilities, theme }) => {
                 "--tw-bg-radial-circle-size": value,
             }),
         },
-        { values: theme("borderWidth") }
+        { values: theme("borderWidth") },
     )
 })

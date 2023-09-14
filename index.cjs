@@ -24,7 +24,7 @@ const defaultConfig = {
     },
 }
 
-export default(userConfig = {}) => {
+export default (userConfig = {}) => {
     const config = deepMerge(defaultConfig, userConfig)
 
     return {
@@ -40,13 +40,11 @@ export default(userConfig = {}) => {
         ],
         plugins: [
             config.utilities.bgGrid && require("./src/utilities/bgGrid.js"),
-            config.utilities.bgRadial &&
-                require("./src/utilities/bgRadial.js"),
+            config.utilities.bgRadial && require("./src/utilities/bgRadial.js"),
             config.utilities.dir && require("./src/utilities/dir.js"),
             config.utilities.drag && require("./src/utilities/drag.js"),
             config.utilities.flip && require("./src/utilities/flip.js"),
-            config.utilities.hideShow &&
-                require("./src/utilities/hideShow.js"),
+            config.utilities.hideShow && require("./src/utilities/hideShow.js"),
             config.utilities.inputResets &&
                 require("./src/utilities/inputResets.js"),
             config.utilities.insetCenter &&
