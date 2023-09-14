@@ -1,4 +1,4 @@
-import deepMerge from "./src/lib/deepMerge.js"
+import deepMerge from "./lib/deepMerge.js"
 
 const defaultConfig = {
     presets: {
@@ -29,33 +29,32 @@ export default (userConfig = {}) => {
 
     return {
         presets: [
-            config.presets.flexGrid && import("./src/presets/flexGrid.js"),
+            config.presets.flexGrid && import("./presets/flexGrid.js"),
             // TODO: In TailwindCSS v3.3.2 there is a bug: https://github.com/tailwindlabs/tailwindcss/issues/11428
             config.presets.fontWeightRegular &&
-                import("./src/presets/fontWeightRegular.js"),
+                import("./presets/fontWeightRegular.js"),
             config.presets.moreDefaultValues &&
-                import("./src/presets/moreDefaultValues.js"),
+                import("./presets/moreDefaultValues.js"),
             config.presets.screenSizeFix &&
-                import("./src/presets/screenSizeFix.js"),
+                import("./presets/screenSizeFix.js"),
         ],
         plugins: [
-            config.utilities.bgGrid && import("./src/utilities/bgGrid.js"),
-            config.utilities.bgRadial && import("./src/utilities/bgRadial.js"),
-            config.utilities.dir && import("./src/utilities/dir.js"),
-            config.utilities.drag && import("./src/utilities/drag.js"),
-            config.utilities.flip && import("./src/utilities/flip.js"),
-            config.utilities.hideShow && import("./src/utilities/hideShow.js"),
+            config.utilities.bgGrid && import("./utilities/bgGrid.js"),
+            config.utilities.bgRadial && import("./utilities/bgRadial.js"),
+            config.utilities.dir && import("./utilities/dir.js"),
+            config.utilities.drag && import("./utilities/drag.js"),
+            config.utilities.flip && import("./utilities/flip.js"),
+            config.utilities.hideShow && import("./utilities/hideShow.js"),
             config.utilities.inputResets &&
-                import("./src/utilities/inputResets.js"),
+                import("./utilities/inputResets.js"),
             config.utilities.insetCenter &&
-                import("./src/utilities/insetCenter.js"),
+                import("./utilities/insetCenter.js"),
             config.utilities.overflowUnset &&
-                import("./src/utilities/overflowUnset.js"),
+                import("./utilities/overflowUnset.js"),
             config.utilities.tapHighlight &&
-                import("./src/utilities/tapHighlight.js"),
+                import("./utilities/tapHighlight.js"),
 
-            config.variants.notVariants &&
-                import("./src/variants/notVariants.js"),
+            config.variants.notVariants && import("./variants/notVariants.js"),
         ],
     }
 }
