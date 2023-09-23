@@ -1,5 +1,3 @@
-import plugin from "tailwindcss/plugin"
-
 export const plugin = ({ addUtilities }) => {
     addUtilities({
         ".jc-start": { "justify-content": "flex-start" },

@@ -1,5 +1,3 @@
-import plugin from "tailwindcss/plugin"
-
 export const extend = {
     height: { screen: "var(--tw-screen-h)" },
     maxHeight: { screen: "var(--tw-screen-h)" },
