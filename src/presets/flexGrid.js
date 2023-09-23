@@ -1,6 +1,6 @@
-import { plugin as createPlugin } from "tailwindcss/plugin"
+import plugin from "tailwindcss/plugin"
 
-export const plugin = createPlugin(({ addUtilities }) => {
+export const plugin = ({ addUtilities }) => {
     addUtilities({
         ".jc-start": { "justify-content": "flex-start" },
         ".jc-end": { "justify-content": "flex-end" },
@@ -59,7 +59,7 @@ export const plugin = createPlugin(({ addUtilities }) => {
         ".ps-center": { "place-self": "center" },
         ".ps-stretch": { "place-self": "stretch" },
     })
-})
+}
 
 export const corePlugins = {
     placeContent: false,
