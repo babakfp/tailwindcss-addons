@@ -1,6 +1,6 @@
-import plugin from "tailwindcss/plugin"
+import { plugin as createPlugin } from "tailwindcss/plugin"
 
-export const plugin = plugin(({ addUtilities }) => {
+export const plugin = createPlugin(({ addUtilities }) => {
     addUtilities({
         ".jc-start": { "justify-content": "flex-start" },
         ".jc-end": { "justify-content": "flex-end" },
