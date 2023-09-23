@@ -1,9 +1,9 @@
 /**
  * Deeply merges two objects, combining their properties recursively.
  *
- * @arg {object} target - The target object to merge into.
- * @arg {object} source - The source object to merge from.
- * @return {object} - The merged object.
+ * @param {object} target - The target object to merge into.
+ * @param {object} source - The source object to merge from.
+ * @returns {object} - The merged object.
  */
 export default function deepMerge(target, source) {
     for (const key of Object.keys(source)) {

@@ -8,9 +8,9 @@ export default {
 
 /**
  * Renames the keys of an object type.
- * @arg {object} source - The object that you want to change it's key name
- * @arg {object} guide - { OLD_KEY_NAME: NEW_KEY_NAME }
- * @return {object}
+ * @param {object} source - The object that you want to change it's key name
+ * @param {object} guide - { OLD_KEY_NAME: NEW_KEY_NAME }
+ * @returns {object}
  */
 function renameKey(source, guide) {
     // [ [ KEY, VALUE ] ]
