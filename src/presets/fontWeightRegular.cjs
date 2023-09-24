@@ -1,4 +1,4 @@
-const { fontWeight } = require("tailwindcss/defaultTheme.cjs")
+const { fontWeight } = require("tailwindcss/defaultTheme")
 
 module.exports = {
     fontWeight: renameKey(fontWeight, {
