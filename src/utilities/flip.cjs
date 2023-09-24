@@ -1,7 +1,7 @@
-import plugin from "tailwindcss/plugin"
-import cssTransformValue from "../lib/cssTransformValue.js"
+const plugin = require("tailwindcss/plugin")
+const cssTransformValue = require("../lib/cssTransformValue.cjs")
 
-export default plugin(({ addUtilities }) => {
+module.exports = plugin(({ addUtilities }) => {
     addUtilities({
         ".flip": {
             "--tw-scale-x": "-1",

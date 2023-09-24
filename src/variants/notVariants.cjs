@@ -1,6 +1,6 @@
-import plugin from "tailwindcss/plugin"
+const plugin = require("tailwindcss/plugin")
 
-export default plugin(({ matchVariant }) => {
+module.exports = plugin(({ matchVariant }) => {
     matchVariant(
         "not",
         value => {

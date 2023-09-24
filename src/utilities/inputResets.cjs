@@ -1,6 +1,6 @@
-import plugin from "tailwindcss/plugin"
+const plugin = require("tailwindcss/plugin")
 
-export default plugin(({ addUtilities }) => {
+module.exports = plugin(({ addUtilities }) => {
     addUtilities({
         ".reset-number-input": {
             "&::-webkit-outer-spin-button, &::-webkit-inner-spin-button": {

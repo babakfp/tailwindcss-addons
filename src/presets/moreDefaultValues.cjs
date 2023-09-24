@@ -1,4 +1,4 @@
-export default {
+module.exports = {
     spacing: generateSpacing([
         4.5, 5.5, 6.5, 7.5, 8.5, 9.5, 13, 15, 17, 18, 19, 21, 22, 23,
     ]),

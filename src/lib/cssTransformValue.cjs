@@ -1,4 +1,4 @@
-export default [
+module.exports = [
     "translate(var(--tw-translate-x), var(--tw-translate-y))",
     "rotate(var(--tw-rotate))",
     "skewX(var(--tw-skew-x))",
