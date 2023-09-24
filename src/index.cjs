@@ -27,6 +27,7 @@ const defaultConfig = {
 module.exports = (userConfig = {}) => {
     const config = deepMerge(defaultConfig, userConfig)
 
+    // prettier-ignore
     return {
         theme: {
             ...(config.presets.fontWeightRegular ? require("./presets/fontWeightRegular.cjs") : []),
