@@ -2,8 +2,8 @@ const { fontWeight } = require("tailwindcss/defaultTheme.cjs")
 
 module.exports = {
     fontWeight: renameKey(fontWeight, {
-        normal: 'regular',
-    })
+        normal: "regular",
+    }),
 }
 
 /**
@@ -15,7 +15,7 @@ module.exports = {
 function renameKey(source, guide) {
     // [ [ KEY, VALUE ] ]
     source = Object.entries(source)
-    source = source.map(([ key, value ]) => [guide[key] || key, value])
+    source = source.map(([key, value]) => [guide[key] || key, value])
     source = Object.fromEntries(source)
     return source
 }
