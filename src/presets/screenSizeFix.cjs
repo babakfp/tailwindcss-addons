@@ -2,8 +2,8 @@ const plugin = require("tailwindcss/plugin")
 
 const extend = {
     height: { screen: "var(--tw-screen-h)" },
-    maxHeight: { screen: "var(--tw-screen-h)" },
-    minHeight: { screen: "var(--tw-screen-h)" },
+    // maxHeight: { screen: "var(--tw-screen-h)" },
+    // minHeight: { screen: "var(--tw-screen-h)" },
     width: { screen: "var(--tw-screen-w)" },
 }
 

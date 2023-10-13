@@ -34,6 +34,17 @@ module.exports = (userConfig = {}) => {
             extend: {
                 ...(config.presets.moreDefaultValues ? require("./presets/moreDefaultValues.cjs") : {}),
                 ...(config.presets.screenSizeFix ? require("./presets/screenSizeFix.cjs").extend : {}),
+
+                ...(config.presets.moreDefaultValues || config.presets.screenSizeFix ? {
+                    minHeight: ({ theme }) => ({
+                        ...(config.presets.moreDefaultValues ? theme("spacing") : {}),
+                        ...(config.presets.screenSizeFix ? { screen: "var(--tw-screen-h)" } : {}),
+                    }),
+                    maxHeight: ({ theme }) => ({
+                        ...(config.presets.moreDefaultValues ? theme("spacing") : {}),
+                        ...(config.presets.screenSizeFix ? { screen: "var(--tw-screen-h)" } : {}),
+                    }),
+                } : {}),
             },
         },
         plugins: [
