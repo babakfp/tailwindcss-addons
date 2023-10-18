@@ -41,9 +41,8 @@ module.exports = {
 
 /**
  * Converts a list of numbers to rem size values.
- *
- * @param {number[]} values - A list of numbers to convert to rem size.
- * @returns {Record<string, string>} - An object mapping the original values to their rem size equivalents.
+ * @param {number[]} values A list of numbers to convert to rem size.
+ * @returns {Record<string, string>} An object mapping the original values to their rem size equivalents.
  */
 function generateSpacing(values) {
     const spacing = {}
