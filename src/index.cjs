@@ -6,7 +6,7 @@ const defaultConfig = {
         flexGrid: false,
         fontWeightRegular: false,
         moreDefaultValues: true,
-        screenSizeFix: false,
+        screenToDynamicScreen: false,
     },
     utilities: {
         bgGrid: true,
@@ -38,23 +38,23 @@ module.exports = (userConfig = {}) => {
             ...(config.presets.fontWeightRegular ? require("./presets/fontWeightRegular.cjs") : []),
             extend: {
                 ...(config.presets.moreDefaultValues ? require("./presets/moreDefaultValues.cjs") : {}),
-                ...(config.presets.screenSizeFix ? require("./presets/screenSizeFix.cjs").extend : {}),
+                ...(config.presets.screenToDynamicScreen ? require("./presets/screenToDynamicScreen.cjs").extend : {}),
 
-                ...(config.presets.moreDefaultValues || config.presets.screenSizeFix ? {
+                ...(config.presets.moreDefaultValues || config.presets.screenToDynamicScreen ? {
                     minHeight: ({ theme }) => ({
                         ...(config.presets.moreDefaultValues ? theme("spacing") : {}),
-                        ...(config.presets.screenSizeFix ? { screen: "var(--tw-screen-h)" } : {}),
+                        ...(config.presets.screenToDynamicScreen ? { screen: "var(--tw-screen-h)" } : {}),
                     }),
                     maxHeight: ({ theme }) => ({
                         ...(config.presets.moreDefaultValues ? theme("spacing") : {}),
-                        ...(config.presets.screenSizeFix ? { screen: "var(--tw-screen-h)" } : {}),
+                        ...(config.presets.screenToDynamicScreen ? { screen: "var(--tw-screen-h)" } : {}),
                     }),
                 } : {}),
             },
         },
         plugins: [
             ...(config.presets.flexGrid ? [ require("./presets/flexGrid.cjs").plugin ] : []),
-            ...(config.presets.screenSizeFix ? [ require("./presets/screenSizeFix.cjs").plugin ] : []),
+            ...(config.presets.screenToDynamicScreen ? [ require("./presets/screenToDynamicScreen.cjs").plugin ] : []),
 
             ...(config.utilities.bgGrid ? [ require("./utilities/bgGrid.cjs") ] : []),
             ...(config.utilities.bgRadial ? [ require("./utilities/bgRadial.cjs") ] : []),

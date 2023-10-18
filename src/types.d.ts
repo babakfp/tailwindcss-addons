@@ -7,7 +7,7 @@ export type Config = {
         /** @default true */
         moreDefaultValues: boolean
         /** @default false */
-        screenSizeFix: boolean
+        screenToDynamicScreen: boolean
     }
     utilities: {
         /** @default true */
