@@ -1,5 +1,6 @@
 const deepMerge = require("./lib/deepMerge.cjs")
 
+/** @type {import("./types.d.ts").Config} */
 const defaultConfig = {
     presets: {
         flexGrid: false,
@@ -24,7 +25,11 @@ const defaultConfig = {
     },
 }
 
+/**
+ * @param {import("./types.d.ts").Config} userConfig
+ */
 module.exports = (userConfig = {}) => {
+    /** @type {import("./types.d.ts").Config} */
     const config = deepMerge(defaultConfig, userConfig)
 
     // prettier-ignore
