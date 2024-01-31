@@ -1,4 +1,4 @@
-A Tailwindcss plugin that adds extra utilities and more.
+A TailwindCSS plugin that adds extra utilities and more.
 
 -   [Documentation](https://babakfp.ir/docs/tailwindcss-addons)
 -   [CHANGELOG](https://babakfp.ir/docs/tailwindcss-addons/changelog)
