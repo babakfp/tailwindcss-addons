@@ -1,6 +1,6 @@
 {
     "name": "tailwindcss-addons",
-    "description": "A Tailwindcss plugin that adds extra utilities and more.",
+    "description": "A TailwindCSS plugin that adds extra utilities and more.",
     "version": "1.7.0",
     "license": "MIT",
     "main": "src/index.cjs",
