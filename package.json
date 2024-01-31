@@ -7,7 +7,7 @@
     "repository": "github:babakfp/tailwindcss-addons",
     "homepage": "https://babakfp.ir/docs/tailwindcss-addons",
     "scripts": {
-        "format": "prettier --write ."
+        "format": "prettier -w ."
     },
     "peerDependencies": {
         "tailwindcss": "3.x"
