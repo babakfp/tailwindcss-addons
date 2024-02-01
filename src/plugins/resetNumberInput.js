@@ -1,6 +1,7 @@
-const plugin = require("tailwindcss/plugin")
+import plugin from "tailwindcss/plugin"
 
-module.exports = plugin(({ addUtilities }) => {
+/** [Docs](https://babakfp.ir/docs/tailwindcss-addons/reset-number-input) */
+export default plugin(({ addUtilities }) => {
     addUtilities({
         ".reset-number-input": {
             "&::-webkit-outer-spin-button, &::-webkit-inner-spin-button": {
@@ -12,11 +13,6 @@ module.exports = plugin(({ addUtilities }) => {
                 "-moz-appearance": "textfield",
             },
         },
-        ".reset-search-input": {
-            "&::-webkit-search-decoration, &::-webkit-search-cancel-button, &::-webkit-search-results-button, &::-webkit-search-results-decoration":
-                {
-                    "-webkit-appearance": "none",
-                },
-        },
     })
+    // TODO:FEATURE: Add an option named `base: boolean`, if `true`, add `reset-number-input` to number inputs in base styles.
 })

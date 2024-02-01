@@ -1,6 +1,7 @@
-const plugin = require("tailwindcss/plugin")
+import plugin from "tailwindcss/plugin"
 
-module.exports = plugin(({ addUtilities }) => {
+/** [Docs](https://babakfp.ir/docs/tailwindcss-addons/drag) */
+export default plugin(({ addUtilities }) => {
     addUtilities({
         ".drag-none": {
             "-webkit-user-drag": "none",
