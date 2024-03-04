@@ -8,10 +8,6 @@ export default plugin(() => {}, {
             spacing: spacing([
                 4.5, 5.5, 6.5, 7.5, 8.5, 9.5, 13, 15, 17, 18, 19, 21, 22, 23,
             ]),
-            minWidth: ({ theme }) => theme("spacing"),
-            maxWidth: ({ theme }) => theme("spacing"),
-            minHeight: ({ theme }) => theme("spacing"),
-            maxHeight: ({ theme }) => theme("spacing"),
             zIndex: {
                 1: "1",
                 2: "2",
