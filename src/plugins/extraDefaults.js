@@ -1,11 +1,11 @@
 import plugin from "tailwindcss/plugin.js"
-import { spacing } from "../lib/spacing.js"
+import { sizeToRem } from "../lib/sizeToRem.js"
 
 /** [Docs](https://babakfp.ir/docs/tailwindcss-addons/more-default-values) */
 export default plugin(() => {}, {
     theme: {
         extend: {
-            spacing: spacing([
+            spacing: sizeToRem([
                 4.5, 5.5, 6.5, 7.5, 8.5, 9.5, 13, 15, 17, 18, 19, 21, 22, 23,
             ]),
             zIndex: {
