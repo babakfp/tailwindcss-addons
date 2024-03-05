@@ -1,4 +1,4 @@
-import _flattenColorPalette from "tailwindcss/lib/util/flattenColorPalette"
+import _flattenColorPalette from "tailwindcss/lib/util/flattenColorPalette.js"
 
 /**
  * @param {Record<string, string>} colors

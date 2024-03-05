@@ -1,5 +1,5 @@
-import plugin from "tailwindcss/plugin"
-import { spacing } from "../lib/spacing"
+import plugin from "tailwindcss/plugin.js"
+import { spacing } from "../lib/spacing.js"
 
 /** [Docs](https://babakfp.ir/docs/tailwindcss-addons/more-default-values) */
 export default plugin(() => {}, {

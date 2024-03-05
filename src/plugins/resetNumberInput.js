@@ -1,4 +1,4 @@
-import plugin from "tailwindcss/plugin"
+import plugin from "tailwindcss/plugin.js"
 
 /** [Docs](https://babakfp.ir/docs/tailwindcss-addons/reset-number-input) */
 export default plugin(({ addUtilities }) => {

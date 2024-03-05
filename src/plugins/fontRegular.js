@@ -1,4 +1,4 @@
-import plugin from "tailwindcss/plugin"
+import plugin from "tailwindcss/plugin.js"
 
 /** [Docs](https://babakfp.ir/docs/tailwindcss-addons/font-weight-regular) */
 export default plugin(() => {}, {
