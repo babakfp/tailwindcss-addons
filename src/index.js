@@ -52,8 +52,20 @@ export default options => [
     ...(options?.insetCenter || true ? [insetCenter] : []),
     ...(options?.not || true ? [not] : []),
     ...(options?.overflowUnset || true ? [overflowUnset] : []),
-    ...(options?.resetNumberInput || true ? [resetNumberInput] : []),
-    ...(options?.resetSearchInput || true ? [resetSearchInput] : []),
+    ...(options?.resetNumberInput || true
+        ? [
+              typeof options?.resetNumberInput === "object"
+                  ? resetNumberInput(options?.resetNumberInput)
+                  : resetNumberInput(),
+          ]
+        : []),
+    ...(options?.resetSearchInput || true
+        ? [
+              typeof options?.resetSearchInput === "object"
+                  ? resetSearchInput(options?.resetSearchInput)
+                  : resetSearchInput(),
+          ]
+        : []),
     ...(options?.tap || true ? [tap] : []),
 ]
 
@@ -73,7 +85,7 @@ export default options => [
  * @property {boolean} [insetCenter] Default: `true`
  * @property {boolean} [not] Default: `true`
  * @property {boolean} [overflowUnset] Default: `true`
- * @property {boolean} [resetNumberInput] Default: `true`
- * @property {boolean} [resetSearchInput] Default: `true`
+ * @property {boolean | { base?: boolean }} [resetNumberInput] Default: `true`
+ * @property {boolean | { base?: boolean }} [resetSearchInput] Default: `true`
  * @property {boolean} [tap] Default: `true`
  */
