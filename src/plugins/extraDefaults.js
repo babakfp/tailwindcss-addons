@@ -34,9 +34,9 @@ export default plugin(() => {}, {
                 "2xs": ["0.625rem", { lineHeight: "1" }],
             },
             letterSpacing: {
-                "widest-2": ".25em",
-                "widest-3": ".5em",
-                "widest-4": ".75em",
+                "widest-2": "0.25em",
+                "widest-3": "0.5em",
+                "widest-4": "0.75em",
                 "widest-5": "1em",
             },
         },
