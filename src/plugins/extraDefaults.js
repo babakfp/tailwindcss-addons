@@ -1,7 +1,7 @@
 import plugin from "tailwindcss/plugin.js"
 import { sizeToRem } from "../lib/sizeToRem.js"
 
-/** [Docs](https://babakfp.ir/docs/tailwindcss-addons/more-default-values) */
+/** [Docs](https://babakfp.ir/docs/tailwindcss-addons/extra-defaults) */
 export default plugin(() => {}, {
     theme: {
         extend: {

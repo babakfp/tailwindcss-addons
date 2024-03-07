@@ -1,6 +1,6 @@
 import plugin from "tailwindcss/plugin.js"
 
-/** [Docs](https://babakfp.ir/docs/tailwindcss-addons/font-weight-regular) */
+/** [Docs](https://babakfp.ir/docs/tailwindcss-addons/font-regular) */
 export default plugin(() => {}, {
     theme: {
         fontWeight: {
