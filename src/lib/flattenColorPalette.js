@@ -1,7 +1,12 @@
 import _flattenColorPalette from "tailwindcss/lib/util/flattenColorPalette.js"
 
 /**
- * @param {Record<string, string>} colors
+ * @typedef {Record<string, string | RecursiveRecordOfString>} RecursiveRecordOfString
+ */
+
+/**
+ * @param {RecursiveStringRecord} colors
+ * @returns {Record<string, string>}
  */
 export const flattenColorPalette = colors => {
     return _flattenColorPalette(colors)
