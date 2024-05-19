@@ -1,9 +1,9 @@
 {
     "name": "tailwindcss-addons",
     "description": "A TailwindCSS plugin that adds extra utilities and more.",
-    "version": "1.9.0",
+    "version": "1.9.1",
     "license": "MIT",
-    "main": "./src/index.js",
+    "main": "./dist/index.js",
     "repository": "github:babakfp/tailwindcss-addons",
     "homepage": "https://babakfp.ir/docs/tailwindcss-addons",
     "scripts": {
@@ -23,7 +23,7 @@
         "tailwindcss"
     ],
     "files": [
-        "/src/"
+        "/dist/"
     ],
     "type": "module"
 }
