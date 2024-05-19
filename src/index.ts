@@ -39,7 +39,7 @@ export {
     tap,
 }
 
-export default (options: Options) => [
+export default (options?: Options) => [
     ...(options?.bgGrid || true ? [bgGrid] : []),
     ...(options?.bgRadial || true ? [bgRadial] : []),
     ...(options?.dir || true ? [dir] : []),
