@@ -1,6 +1,6 @@
 import plugin from "tailwindcss/plugin.js"
 
-/** [Docs](https://babakfp.ir/docs/tailwindcss-addons/flex-grid) */
+/** [Documenation](https://babakfp.ir/docs/tailwindcss-addons/flex-grid) */
 export default plugin(
     ({ addUtilities }) => {
         addUtilities({

@@ -1,6 +1,6 @@
 import plugin from "tailwindcss/plugin.js"
 
-/** [Docs](https://babakfp.ir/docs/tailwindcss-addons/not) */
+/** [Documenation](https://babakfp.ir/docs/tailwindcss-addons/not) */
 export default plugin(({ matchVariant }) => {
     matchVariant(
         "not",

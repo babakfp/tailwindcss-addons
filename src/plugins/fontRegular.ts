@@ -6,7 +6,7 @@ interface CustomFontWeight
     regular: string
 }
 
-/** [Docs](https://babakfp.ir/docs/tailwindcss-addons/font-regular) */
+/** [Documenation](https://babakfp.ir/docs/tailwindcss-addons/font-regular) */
 export default plugin(() => {}, {
     theme: {
         fontWeight: {

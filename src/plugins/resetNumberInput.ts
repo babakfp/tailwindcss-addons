@@ -1,6 +1,6 @@
 import plugin from "tailwindcss/plugin.js"
 
-/** [Docs](https://babakfp.ir/docs/tailwindcss-addons/reset-number-input) */
+/** [Documenation](https://babakfp.ir/docs/tailwindcss-addons/reset-number-input) */
 export default (options?: { base?: boolean }) =>
     plugin(({ addBase, addUtilities }) => {
         addUtilities({

@@ -75,63 +75,123 @@ export default (options?: Options) => [
 ]
 
 type Options = {
-    /** @default true */
+    /**
+     * [Documenation](https://babakfp.ir/docs/tailwindcss-addons/bg-grid)
+     * @default true
+     */
     bgGrid?: boolean
 
-    /** @default true */
+    /**
+     * [Documenation](https://babakfp.ir/docs/tailwindcss-addons/bg-radial)
+     * @default true
+     */
     bgRadial?: boolean
 
-    /** @default true */
+    /**
+     * [Documenation](https://babakfp.ir/docs/tailwindcss-addons/dir)
+     * @default true
+     */
     dir?: boolean
 
-    /** @default true */
+    /**
+     * [Documenation](https://babakfp.ir/docs/tailwindcss-addons/drag)
+     * @default true
+     */
     drag?: boolean
 
-    /** @default true */
+    /**
+     * [Documenation](https://babakfp.ir/docs/tailwindcss-addons/dynamic-screen)
+     * @default true
+     */
     dynamicScreen?: boolean
 
-    /** @default true */
+    /**
+     * [Documenation](https://babakfp.ir/docs/tailwindcss-addons/extra-defaults)
+     * @default true
+     */
     extraDefaults?: boolean
 
-    /** @default false */
+    /**
+     * [Documenation](https://babakfp.ir/docs/tailwindcss-addons/flex-grid)
+     * @default false
+     */
     flexGrid?: boolean
 
-    /** @default true */
+    /**
+     * [Documenation](https://babakfp.ir/docs/tailwindcss-addons/flip)
+     * @default true
+     */
     flip?: boolean
 
-    /** @default false */
+    /**
+     * [Documenation](https://babakfp.ir/docs/tailwindcss-addons/font-regular)
+     * @default false
+     */
     fontRegular?: boolean
 
-    /** @default true */
+    /**
+     * [Documenation](https://babakfp.ir/docs/tailwindcss-addons/hide-show)
+     * @default true
+     */
     hideShow?: boolean
 
-    /** @default true */
+    /**
+     * [Documenation](https://babakfp.ir/docs/tailwindcss-addons/hocus)
+     * @default true
+     */
     hocus?: boolean
 
-    /** @default true */
+    /**
+     * [Documenation](https://babakfp.ir/docs/tailwindcss-addons/inset-center)
+     * @default true
+     */
     insetCenter?: boolean
 
-    /** @default true */
+    /**
+     * [Documenation](https://babakfp.ir/docs/tailwindcss-addons/not)
+     * @default true
+     */
     not?: boolean
 
-    /** @default true */
+    /**
+     * [Documenation](https://babakfp.ir/docs/tailwindcss-addons/overflow-unset)
+     * @default true
+     */
     overflowUnset?: boolean
 
-    /** @default true */
+    /**
+     * [Documenation](https://babakfp.ir/docs/tailwindcss-addons/reset-number-input)
+     * @default true
+     */
     resetNumberInput?: boolean | { base?: boolean }
 
-    /** @default true */
+    /**
+     * [Documenation](https://babakfp.ir/docs/tailwindcss-addons/reset-search-input)
+     * @default true
+     */
     resetSearchInput?: boolean | { base?: boolean }
 
-    /** @default true */
+    /**
+     * [Documenation](https://babakfp.ir/docs/tailwindcss-addons/supports-focus)
+     * @default true
+     */
     supportsFocus?: boolean
 
-    /** @default true */
+    /**
+     * [Documenation](https://babakfp.ir/docs/tailwindcss-addons/supports-hocus)
+     * @default true
+     */
     supportsHocus?: boolean
 
-    /** @default true */
+    /**
+     * [Documenation](https://babakfp.ir/docs/tailwindcss-addons/supports-hover)
+     * @default true
+     */
     supportsHover?: boolean
 
-    /** @default true */
+    /**
+     * [Documenation](https://babakfp.ir/docs/tailwindcss-addons/tap)
+     * @default true
+     */
     tap?: boolean
 }

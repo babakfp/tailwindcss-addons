@@ -1,6 +1,6 @@
 import plugin from "tailwindcss/plugin.js"
 
-/** [Docs](https://babakfp.ir/docs/tailwindcss-addons/hide-show) */
+/** [Documenation](https://babakfp.ir/docs/tailwindcss-addons/hide-show) */
 export default plugin(({ addUtilities }) => {
     addUtilities({
         ".hide": {

@@ -1,5 +1,6 @@
 import plugin from "tailwindcss/plugin.js"
 
+/** [Documenation](https://babakfp.ir/docs/tailwindcss-addons/supports-hocus) */
 export default plugin(({ addVariant }) => {
     addVariant("supports-hocus", "@media (hover: hover) and (focus: focus)")
     addVariant(

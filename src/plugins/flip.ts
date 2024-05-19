@@ -1,6 +1,6 @@
 import plugin from "tailwindcss/plugin.js"
 
-/** [Docs](https://babakfp.ir/docs/tailwindcss-addons/flip) */
+/** [Documenation](https://babakfp.ir/docs/tailwindcss-addons/flip) */
 export default plugin(({ addUtilities }) => {
     addUtilities({
         ".flip": {

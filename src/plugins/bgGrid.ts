@@ -1,7 +1,7 @@
 import plugin from "tailwindcss/plugin.js"
 import { flattenColorPalette } from "../lib/flattenColorPalette.js"
 
-/** [Docs](https://babakfp.ir/docs/tailwindcss-addons/bg-grid) */
+/** [Documenation](https://babakfp.ir/docs/tailwindcss-addons/bg-grid) */
 export default plugin(({ matchUtilities, theme }) => {
     matchUtilities(
         {

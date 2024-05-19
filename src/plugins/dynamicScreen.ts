@@ -1,6 +1,6 @@
 import plugin from "tailwindcss/plugin.js"
 
-/** [Docs](https://babakfp.ir/docs/tailwindcss-addons/dynamic-screen) */
+/** [Documenation](https://babakfp.ir/docs/tailwindcss-addons/dynamic-screen) */
 export default plugin(
     ({ addBase }) => {
         addBase({

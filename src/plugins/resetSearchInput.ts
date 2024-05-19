@@ -1,6 +1,6 @@
 import plugin from "tailwindcss/plugin.js"
 
-/** [Docs](https://babakfp.ir/docs/tailwindcss-addons/reset-search-input) */
+/** [Documenation](https://babakfp.ir/docs/tailwindcss-addons/reset-search-input) */
 export default (options?: { base?: boolean }) =>
     plugin(({ addBase, addUtilities }) => {
         addUtilities({

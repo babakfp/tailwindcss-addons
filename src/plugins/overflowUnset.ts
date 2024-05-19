@@ -1,6 +1,6 @@
 import plugin from "tailwindcss/plugin.js"
 
-/** [Docs](https://babakfp.ir/docs/tailwindcss-addons/overflow-unset) */
+/** [Documenation](https://babakfp.ir/docs/tailwindcss-addons/overflow-unset) */
 export default plugin(({ addUtilities }) => {
     addUtilities({
         ".overflow-unset": {

@@ -1,6 +1,6 @@
 import plugin from "tailwindcss/plugin.js"
 
-/** [Docs](https://babakfp.ir/docs/tailwindcss-addons/inset-center) */
+/** [Documenation](https://babakfp.ir/docs/tailwindcss-addons/inset-center) */
 export default plugin(({ addUtilities }) => {
     addUtilities({
         ".inset-center": {

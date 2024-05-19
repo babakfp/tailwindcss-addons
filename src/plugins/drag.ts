@@ -1,6 +1,6 @@
 import plugin from "tailwindcss/plugin.js"
 
-/** [Docs](https://babakfp.ir/docs/tailwindcss-addons/drag) */
+/** [Documenation](https://babakfp.ir/docs/tailwindcss-addons/drag) */
 export default plugin(({ addUtilities }) => {
     addUtilities({
         ".drag-none": {
