@@ -74,64 +74,64 @@ export default (options?: Options) => [
     ...(options?.tap || true ? [tap] : []),
 ]
 
-type Options = Partial<{
+type Options = {
     /** @default true */
-    bgGrid: boolean
+    bgGrid?: boolean
 
     /** @default true */
-    bgRadial: boolean
+    bgRadial?: boolean
 
     /** @default true */
-    dir: boolean
+    dir?: boolean
 
     /** @default true */
-    drag: boolean
+    drag?: boolean
 
     /** @default true */
-    dynamicScreen: boolean
+    dynamicScreen?: boolean
 
     /** @default true */
-    extraDefaults: boolean
+    extraDefaults?: boolean
 
     /** @default false */
-    flexGrid: boolean
+    flexGrid?: boolean
 
     /** @default true */
-    flip: boolean
+    flip?: boolean
 
     /** @default false */
-    fontRegular: boolean
+    fontRegular?: boolean
 
     /** @default true */
-    hideShow: boolean
+    hideShow?: boolean
 
     /** @default true */
-    hocus: boolean
+    hocus?: boolean
 
     /** @default true */
-    insetCenter: boolean
+    insetCenter?: boolean
 
     /** @default true */
-    not: boolean
+    not?: boolean
 
     /** @default true */
-    overflowUnset: boolean
+    overflowUnset?: boolean
 
     /** @default true */
-    resetNumberInput: boolean | { base?: boolean }
+    resetNumberInput?: boolean | { base?: boolean }
 
     /** @default true */
-    resetSearchInput: boolean | { base?: boolean }
+    resetSearchInput?: boolean | { base?: boolean }
 
     /** @default true */
-    supportsFocus: boolean
+    supportsFocus?: boolean
 
     /** @default true */
-    supportsHocus: boolean
+    supportsHocus?: boolean
 
     /** @default true */
-    supportsHover: boolean
+    supportsHover?: boolean
 
     /** @default true */
-    tap: boolean
-}>
+    tap?: boolean
+}
