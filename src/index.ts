@@ -14,9 +14,9 @@ import not from "./plugins/not.js"
 import overflowUnset from "./plugins/overflowUnset.js"
 import resetNumberInput from "./plugins/resetNumberInput.js"
 import resetSearchInput from "./plugins/resetSearchInput.js"
-import supportsFocus from "./plugins/supports-focus.js"
-import supportsHocus from "./plugins/supports-hocus.js"
-import supportsHover from "./plugins/supports-hover.js"
+import supportsFocus from "./plugins/supportsFocus.js"
+import supportsHocus from "./plugins/supportsHocus.js"
+import supportsHover from "./plugins/supportsHover.js"
 import tap from "./plugins/tap.js"
 
 export {
