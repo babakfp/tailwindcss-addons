@@ -36,6 +36,9 @@ export {
     overflowUnset,
     resetNumberInput,
     resetSearchInput,
+    supportsFocus,
+    supportsHocus,
+    supportsHover,
     tap,
 }
 
