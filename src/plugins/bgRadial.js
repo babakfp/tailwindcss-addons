@@ -5,7 +5,7 @@ import { flattenColorPalette } from "../lib/flattenColorPalette.js"
 export default plugin(({ matchUtilities, theme }) => {
     matchUtilities(
         {
-            "bg-radial": value => ({
+            "bg-radial": (value) => ({
                 "background-size":
                     "var(--tw-bg-radial-size, var(--tw-bg-radial-w, 32px)) var(--tw-bg-radial-size, var(--tw-bg-radial-h, 32px))",
                 "background-image": `radial-gradient(circle, ${value} var(--tw-bg-radial-circle-size, 1px), transparent 0px)`,
@@ -15,7 +15,7 @@ export default plugin(({ matchUtilities, theme }) => {
     )
     matchUtilities(
         {
-            "bg-radial": value => ({
+            "bg-radial": (value) => ({
                 "--tw-bg-radial-size": value,
             }),
         },
@@ -23,7 +23,7 @@ export default plugin(({ matchUtilities, theme }) => {
     )
     matchUtilities(
         {
-            "bg-radial-w": value => ({
+            "bg-radial-w": (value) => ({
                 "--tw-bg-radial-w": value,
             }),
         },
@@ -31,7 +31,7 @@ export default plugin(({ matchUtilities, theme }) => {
     )
     matchUtilities(
         {
-            "bg-radial-h": value => ({
+            "bg-radial-h": (value) => ({
                 "--tw-bg-radial-h": value,
             }),
         },
@@ -39,7 +39,7 @@ export default plugin(({ matchUtilities, theme }) => {
     )
     matchUtilities(
         {
-            "bg-radial-circle": value => ({
+            "bg-radial-circle": (value) => ({
                 "--tw-bg-radial-circle-size": value,
             }),
         },

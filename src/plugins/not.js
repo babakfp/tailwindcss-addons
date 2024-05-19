@@ -4,7 +4,7 @@ import plugin from "tailwindcss/plugin.js"
 export default plugin(({ matchVariant }) => {
     matchVariant(
         "not",
-        value => {
+        (value) => {
             if (value === "first") return "&:not(:first-child)"
             if (value === "last") return "&:not(:last-child)"
             if (value === "first-of-type") return "&:not(:first-of-type)"

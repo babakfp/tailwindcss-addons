@@ -8,6 +8,6 @@ import _flattenColorPalette from "tailwindcss/lib/util/flattenColorPalette.js"
  * @param {RecursiveStringRecord} colors
  * @returns {Record<string, string>}
  */
-export const flattenColorPalette = colors => {
+export const flattenColorPalette = (colors) => {
     return _flattenColorPalette(colors)
 }

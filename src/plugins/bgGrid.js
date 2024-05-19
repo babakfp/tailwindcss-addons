@@ -5,7 +5,7 @@ import { flattenColorPalette } from "../lib/flattenColorPalette.js"
 export default plugin(({ matchUtilities, theme }) => {
     matchUtilities(
         {
-            "bg-grid": value => ({
+            "bg-grid": (value) => ({
                 "background-size":
                     "var(--tw-bg-grid-size, var(--tw-bg-grid-w, 32px)) var(--tw-bg-grid-size, var(--tw-bg-grid-h, 32px))",
                 "background-image": `
@@ -17,7 +17,7 @@ export default plugin(({ matchUtilities, theme }) => {
     )
     matchUtilities(
         {
-            "bg-grid": value => ({
+            "bg-grid": (value) => ({
                 "--tw-bg-grid-size": value,
             }),
         },
@@ -25,7 +25,7 @@ export default plugin(({ matchUtilities, theme }) => {
     )
     matchUtilities(
         {
-            "bg-grid-w": value => ({
+            "bg-grid-w": (value) => ({
                 "--tw-bg-grid-w": value,
             }),
         },
@@ -33,7 +33,7 @@ export default plugin(({ matchUtilities, theme }) => {
     )
     matchUtilities(
         {
-            "bg-grid-h": value => ({
+            "bg-grid-h": (value) => ({
                 "--tw-bg-grid-h": value,
             }),
         },
@@ -41,7 +41,7 @@ export default plugin(({ matchUtilities, theme }) => {
     )
     matchUtilities(
         {
-            "bg-grid-border": value => ({
+            "bg-grid-border": (value) => ({
                 "--tw-bg-grid-border-w": value,
             }),
         },

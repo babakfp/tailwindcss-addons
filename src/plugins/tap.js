@@ -5,7 +5,7 @@ import { flattenColorPalette } from "../lib/flattenColorPalette.js"
 export default plugin(({ matchUtilities, theme }) => {
     matchUtilities(
         {
-            tap: value => ({
+            tap: (value) => ({
                 "-webkit-tap-highlight-color": value,
             }),
         },

@@ -37,7 +37,7 @@ export {
 }
 
 /** @param {Options} [options] */
-export default options => [
+export default (options) => [
     ...(options?.bgGrid || true ? [bgGrid] : []),
     ...(options?.bgRadial || true ? [bgRadial] : []),
     ...(options?.dir || true ? [dir] : []),
