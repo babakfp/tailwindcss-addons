@@ -39,8 +39,7 @@ export {
     tap,
 }
 
-/** @param {Options} [options] */
-export default (options) => [
+export default (options: Options) => [
     ...(options?.bgGrid || true ? [bgGrid] : []),
     ...(options?.bgRadial || true ? [bgRadial] : []),
     ...(options?.dir || true ? [dir] : []),
@@ -75,26 +74,64 @@ export default (options) => [
     ...(options?.tap || true ? [tap] : []),
 ]
 
-/**
- * @typedef {Object} Options
- * @property {boolean} [bgGrid] Default: `true`
- * @property {boolean} [bgRadial] Default: `true`
- * @property {boolean} [dir] Default: `true`
- * @property {boolean} [drag] Default: `true`
- * @property {boolean} [dynamicScreen] Default: `true`
- * @property {boolean} [extraDefaults] Default: `true`
- * @property {boolean} [flexGrid] Default: `false`
- * @property {boolean} [flip] Default: `true`
- * @property {boolean} [fontRegular] Default: `false`
- * @property {boolean} [hideShow] Default: `true`
- * @property {boolean} [hocus] Default: `true`
- * @property {boolean} [insetCenter] Default: `true`
- * @property {boolean} [not] Default: `true`
- * @property {boolean} [overflowUnset] Default: `true`
- * @property {boolean | { base?: boolean }} [resetNumberInput] Default: `true`
- * @property {boolean | { base?: boolean }} [resetSearchInput] Default: `true`
- * @property {boolean} [supportsFocus] Default: `true`
- * @property {boolean} [supportsHocus] Default: `true`
- * @property {boolean} [supportsHover] Default: `true`
- * @property {boolean} [tap] Default: `true`
- */
+type Options = Partial<{
+    /** @default true */
+    bgGrid: boolean
+
+    /** @default true */
+    bgRadial: boolean
+
+    /** @default true */
+    dir: boolean
+
+    /** @default true */
+    drag: boolean
+
+    /** @default true */
+    dynamicScreen: boolean
+
+    /** @default true */
+    extraDefaults: boolean
+
+    /** @default false */
+    flexGrid: boolean
+
+    /** @default true */
+    flip: boolean
+
+    /** @default false */
+    fontRegular: boolean
+
+    /** @default true */
+    hideShow: boolean
+
+    /** @default true */
+    hocus: boolean
+
+    /** @default true */
+    insetCenter: boolean
+
+    /** @default true */
+    not: boolean
+
+    /** @default true */
+    overflowUnset: boolean
+
+    /** @default true */
+    resetNumberInput: boolean | { base?: boolean }
+
+    /** @default true */
+    resetSearchInput: boolean | { base?: boolean }
+
+    /** @default true */
+    supportsFocus: boolean
+
+    /** @default true */
+    supportsHocus: boolean
+
+    /** @default true */
+    supportsHover: boolean
+
+    /** @default true */
+    tap: boolean
+}>
