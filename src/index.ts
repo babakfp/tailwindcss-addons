@@ -1,3 +1,6 @@
+export { flattenColorPalette } from "./lib/flattenColorPalette.js"
+export { sizeToRem } from "./lib/sizeToRem.js"
+
 import type { Config } from "tailwindcss"
 
 import bgGrid from "./plugins/bgGrid.js"
@@ -44,7 +47,7 @@ export {
     tap,
 }
 
-export default (options?: Options) =>
+export const allAddons = (options?: Options) =>
     [
         ...(options?.bgGrid || true ? [bgGrid] : []),
         ...(options?.bgRadial || true ? [bgRadial] : []),
