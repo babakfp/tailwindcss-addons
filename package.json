@@ -27,7 +27,30 @@
         ".": "./dist/index.js"
     },
     "keywords": [
-        "tailwindcss"
+        "ui",
+        "css",
+        "tailwind",
+        "tailwindcss",
+        "bg-grid",
+        "bg-radial",
+        "dir",
+        "drag",
+        "dynamic-screen",
+        "extra-defaults",
+        "flex-grid",
+        "flip",
+        "font-regular",
+        "hide-show",
+        "hocus",
+        "inset-center",
+        "not",
+        "overflow-unset",
+        "reset-number-input",
+        "reset-search-input",
+        "supports-focus",
+        "supports-hocus",
+        "supports-hover",
+        "tap"
     ],
     "type": "module"
 }
