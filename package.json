@@ -1,6 +1,6 @@
 {
     "name": "tailwindcss-addons",
-    "description": "A TailwindCSS plugin that adds extra utilities and more.",
+    "description": "A set of Tailwind CSS plugins that add extra defaults, utilities, variants, and more.",
     "version": "1.10.1",
     "license": "MIT",
     "main": "./dist/index.js",
