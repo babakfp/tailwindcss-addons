@@ -49,38 +49,38 @@ export {
 
 export const allAddons = (options?: Options) =>
     [
-        ...(options?.bgGrid || true ? [bgGrid] : []),
-        ...(options?.bgRadial || true ? [bgRadial] : []),
-        ...(options?.dir || true ? [dir] : []),
-        ...(options?.drag || true ? [drag] : []),
-        ...(options?.dynamicScreen || true ? [dynamicScreen] : []),
-        ...(options?.extraDefaults || true ? [extraDefaults] : []),
-        ...(options?.flexGrid || false ? [flexGrid] : []),
-        ...(options?.flip || true ? [flip] : []),
-        ...(options?.fontRegular || false ? [fontRegular] : []),
-        ...(options?.hideShow || true ? [hideShow] : []),
-        ...(options?.hocus || true ? [hocus] : []),
-        ...(options?.insetCenter || true ? [insetCenter] : []),
-        ...(options?.not || true ? [not] : []),
-        ...(options?.overflowUnset || true ? [overflowUnset] : []),
-        ...(options?.resetNumberInput || true
+        ...(options?.bgGrid ?? true ? [bgGrid] : []),
+        ...(options?.bgRadial ?? true ? [bgRadial] : []),
+        ...(options?.dir ?? true ? [dir] : []),
+        ...(options?.drag ?? true ? [drag] : []),
+        ...(options?.dynamicScreen ?? true ? [dynamicScreen] : []),
+        ...(options?.extraDefaults ?? true ? [extraDefaults] : []),
+        ...(options?.flexGrid ?? false ? [flexGrid] : []),
+        ...(options?.flip ?? true ? [flip] : []),
+        ...(options?.fontRegular ?? false ? [fontRegular] : []),
+        ...(options?.hideShow ?? true ? [hideShow] : []),
+        ...(options?.hocus ?? true ? [hocus] : []),
+        ...(options?.insetCenter ?? true ? [insetCenter] : []),
+        ...(options?.not ?? true ? [not] : []),
+        ...(options?.overflowUnset ?? true ? [overflowUnset] : []),
+        ...(options?.resetNumberInput ?? true
             ? [
                   typeof options?.resetNumberInput === "object"
                       ? resetNumberInput(options?.resetNumberInput)
                       : resetNumberInput(),
               ]
             : []),
-        ...(options?.resetSearchInput || true
+        ...(options?.resetSearchInput ?? true
             ? [
                   typeof options?.resetSearchInput === "object"
                       ? resetSearchInput(options?.resetSearchInput)
                       : resetSearchInput(),
               ]
             : []),
-        ...(options?.supportsFocus || true ? [supportsFocus] : []),
-        ...(options?.supportsHocus || true ? [supportsHocus] : []),
-        ...(options?.supportsHover || true ? [supportsHover] : []),
-        ...(options?.tap || true ? [tap] : []),
+        ...(options?.supportsFocus ?? true ? [supportsFocus] : []),
+        ...(options?.supportsHocus ?? true ? [supportsHocus] : []),
+        ...(options?.supportsHover ?? true ? [supportsHover] : []),
+        ...(options?.tap ?? true ? [tap] : []),
     ] satisfies Config["plugins"]
 
 type Options = {
