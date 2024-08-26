@@ -7,9 +7,9 @@
     "repository": "github:babakfp/tailwindcss-addons",
     "homepage": "https://babakfp.ir/docs/tailwindcss-addons",
     "scripts": {
-        "dev": "tsc -w",
-        "build": "tsc",
-        "prepublishOnly": "tsc",
+        "dev": "rimraf dist && tsc -w",
+        "build": "rimraf dist && tsc",
+        "prepublishOnly": "rimraf dist && tsc",
         "format": "prettier -w ."
     },
     "peerDependencies": {
@@ -17,6 +17,7 @@
     },
     "devDependencies": {
         "prettier": "3.2.5",
+        "rimraf": "6.0.1",
         "tailwindcss": "3.4.3",
         "typescript": "5.4.5"
     },
