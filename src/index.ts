@@ -19,6 +19,8 @@ import not from "./plugins/not.js"
 import overflowUnset from "./plugins/overflowUnset.js"
 import resetNumberInput from "./plugins/resetNumberInput.js"
 import resetSearchInput from "./plugins/resetSearchInput.js"
+import scrollbarColor from "./plugins/scrollbarColor.js"
+import scrollbarWidth from "./plugins/scrollbarWidth.js"
 import supportsFocus from "./plugins/supportsFocus.js"
 import supportsHocus from "./plugins/supportsHocus.js"
 import supportsHover from "./plugins/supportsHover.js"
@@ -41,6 +43,8 @@ export {
     overflowUnset,
     resetNumberInput,
     resetSearchInput,
+    scrollbarColor,
+    scrollbarWidth,
     supportsFocus,
     supportsHocus,
     supportsHover,
@@ -77,6 +81,8 @@ export const allAddons = (options?: Options) =>
                       : resetSearchInput(),
               ]
             : []),
+        ...(options?.scrollbarColor ?? true ? [scrollbarColor] : []),
+        ...(options?.scrollbarWidth ?? true ? [scrollbarWidth] : []),
         ...(options?.supportsFocus ?? true ? [supportsFocus] : []),
         ...(options?.supportsHocus ?? true ? [supportsHocus] : []),
         ...(options?.supportsHover ?? true ? [supportsHover] : []),
@@ -179,6 +185,18 @@ type Options = {
      * @default true
      */
     resetSearchInput?: boolean | { base?: boolean }
+
+    /**
+     * [Documenation](https://babakfp.ir/docs/tailwindcss-addons/scrollbar-color)
+     * @default true
+     */
+    scrollbarColor?: boolean
+
+    /**
+     * [Documenation](https://babakfp.ir/docs/tailwindcss-addons/scrollbar-width)
+     * @default true
+     */
+    scrollbarWidth?: boolean
 
     /**
      * [Documenation](https://babakfp.ir/docs/tailwindcss-addons/supports-focus)
