@@ -16,10 +16,10 @@
         "tailwindcss": ">= 3.4.1 < 4"
     },
     "devDependencies": {
-        "prettier": "3.2.5",
+        "prettier": "3.3.3",
         "rimraf": "6.0.1",
-        "tailwindcss": "3.4.3",
-        "typescript": "5.4.5"
+        "tailwindcss": "3.4.10",
+        "typescript": "5.5.4"
     },
     "files": [
         "/dist/"
