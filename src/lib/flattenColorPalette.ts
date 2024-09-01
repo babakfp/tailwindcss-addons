@@ -7,6 +7,4 @@ interface RecursiveStringRecord {
 
 export const flattenColorPalette = (
     colors: RecursiveStringRecord,
-): Record<string, string> => {
-    return flattenColorPalette_(colors)
-}
+): Record<string, string> => flattenColorPalette_(colors)
