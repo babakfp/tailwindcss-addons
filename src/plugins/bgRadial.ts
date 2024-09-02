@@ -7,40 +7,40 @@ export default plugin(({ matchUtilities, theme }) => {
         {
             "bg-radial": (value) => ({
                 "background-size":
-                    "var(--tw-bg-radial-size, var(--tw-bg-radial-w, 32px)) var(--tw-bg-radial-size, var(--tw-bg-radial-h, 32px))",
-                "background-image": `radial-gradient(circle, ${value} var(--tw-bg-radial-circle-size, 1px), transparent 0px)`,
+                    "var(--tw-bg-radial-gap, var(--tw-bg-radial-gap-x, 32px)) var(--tw-bg-radial-gap, var(--tw-bg-radial-gap-y, 32px))",
+                "background-image": `radial-gradient(circle, ${value} var(--tw-bg-radial-size, 1px), transparent 0px)`,
             }),
         },
         { values: flattenColorPalette(theme("colors")), type: "color" },
     )
     matchUtilities(
         {
-            "bg-radial": (value) => ({
+            "bg-radial-gap": (value) => ({
+                "--tw-bg-radial-gap": value,
+            }),
+        },
+        { values: theme("spacing") },
+    )
+    matchUtilities(
+        {
+            "bg-radial-gap-x": (value) => ({
+                "--tw-bg-radial-gap-x": value,
+            }),
+        },
+        { values: theme("spacing") },
+    )
+    matchUtilities(
+        {
+            "bg-radial-gap-y": (value) => ({
+                "--tw-bg-radial-gap-y": value,
+            }),
+        },
+        { values: theme("spacing") },
+    )
+    matchUtilities(
+        {
+            "bg-radial-size": (value) => ({
                 "--tw-bg-radial-size": value,
-            }),
-        },
-        { values: theme("spacing") },
-    )
-    matchUtilities(
-        {
-            "bg-radial-w": (value) => ({
-                "--tw-bg-radial-w": value,
-            }),
-        },
-        { values: theme("spacing") },
-    )
-    matchUtilities(
-        {
-            "bg-radial-h": (value) => ({
-                "--tw-bg-radial-h": value,
-            }),
-        },
-        { values: theme("spacing") },
-    )
-    matchUtilities(
-        {
-            "bg-radial-circle": (value) => ({
-                "--tw-bg-radial-circle-size": value,
             }),
         },
         { values: theme("borderWidth") },
