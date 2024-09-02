@@ -7,7 +7,7 @@ export default plugin(({ matchUtilities, theme }) => {
         {
             "bg-radial": (value) => ({
                 "background-size":
-                    "var(--tw-bg-radial-gap, var(--tw-bg-radial-gap-x, 32px)) var(--tw-bg-radial-gap, var(--tw-bg-radial-gap-y, 32px))",
+                    "var(--tw-bg-radial-gap-x, 32px) var(--tw-bg-radial-gap-y, 32px)",
                 "background-image": `radial-gradient(circle, ${value} var(--tw-bg-radial-size, 1px), transparent 0px)`,
             }),
         },
@@ -16,7 +16,8 @@ export default plugin(({ matchUtilities, theme }) => {
     matchUtilities(
         {
             "bg-radial-gap": (value) => ({
-                "--tw-bg-radial-gap": value,
+                "--tw-bg-radial-gap-x": value,
+                "--tw-bg-radial-gap-y": value,
             }),
         },
         { values: theme("spacing") },
