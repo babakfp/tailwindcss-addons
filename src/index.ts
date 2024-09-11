@@ -7,7 +7,6 @@ import bgGrid from "./plugins/bgGrid.js"
 import bgRadial from "./plugins/bgRadial.js"
 import dir from "./plugins/dir.js"
 import drag from "./plugins/drag.js"
-import dynamicScreen from "./plugins/dynamicScreen.js"
 import extraDefaults from "./plugins/extraDefaults.js"
 import flexGrid from "./plugins/flexGrid.js"
 import flip from "./plugins/flip.js"
@@ -31,7 +30,6 @@ export {
     bgRadial,
     dir,
     drag,
-    dynamicScreen,
     extraDefaults,
     flexGrid,
     flip,
@@ -53,40 +51,39 @@ export {
 
 export const allAddons = (options?: Options) =>
     [
-        ...(options?.bgGrid ?? true ? [bgGrid] : []),
-        ...(options?.bgRadial ?? true ? [bgRadial] : []),
-        ...(options?.dir ?? true ? [dir] : []),
-        ...(options?.drag ?? true ? [drag] : []),
-        ...(options?.dynamicScreen ?? true ? [dynamicScreen] : []),
-        ...(options?.extraDefaults ?? true ? [extraDefaults] : []),
-        ...(options?.flexGrid ?? false ? [flexGrid] : []),
-        ...(options?.flip ?? true ? [flip] : []),
-        ...(options?.fontRegular ?? false ? [fontRegular] : []),
-        ...(options?.hideShow ?? true ? [hideShow] : []),
-        ...(options?.hocus ?? true ? [hocus] : []),
-        ...(options?.insetCenter ?? true ? [insetCenter] : []),
-        ...(options?.not ?? true ? [not] : []),
-        ...(options?.overflowUnset ?? true ? [overflowUnset] : []),
-        ...(options?.resetNumberInput ?? true
+        ...((options?.bgGrid ?? true) ? [bgGrid] : []),
+        ...((options?.bgRadial ?? true) ? [bgRadial] : []),
+        ...((options?.dir ?? true) ? [dir] : []),
+        ...((options?.drag ?? true) ? [drag] : []),
+        ...((options?.extraDefaults ?? true) ? [extraDefaults] : []),
+        ...((options?.flexGrid ?? false) ? [flexGrid] : []),
+        ...((options?.flip ?? true) ? [flip] : []),
+        ...((options?.fontRegular ?? false) ? [fontRegular] : []),
+        ...((options?.hideShow ?? true) ? [hideShow] : []),
+        ...((options?.hocus ?? true) ? [hocus] : []),
+        ...((options?.insetCenter ?? true) ? [insetCenter] : []),
+        ...((options?.not ?? true) ? [not] : []),
+        ...((options?.overflowUnset ?? true) ? [overflowUnset] : []),
+        ...((options?.resetNumberInput ?? true)
             ? [
                   typeof options?.resetNumberInput === "object"
                       ? resetNumberInput(options?.resetNumberInput)
                       : resetNumberInput(),
               ]
             : []),
-        ...(options?.resetSearchInput ?? true
+        ...((options?.resetSearchInput ?? true)
             ? [
                   typeof options?.resetSearchInput === "object"
                       ? resetSearchInput(options?.resetSearchInput)
                       : resetSearchInput(),
               ]
             : []),
-        ...(options?.scrollbarColor ?? true ? [scrollbarColor] : []),
-        ...(options?.scrollbarWidth ?? true ? [scrollbarWidth] : []),
-        ...(options?.supportsFocus ?? true ? [supportsFocus] : []),
-        ...(options?.supportsHocus ?? true ? [supportsHocus] : []),
-        ...(options?.supportsHover ?? true ? [supportsHover] : []),
-        ...(options?.tap ?? true ? [tap] : []),
+        ...((options?.scrollbarColor ?? true) ? [scrollbarColor] : []),
+        ...((options?.scrollbarWidth ?? true) ? [scrollbarWidth] : []),
+        ...((options?.supportsFocus ?? true) ? [supportsFocus] : []),
+        ...((options?.supportsHocus ?? true) ? [supportsHocus] : []),
+        ...((options?.supportsHover ?? true) ? [supportsHover] : []),
+        ...((options?.tap ?? true) ? [tap] : []),
     ] satisfies Config["plugins"]
 
 type Options = {
@@ -113,12 +110,6 @@ type Options = {
      * @default true
      */
     drag?: boolean
-
-    /**
-     * [Documenation](https://babakfp.ir/docs/tailwindcss-addons/dynamic-screen)
-     * @default true
-     */
-    dynamicScreen?: boolean
 
     /**
      * [Documenation](https://babakfp.ir/docs/tailwindcss-addons/extra-defaults)
