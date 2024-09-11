@@ -13,6 +13,11 @@ export default plugin(() => {}, {
                 2: "2",
                 3: "3",
                 4: "4",
+                5: "5",
+                6: "6",
+                7: "7",
+                8: "8",
+                9: "9",
             },
             blur: {
                 px: "1px",
@@ -31,7 +36,7 @@ export default plugin(() => {}, {
                 3: "3px",
             },
             fontSize: {
-                "2xs": ["0.625rem", { lineHeight: "1" }],
+                "2xs": ["0.625rem", { lineHeight: "0.75rem" }],
             },
             letterSpacing: {
                 "widest-2": "0.25em",
