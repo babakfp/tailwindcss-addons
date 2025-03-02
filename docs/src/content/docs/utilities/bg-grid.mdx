@@ -36,7 +36,8 @@ import Preview from "../../../components/Preview.svelte"
 ## Examples
 
 export const examples = {
-    basic: "bg-grid-gray-800 h-32",
+    _base_: "h-32",
+    basic: "bg-grid-gray-800",
     center: "bg-center",
     shadow: "shadow-[inset_0_0_4rem_2rem_var(--sl-color-black)]",
     widthAndHeight: "bg-grid-4",
@@ -48,25 +49,25 @@ export const examples = {
 ### Basic
 
 <Preview useGrid={false}>
-    <div class={examples.basic} />
+    <div class={`${examples.basic} ${examples._base_}`} />
 </Preview>
 
 <Code
-    code={`<div class="${examples.basic}"></div>`}
+    code={`<div class="${examples.basic} ${examples._base_}"></div>`}
     lang="jsx"
-    mark={["bg-grid-gray-800"]}
+    mark={[examples.basic]}
 />
 
 ### Center
 
 <Preview useGrid={false}>
-    <div class={`${examples.center} ${examples.basic}`} />
+    <div class={`${examples.center} ${examples._base_} ${examples.basic}`} />
 </Preview>
 
 <Code
-    code={`<div class="${examples.center} ${examples.basic}"></div>`}
+    code={`<div class="${examples.center} ${examples._base_} ${examples.basic}"></div>`}
     lang="jsx"
-    mark={["bg-center"]}
+    mark={[examples.center]}
 />
 
 - [`background-position`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-position)
@@ -74,13 +75,15 @@ export const examples = {
 ### Shadow
 
 <Preview useGrid={false}>
-    <div class={`${examples.shadow} ${examples.basic} ${examples.center}`} />
+    <div
+        class={`${examples.shadow} ${examples._base_} ${examples.basic} ${examples.center}`}
+    />
 </Preview>
 
 <Code
-    code={`<div class="${examples.shadow} ${examples.basic} ${examples.center}"></div>`}
+    code={`<div class="${examples.shadow} ${examples._base_} ${examples.basic} ${examples.center}"></div>`}
     lang="jsx"
-    mark={["shadow-[inset_0_0_4rem_2rem_var(--sl-color-black)]"]}
+    mark={[examples.shadow]}
 />
 
 - [`box-shadow`](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow)
@@ -124,14 +127,14 @@ export const examples = {
 
 <Preview useGrid={false}>
     <div
-        class={`${examples.widthAndHeight} ${examples.basic} ${examples.center} ${examples.shadow}`}
+        class={`${examples.widthAndHeight} ${examples._base_} ${examples.basic} ${examples.center} ${examples.shadow}`}
     />
 </Preview>
 
 <Code
-    code={`<div class="${examples.widthAndHeight} ${examples.basic} ${examples.center} ${examples.shadow}"></div>`}
+    code={`<div class="${examples.widthAndHeight} ${examples._base_} ${examples.basic} ${examples.center} ${examples.shadow}"></div>`}
     lang="jsx"
-    mark={["bg-grid-4"]}
+    mark={[examples.widthAndHeight]}
 />
 
 #### Rows
@@ -156,14 +159,14 @@ export const examples = {
 
 <Preview useGrid={false}>
     <div
-        class={`${examples.rows} ${examples.basic} ${examples.center} ${examples.shadow}`}
+        class={`${examples.rows} ${examples._base_} ${examples.basic} ${examples.center} ${examples.shadow}`}
     />
 </Preview>
 
 <Code
-    code={`<div class="${examples.rows} ${examples.basic} ${examples.center} ${examples.shadow}"></div>`}
+    code={`<div class="${examples.rows} ${examples._base_} ${examples.basic} ${examples.center} ${examples.shadow}"></div>`}
     lang="jsx"
-    mark={["bg-grid-w-16"]}
+    mark={[examples.rows]}
 />
 
 #### Columns
@@ -188,14 +191,14 @@ export const examples = {
 
 <Preview useGrid={false}>
     <div
-        class={`${examples.columns} ${examples.basic} ${examples.center} ${examples.shadow}`}
+        class={`${examples.columns} ${examples._base_} ${examples.basic} ${examples.center} ${examples.shadow}`}
     />
 </Preview>
 
 <Code
-    code={`<div class="${examples.columns} ${examples.basic} ${examples.center} ${examples.shadow}"></div>`}
+    code={`<div class="${examples.columns} ${examples._base_} ${examples.basic} ${examples.center} ${examples.shadow}"></div>`}
     lang="jsx"
-    mark={["bg-grid-h-16"]}
+    mark={[examples.columns]}
 />
 
 ### Border Width
@@ -216,14 +219,14 @@ export const examples = {
 
 <Preview useGrid={false}>
     <div
-        class={`${examples.borderWidth} ${examples.basic} ${examples.center} ${examples.shadow}`}
+        class={`${examples.borderWidth} ${examples._base_} ${examples.basic} ${examples.center} ${examples.shadow}`}
     />
 </Preview>
 
 <Code
-    code={`<div class="${examples.borderWidth} ${examples.basic} ${examples.center} ${examples.shadow}"></div>`}
+    code={`<div class="${examples.borderWidth} ${examples._base_} ${examples.basic} ${examples.center} ${examples.shadow}"></div>`}
     lang="jsx"
-    mark={["bg-grid-border-2"]}
+    mark={[examples.borderWidth]}
 />
 
 ## How to import?
