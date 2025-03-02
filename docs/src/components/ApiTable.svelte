@@ -49,14 +49,10 @@
         <table class="grid! w-full grid-cols-[auto_auto]">
             <thead class="col-span-2 grid grid-cols-subgrid">
                 <tr class="col-span-2 grid grid-cols-subgrid">
-                    <th
-                        class="px-2! py-2.5 text-left text-sm/7 font-semibold text-white"
-                    >
+                    <th class="px-2! py-2.5 text-sm/7 font-semibold">
                         Class
                     </th>
-                    <th
-                        class="mt-0! px-2! py-2.5 text-left text-sm/7 font-semibold text-white"
-                    >
+                    <th class="mt-0! px-2! py-2.5 text-sm/7 font-semibold">
                         Styles
                     </th>
                 </tr>
@@ -86,14 +82,14 @@
     {#if isExpandable}
         <div
             class={clsx(
-                "z-10 flex justify-center bg-linear-to-t from-gray-950 to-gray-950/40 text-white hover:text-white/70",
+                "z-10 flex justify-center bg-linear-to-t from-gray-950 to-gray-950/40 hover:text-white/70",
                 isExpanded
                     ? "sticky bottom-0 h-12 to-white/80 py-1"
                     : "absolute bottom-0 h-26 w-full translate-y-1/2 py-8",
             )}
         >
             <button
-                class="rounded-full border border-gray-700 bg-gray-700 px-3 py-1 font-mono text-xs/7 font-medium tracking-widest text-white uppercase"
+                class="rounded-full border border-gray-700 bg-gray-700 px-3 py-1 font-mono text-xs/7 font-medium tracking-widest uppercase"
                 onclick={() => (isExpanded = !isExpanded)}
             >
                 {isExpanded ? "Show less" : "Show more"}
