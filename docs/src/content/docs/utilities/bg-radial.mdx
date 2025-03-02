@@ -2,31 +2,61 @@
 title: Background Radial
 ---
 
+import { Code } from "@astrojs/starlight/components"
+import dedent from "dedent"
+import ApiTable from "../../../components/ApiTable.svelte"
 import Preview from "../../../components/Preview.svelte"
 
+<ApiTable
+    rows={[
+        [
+            "bg-radial-<theme-color>",
+            dedent`
+                background-size: var(--tw-bg-radial-gap-x, 32px) var(--tw-bg-radial-gap-y, 32px);
+                background-image: radial-gradient(circle, <theme-color> var(--tw-bg-radial-size, 1px), transparent 0);
+            `,
+        ],
+        [
+            "bg-radial-(<custom-property>)",
+            dedent`
+                background-size: var(--tw-bg-radial-gap-x, 32px) var(--tw-bg-radial-gap-y, 32px);
+                background-image: radial-gradient(circle, var(<custom-property>) var(--tw-bg-radial-size, 1px), transparent 0);
+            `,
+        ],
+        [
+            "bg-radial-[<arbitrary-value>]",
+            dedent`
+                background-size: var(--tw-bg-radial-gap-x, 32px) var(--tw-bg-radial-gap-y, 32px);
+                background-image: radial-gradient(circle, <arbitrary-value> var(--tw-bg-radial-size, 1px), transparent 0);
+            `,
+        ],
+    ]}
+/>
+
 ## Examples
+
+export const examples = {
+    _base_: "h-48",
+    basic: "bg-radial-gray-700",
+    center: "bg-center",
+    shadow: "shadow-[inset_0_0_2rem_2rem_var(--sl-color-black)]",
+    gap: "bg-radial-gap-4",
+    gapX: "bg-radial-gap-x-16",
+    gapY: "bg-radial-gap-y-16",
+    size: "bg-radial-size-2",
+}
 
 ### Basic
 
 <Preview useGrid={false}>
-    <div class="bg-radial-gray-700 h-32"></div>
+    <div class={`${examples.basic} ${examples._base_}`} />
 </Preview>
 
-```svelte /bg-radial-gray-700/
-<div class="bg-radial-gray-700 ..." />
-```
-
-```css
-.bg-radial-COLOR: {
-    background-size: var(--tw-bg-radial-gap-x, 32px)
-        var(--tw-bg-radial-gap-y, 32px);
-    background-image: radial-gradient(
-        circle,
-        COLOR var(--tw-bg-radial-size, 1px),
-        transparent 0px
-    );
-}
-```
+<Code
+    code={`<div class="${examples.basic} ${examples._base_}"></div>`}
+    lang="jsx"
+    mark={[examples.basic]}
+/>
 
 - [`background-size`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-size)
 - [CSS custom properties (variables)](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties)
@@ -36,26 +66,30 @@ import Preview from "../../../components/Preview.svelte"
 ### Center
 
 <Preview useGrid={false}>
-    <div class="bg-radial-gray-700 h-32 bg-center"></div>
+    <div class={`${examples.center} ${examples._base_} ${examples.basic}`} />
 </Preview>
 
-```svelte /bg-center/
-<div class="bg-radial-gray-700 bg-center ..." />
-```
+<Code
+    code={`<div class="${examples.center} ${examples._base_} ${examples.basic}"></div>`}
+    lang="jsx"
+    mark={[examples.center]}
+/>
 
 - [`background-position`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-position)
 
 ### Shadow
 
 <Preview useGrid={false}>
-    <div class="bg-radial-gray-700 h-32 bg-center shadow-[inset_0_0_4rem_2rem_var(--color-gray-900)]"></div>
+    <div
+        class={`${examples.shadow} ${examples._base_} ${examples.basic} ${examples.center}`}
+    />
 </Preview>
 
-```svelte /shadow-[inset_0_0_4rem_2rem_var(--color-gray-900)]/
-<div
-    class="bg-radial-gray-700 bg-center shadow-[inset_0_0_4rem_2rem_var(--color-gray-900)] ..."
+<Code
+    code={`<div class="${examples.shadow} ${examples._base_} ${examples.basic} ${examples.center}"></div>`}
+    lang="jsx"
+    mark={[examples.shadow]}
 />
-```
 
 - [`box-shadow`](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow)
 
@@ -63,74 +97,170 @@ import Preview from "../../../components/Preview.svelte"
 
 #### X and Y
 
+<ApiTable
+    rows={[
+        [
+            "bg-radial-gap-<theme-spacing>",
+            dedent`
+                --tw-bg-radial-gap-x: calc(var(--spacing) * <theme-spacing>);
+                --tw-bg-radial-gap-y: calc(var(--spacing) * <theme-spacing>);
+            `,
+        ],
+        [
+            "bg-radial-gap-<number>",
+            dedent`
+                --tw-bg-radial-gap-x: calc(var(--spacing) * <number>);
+                --tw-bg-radial-gap-y: calc(var(--spacing) * <number>);
+            `,
+        ],
+        [
+            "bg-radial-gap-(<custom-property>)",
+            dedent`
+                --tw-bg-radial-gap-x: var(<custom-property>);
+                --tw-bg-radial-gap-y: var(<custom-property>);
+            `,
+        ],
+        [
+            "bg-radial-gap-[<arbitrary-value>]",
+            dedent`
+                --tw-bg-radial-gap-x: <arbitrary-value>;
+                --tw-bg-radial-gap-y: <arbitrary-value>;
+            `,
+        ],
+    ]}
+/>
+
 <Preview useGrid={false}>
-    <div class="bg-radial-gray-700 bg-radial-gap-4 h-32"></div>
+    <div
+        class={`${examples.gap} ${examples._base_} ${examples.basic} ${examples.center} ${examples.shadow}`}
+    />
 </Preview>
 
-```svelte /bg-radial-gap-4/
-<div class="bg-radial-gray-700 bg-radial-gap-4 ..." />
-```
-
-```css
-.bg-radial-gap-SPACING: {
-    --tw-bg-radial-gap-x: SPACING;
-    --tw-bg-radial-gap-y: SPACING;
-}
-```
+<Code
+    code={`<div class="${examples.gap} ${examples._base_} ${examples.basic} ${examples.center} ${examples.shadow}"></div>`}
+    lang="jsx"
+    mark={[examples.gap]}
+/>
 
 - [CSS custom properties (variables)](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties)
 
 #### X
 
+<ApiTable
+    rows={[
+        [
+            "bg-radial-gap-x-<theme-spacing>",
+            dedent`
+                --tw-bg-radial-gap-x: calc(var(--spacing) * <theme-spacing>);
+            `,
+        ],
+        [
+            "bg-radial-gap-x-<number>",
+            dedent`
+                --tw-bg-radial-gap-x: calc(var(--spacing) * <number>);
+            `,
+        ],
+        [
+            "bg-radial-gap-x-(<custom-property>)",
+            dedent`
+                --tw-bg-radial-gap-x: var(<custom-property>);
+            `,
+        ],
+        [
+            "bg-radial-gap-x-[<arbitrary-value>]",
+            dedent`
+                --tw-bg-radial-gap-x: <arbitrary-value>;
+            `,
+        ],
+    ]}
+/>
+
 <Preview useGrid={false}>
-    <div class="bg-radial-gray-700 bg-radial-gap-x-16 h-32"></div>
+    <div
+        class={`${examples.gapX} ${examples._base_} ${examples.basic} ${examples.center} ${examples.shadow}`}
+    />
 </Preview>
 
-```svelte /bg-radial-gap-x-16/
-<div class="bg-radial-gray-700 bg-radial-gap-x-16 ..." />
-```
-
-```css
-.bg-radial-gap-x-SPACING: {
-    --tw-bg-radial-gap-x: SPACING;
-}
-```
+<Code
+    code={`<div class="${examples.gapX} ${examples._base_} ${examples.basic} ${examples.center} ${examples.shadow}"></div>`}
+    lang="jsx"
+    mark={[examples.gapX]}
+/>
 
 - [CSS custom properties (variables)](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties)
 
 #### Y
 
+<ApiTable
+    rows={[
+        [
+            "bg-radial-gap-y-<theme-spacing>",
+            dedent`
+                --tw-bg-radial-gap-y: calc(var(--spacing) * <theme-spacing>);
+            `,
+        ],
+        [
+            "bg-radial-gap-y-<number>",
+            dedent`
+                --tw-bg-radial-gap-y: calc(var(--spacing) * <number>);
+            `,
+        ],
+        [
+            "bg-radial-gap-y-(<custom-property>)",
+            dedent`
+                --tw-bg-radial-gap-y: var(<custom-property>);
+            `,
+        ],
+        [
+            "bg-radial-gap-y-[<arbitrary-value>]",
+            dedent`
+                --tw-bg-radial-gap-y: <arbitrary-value>;
+            `,
+        ],
+    ]}
+/>
+
 <Preview useGrid={false}>
-    <div class="bg-radial-gray-700 bg-radial-gap-y-16 h-32"></div>
+    <div
+        class={`${examples.gapY} ${examples._base_} ${examples.basic} ${examples.center} ${examples.shadow}`}
+    />
 </Preview>
 
-```svelte /bg-radial-gap-y-16/
-<div class="bg-radial-gray-700 bg-radial-gap-y-16 ..." />
-```
-
-```css
-.bg-radial-gap-y-SPACING: {
-    --tw-bg-radial-gap-y: SPACING;
-}
-```
+<Code
+    code={`<div class="${examples.gapY} ${examples._base_} ${examples.basic} ${examples.center} ${examples.shadow}"></div>`}
+    lang="jsx"
+    mark={[examples.gapY]}
+/>
 
 - [CSS custom properties (variables)](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties)
 
 ## Size
 
+<ApiTable
+    rows={[
+        ["bg-radial-size-<number>", "--tw-bg-radial-size: <number>px;"],
+        [
+            "bg-radial-size-(length:<custom-property>)",
+            "--tw-bg-radial-size: var(<custom-property>);",
+        ],
+        [
+            "bg-radial-size-[<arbitrary-value>]",
+            "--tw-bg-radial-size: <arbitrary-value>;",
+        ],
+    ]}
+/>
+
 <Preview useGrid={false}>
-    <div class="bg-radial-gray-700 bg-radial-size-2 h-32"></div>
+    <div
+        class={`${examples.size} ${examples._base_} ${examples.basic} ${examples.center} ${examples.shadow}`}
+    />
 </Preview>
 
-```svelte /bg-radial-size-2/
-<div class="bg-radial-gray-700 bg-radial-size-2 ..." />
-```
-
-```css
-.bg-radial-size-BORDER_WIDTH: {
-    --tw-bg-radial-size: BORDER_WIDTH;
-}
-```
+<Code
+    code={`<div class="${examples.size} ${examples._base_} ${examples.basic} ${examples.center} ${examples.shadow}"></div>`}
+    lang="jsx"
+    mark={[examples.size]}
+/>
 
 - [CSS custom properties (variables)](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties)
 
