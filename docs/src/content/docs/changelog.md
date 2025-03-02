@@ -5,7 +5,6 @@ title: CHANGELOG
 ## 4.0.2
 
 - fix: `bg-grid-border-*` and `bg-radial-size-*` utilities not working.
-- fix: typo in `bg-grid-border-*` utility name.
 
 ## 4.0.1
 
