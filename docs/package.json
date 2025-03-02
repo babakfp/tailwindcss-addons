@@ -20,7 +20,7 @@
         "svelte": "^5.20.5",
         "tailwind-merge": "^3.0.1",
         "tailwindcss": "^4.0.9",
-        "tailwindcss-addons": "workspace:^",
+        "tailwindcss-addons": "workspace:*",
         "typescript": "^5.8.2"
     },
     "devDependencies": {
