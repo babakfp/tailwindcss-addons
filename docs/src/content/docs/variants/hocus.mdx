@@ -5,37 +5,37 @@ title: Hocus
 import dedent from "dedent"
 import ApiTable from "../../../components/ApiTable.svelte"
 
-export const utilities = [
-    [
-        "hocus",
-        dedent`
-            &:hover,
-            &:focus {
-                @media (hover: hover)
-            }
-        `,
-    ],
-    [
-        "hocus-within",
-        dedent`
-            &:hover,
-            &:focus-within {
-                @media (hover: hover)
-            }
-        `,
-    ],
-    [
-        "hocus-visible",
-        dedent`
-            &:hover,
-            &:focus-visible {
-                @media (hover: hover)
-            }
-        `,
-    ],
-]
-
-<ApiTable rows={utilities} />
+<ApiTable
+    rows={[
+        [
+            "hocus",
+            dedent`
+                &:hover,
+                &:focus {
+                    @media (hover: hover)
+                }
+            `,
+        ],
+        [
+            "hocus-within",
+            dedent`
+                &:hover,
+                &:focus-within {
+                    @media (hover: hover)
+                }
+            `,
+        ],
+        [
+            "hocus-visible",
+            dedent`
+                &:hover,
+                &:focus-visible {
+                    @media (hover: hover)
+                }
+            `,
+        ],
+    ]}
+/>
 
 - [Hover styles on mobile](https://tailwindcss.com/docs/upgrade-guide#hover-styles-on-mobile)
 

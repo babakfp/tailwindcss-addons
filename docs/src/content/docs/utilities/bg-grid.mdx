@@ -7,31 +7,31 @@ import dedent from "dedent"
 import ApiTable from "../../../components/ApiTable.svelte"
 import Preview from "../../../components/Preview.svelte"
 
-export const utilities = [
-    [
-        "bg-grid-<theme-color>",
-        dedent`
-            background-size: var(--tw-bg-grid-w, 32px) var(--tw-bg-grid-h, 32px);
-            background-image: linear-gradient(to right, var(--<theme-color>) var(--tw-bg-grid-border-w, 1px), transparent 0px), linear-gradient( to bottom, var(--<theme-color>) var(--tw-bg-grid-border-w, 1px), transparent 0px);
-        `,
-    ],
-    [
-        "bg-grid-(<custom-property>)",
-        dedent`
-            background-size: var(--tw-bg-grid-w, 32px) var(--tw-bg-grid-h, 32px);
-            background-image: linear-gradient(to right, var(<custom-property>) var(--tw-bg-grid-border-w, 1px), transparent 0px), linear-gradient( to bottom, var(<custom-property>) var(--tw-bg-grid-border-w, 1px), transparent 0px);
-        `,
-    ],
-    [
-        "bg-grid-[<arbitrary-value>]",
-        dedent`
-            background-size: var(--tw-bg-grid-w, 32px) var(--tw-bg-grid-h, 32px);
-            background-image: linear-gradient(to right, <arbitrary-value> var(--tw-bg-grid-border-w, 1px), transparent 0px), linear-gradient( to bottom, <arbitrary-value> var(--tw-bg-grid-border-w, 1px), transparent 0px);
-        `,
-    ],
-]
-
-<ApiTable rows={utilities} />
+<ApiTable
+    rows={[
+        [
+            "bg-grid-<theme-color>",
+            dedent`
+                background-size: var(--tw-bg-grid-w, 32px) var(--tw-bg-grid-h, 32px);
+                background-image: linear-gradient(to right, var(--<theme-color>) var(--tw-bg-grid-border-w, 1px), transparent 0px), linear-gradient( to bottom, var(--<theme-color>) var(--tw-bg-grid-border-w, 1px), transparent 0px);
+            `,
+        ],
+        [
+            "bg-grid-(<custom-property>)",
+            dedent`
+                background-size: var(--tw-bg-grid-w, 32px) var(--tw-bg-grid-h, 32px);
+                background-image: linear-gradient(to right, var(<custom-property>) var(--tw-bg-grid-border-w, 1px), transparent 0px), linear-gradient( to bottom, var(<custom-property>) var(--tw-bg-grid-border-w, 1px), transparent 0px);
+            `,
+        ],
+        [
+            "bg-grid-[<arbitrary-value>]",
+            dedent`
+                background-size: var(--tw-bg-grid-w, 32px) var(--tw-bg-grid-h, 32px);
+                background-image: linear-gradient(to right, <arbitrary-value> var(--tw-bg-grid-border-w, 1px), transparent 0px), linear-gradient( to bottom, <arbitrary-value> var(--tw-bg-grid-border-w, 1px), transparent 0px);
+            `,
+        ],
+    ]}
+/>
 
 ## Examples
 

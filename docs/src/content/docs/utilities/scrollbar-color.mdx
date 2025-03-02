@@ -5,7 +5,7 @@ title: Scrollbar Color
 import dedent from "dedent"
 import ApiTable from "../../../components/ApiTable.svelte"
 
-export const utilities = [
+<ApiTable rows={[
     [
         "scrollbar-thumb-<theme-color>",
         dedent`
@@ -50,9 +50,7 @@ export const utilities = [
         `,
     ],
 
-]
-
-<ApiTable rows={utilities} />
+]} />
 
 - [`scrollbar-color`](https://developer.mozilla.org/en-US/docs/Web/CSS/scrollbar-color)
 - [CSS custom properties (variables)](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties)

@@ -5,24 +5,24 @@ title: Font Size
 import dedent from "dedent"
 import ApiTable from "../../../components/ApiTable.svelte"
 
-export const utilities = [
-    [
-        "text-2xs",
-        dedent`
-            font-size: var(--text-2xs); /* 0.625rem (10px) */ 
-            line-height: var(--text-2xs--line-height); /* calc(1 / 0.625) */
-        `,
-    ],
-    [
-        "text-3xs",
-        dedent`
-            font-size: var(--text-3xs); /* 0.5rem (8px) */ 
-            line-height: var(--text-3xs--line-height); /* calc(1 / 0.5) */
-        `,
-    ],
-]
-
-<ApiTable rows={utilities} />
+<ApiTable
+    rows={[
+        [
+            "text-2xs",
+            dedent`
+                font-size: var(--text-2xs); /* 0.625rem (10px) */ 
+                line-height: var(--text-2xs--line-height); /* calc(1 / 0.625) */
+            `,
+        ],
+        [
+            "text-3xs",
+            dedent`
+                font-size: var(--text-3xs); /* 0.5rem (8px) */ 
+                line-height: var(--text-3xs--line-height); /* calc(1 / 0.5) */
+            `,
+        ],
+    ]}
+/>
 
 ## How to import?
 

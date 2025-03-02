@@ -5,26 +5,26 @@ title: Hide & Show
 import dedent from "dedent"
 import ApiTable from "../../../components/ApiTable.svelte"
 
-export const utilities = [
-    [
-        "hide",
-        dedent`
-            visibility: hidden;
-            opacity: 0;
-            pointer-events: none;
-        `,
-    ],
-    [
-        "show",
-        dedent`
-            visibility: visible;
-            opacity: 1;
-            pointer-events: auto;
-        `,
-    ],
-]
-
-<ApiTable rows={utilities} />
+<ApiTable
+    rows={[
+        [
+            "hide",
+            dedent`
+                visibility: hidden;
+                opacity: 0;
+                pointer-events: none;
+            `,
+        ],
+        [
+            "show",
+            dedent`
+                visibility: visible;
+                opacity: 1;
+                pointer-events: auto;
+            `,
+        ],
+    ]}
+/>
 
 ## How to import?
 
