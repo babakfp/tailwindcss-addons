@@ -22,7 +22,7 @@
     --tw-bg-grid-h: --spacing(--value(number, [length], [percentage]));
 }
 
-@utility g-grid-border-* {
+@utility bg-grid-border-* {
     /* prettier-ignore */
     --tw-bg-grid-border-w: --value(--border-width-*, number, [length]);
 }
