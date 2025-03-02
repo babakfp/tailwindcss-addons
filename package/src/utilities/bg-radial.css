@@ -21,5 +21,5 @@
 
 @utility bg-radial-size-* {
     /* prettier-ignore */
-    --tw-bg-radial-size: --modifier(--border-width-*, [length]);
+    --tw-bg-radial-size: --value(--border-width-*, number, [length]);
 }
