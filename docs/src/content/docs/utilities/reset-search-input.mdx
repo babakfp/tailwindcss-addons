@@ -1,0 +1,28 @@
+---
+title: Reset Search Input
+---
+
+import dedent from "dedent"
+import ApiTable from "../../../components/ApiTable.svelte"
+
+export const utilities = [
+    [
+        "reset-search-input",
+        dedent`
+            &::-webkit-search-decoration,
+            &::-webkit-search-cancel-button,
+            &::-webkit-search-results-button,
+            &::-webkit-search-results-decoration {
+                -webkit-appearance: none;
+            }
+        `,
+    ],
+]
+
+Removes the x button from the search inputs.
+
+<ApiTable rows={utilities} />
+
+## How to import?
+
+[How to import?](/#how-to-import)

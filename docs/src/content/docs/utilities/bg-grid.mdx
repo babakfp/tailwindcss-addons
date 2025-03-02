@@ -1,0 +1,230 @@
+---
+title: Background Grid
+---
+
+import { Code } from "@astrojs/starlight/components"
+import dedent from "dedent"
+import ApiTable from "../../../components/ApiTable.svelte"
+import Preview from "../../../components/Preview.svelte"
+
+export const utilities = [
+    [
+        "bg-grid-<theme-color>",
+        dedent`
+            background-size: var(--tw-bg-grid-w, 32px) var(--tw-bg-grid-h, 32px);
+            background-image: linear-gradient(to right, var(--<theme-color>) var(--tw-bg-grid-border-w, 1px), transparent 0px), linear-gradient( to bottom, var(--<theme-color>) var(--tw-bg-grid-border-w, 1px), transparent 0px);
+        `,
+    ],
+    [
+        "bg-grid-(<custom-property>)",
+        dedent`
+            background-size: var(--tw-bg-grid-w, 32px) var(--tw-bg-grid-h, 32px);
+            background-image: linear-gradient(to right, var(<custom-property>) var(--tw-bg-grid-border-w, 1px), transparent 0px), linear-gradient( to bottom, var(<custom-property>) var(--tw-bg-grid-border-w, 1px), transparent 0px);
+        `,
+    ],
+    [
+        "bg-grid-[<arbitrary-value>]",
+        dedent`
+            background-size: var(--tw-bg-grid-w, 32px) var(--tw-bg-grid-h, 32px);
+            background-image: linear-gradient(to right, <arbitrary-value> var(--tw-bg-grid-border-w, 1px), transparent 0px), linear-gradient( to bottom, <arbitrary-value> var(--tw-bg-grid-border-w, 1px), transparent 0px);
+        `,
+    ],
+]
+
+<ApiTable rows={utilities} />
+
+## Examples
+
+export const examples = {
+    basic: "bg-grid-gray-800 h-32",
+    center: "bg-grid-gray-800 h-32 bg-center",
+    shadow: "bg-grid-gray-800 h-32 bg-center shadow-[inset_0_0_4rem_2rem_var(--sl-color-black)]",
+    widthAndHeight: "bg-grid-gray-800 bg-grid-4 h-32",
+    rows: "bg-grid-gray-800 bg-grid-w-16 h-32",
+    columns: "bg-grid-gray-800 bg-grid-h-16 h-32",
+    borderWidth: "bg-grid-gray-800 bg-grid-border-2 h-32",
+}
+
+### Basic
+
+<Preview useGrid={false}>
+    <div class={examples.basic}></div>
+</Preview>
+
+<Code
+    code={`<div class="${examples.basic}"></div>`}
+    lang="jsx"
+    mark={["bg-grid-gray-800"]}
+/>
+
+### Center
+
+<Preview useGrid={false}>
+    <div class={examples.center}></div>
+</Preview>
+
+<Code
+    code={`<div class="${examples.center}"></div>`}
+    lang="jsx"
+    mark={["bg-center"]}
+/>
+
+- [`background-position`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-position)
+
+### Shadow
+
+<Preview useGrid={false}>
+    <div class={examples.shadow}></div>
+</Preview>
+
+<Code
+    code={`<div class="${examples.shadow}"></div>`}
+    lang="jsx"
+    mark={["shadow-[inset_0_0_4rem_2rem_var(--sl-color-black)]"]}
+/>
+
+- [`box-shadow`](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow)
+
+### Sizes
+
+#### Width and Height
+
+<ApiTable
+    rows={[
+        [
+            "bg-grid-<theme-spacing>",
+            dedent`
+                --tw-bg-grid-w: calc(var(--spacing) * <theme-spacing>);
+                --tw-bg-grid-h: calc(var(--spacing) * <theme-spacing>);
+            `,
+        ],
+        [
+            "bg-grid-<number>",
+            dedent`
+                --tw-bg-grid-w: calc(var(--spacing) * <number>);
+                --tw-bg-grid-h: calc(var(--spacing) * <number>);
+            `,
+        ],
+        [
+            "bg-grid-(<custom-property>)",
+            dedent`
+                --tw-bg-grid-w: var(<custom-property>);
+                --tw-bg-grid-h: var(<custom-property>);
+            `,
+        ],
+        [
+            "bg-grid-[<arbitrary-value>]",
+            dedent`
+                --tw-bg-grid-w: <arbitrary-value>;
+                --tw-bg-grid-h: <arbitrary-value>;
+            `,
+        ],
+    ]}
+/>
+
+<Preview useGrid={false}>
+    <div class={examples.widthAndHeight}></div>
+</Preview>
+
+<Code
+    code={`<div class="${examples.widthAndHeight}"></div>`}
+    lang="jsx"
+    mark={["bg-grid-4"]}
+/>
+
+#### Rows
+
+<ApiTable
+    rows={[
+        [
+            "bg-grid-w-<theme-spacing>",
+            "--tw-bg-grid-w: calc(var(--spacing) * <theme-spacing>);",
+        ],
+        [
+            "bg-grid-w-<number>",
+            "--tw-bg-grid-w: calc(var(--spacing) * <number>);",
+        ],
+        [
+            "bg-grid-w-(<custom-property>)",
+            "--tw-bg-grid-w: var(<custom-property>);",
+        ],
+        ["bg-grid-w-[<arbitrary-value>]", "--tw-bg-grid-w: <arbitrary-value>;"],
+    ]}
+/>
+
+<Preview useGrid={false}>
+    <div class={examples.rows}></div>
+</Preview>
+
+<Code
+    code={`<div class="${examples.rows}"></div>`}
+    lang="jsx"
+    mark={["bg-grid-w-16"]}
+/>
+
+#### Columns
+
+<ApiTable
+    rows={[
+        [
+            "bg-grid-h-<theme-spacing>",
+            "--tw-bg-grid-h: calc(var(--spacing) * <theme-spacing>);",
+        ],
+        [
+            "bg-grid-h-<number>",
+            "--tw-bg-grid-h: calc(var(--spacing) * <number>);",
+        ],
+        [
+            "bg-grid-h-(<custom-property>)",
+            "--tw-bg-grid-h: var(<custom-property>);",
+        ],
+        ["bg-grid-h-[<arbitrary-value>]", "--tw-bg-grid-h: <arbitrary-value>;"],
+    ]}
+/>
+
+<Preview useGrid={false}>
+    <div class={examples.columns}></div>
+</Preview>
+
+<Code
+    code={`<div class="${examples.columns}"></div>`}
+    lang="jsx"
+    mark={["bg-grid-h-16"]}
+/>
+
+### Border Width
+
+<ApiTable
+    rows={[
+        ["bg-grid-border-<number>", "--tw-bg-grid-border-w: <number>px;"],
+        [
+            "bg-grid-border-(length:<custom-property>)",
+            "--tw-bg-grid-border-w: var(<custom-property>);",
+        ],
+        [
+            "bg-grid-border-[<arbitrary-value>]",
+            "--tw-bg-grid-border-w: <arbitrary-value>;",
+        ],
+    ]}
+/>
+
+<Preview useGrid={false}>
+    <div class={examples.borderWidth}></div>
+</Preview>
+
+<Code
+    code={`<div class="${examples.borderWidth}"></div>`}
+    lang="jsx"
+    mark={["bg-grid-border-2"]}
+/>
+
+## How to import?
+
+[How to import?](/#how-to-import)
+
+## Other resources
+
+- [`background-size`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-size)
+- [`background-image`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-image)
+- [`linear-gradient()`](https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/linear-gradient)
+- [CSS custom properties (variables)](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties)

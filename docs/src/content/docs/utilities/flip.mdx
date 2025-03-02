@@ -1,0 +1,28 @@
+---
+title: Flip
+---
+
+import ApiTable from "../../../components/ApiTable.svelte"
+import FlipUtilityPreview from "../../../components/FlipUtilityPreview.svelte"
+
+export const utilities = [
+    ["flip", "@apply scale-x-[-1] scale-y-[-1];"],
+    ["flip-x", "@apply scale-x-[-1];"],
+    ["flip-y", "@apply scale-y-[-1];"],
+]
+
+<ApiTable rows={utilities} />
+
+- [Tailwind CSS: `scale`](https://tailwindcss.com/docs/scale)
+- [MDN Web Docs: `scale()
+`](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/scale)
+
+- [Point reflection](https://en.wikipedia.org/wiki/Point_reflection)
+
+## Examples
+
+<FlipUtilityPreview utilities={utilities} />
+
+## How to import?
+
+[How to import?](/#how-to-import)

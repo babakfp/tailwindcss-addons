@@ -1,0 +1,139 @@
+---
+title: Background Radial
+---
+
+import Preview from "../../../components/Preview.svelte"
+
+## Examples
+
+### Basic
+
+<Preview useGrid={false}>
+    <div class="bg-radial-gray-700 h-32"></div>
+</Preview>
+
+```svelte /bg-radial-gray-700/
+<div class="bg-radial-gray-700 ..." />
+```
+
+```css
+.bg-radial-COLOR: {
+    background-size: var(--tw-bg-radial-gap-x, 32px)
+        var(--tw-bg-radial-gap-y, 32px);
+    background-image: radial-gradient(
+        circle,
+        COLOR var(--tw-bg-radial-size, 1px),
+        transparent 0px
+    );
+}
+```
+
+- [`background-size`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-size)
+- [CSS custom properties (variables)](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties)
+- [`background-image`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-image)
+- [`radial-gradient()`](https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/radial-gradient)
+
+### Center
+
+<Preview useGrid={false}>
+    <div class="bg-radial-gray-700 h-32 bg-center"></div>
+</Preview>
+
+```svelte /bg-center/
+<div class="bg-radial-gray-700 bg-center ..." />
+```
+
+- [`background-position`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-position)
+
+### Shadow
+
+<Preview useGrid={false}>
+    <div class="bg-radial-gray-700 h-32 bg-center shadow-[inset_0_0_4rem_2rem_var(--color-gray-900)]"></div>
+</Preview>
+
+```svelte /shadow-[inset_0_0_4rem_2rem_var(--color-gray-900)]/
+<div
+    class="bg-radial-gray-700 bg-center shadow-[inset_0_0_4rem_2rem_var(--color-gray-900)] ..."
+/>
+```
+
+- [`box-shadow`](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow)
+
+### Spacing
+
+#### X and Y
+
+<Preview useGrid={false}>
+    <div class="bg-radial-gray-700 bg-radial-gap-4 h-32"></div>
+</Preview>
+
+```svelte /bg-radial-gap-4/
+<div class="bg-radial-gray-700 bg-radial-gap-4 ..." />
+```
+
+```css
+.bg-radial-gap-SPACING: {
+    --tw-bg-radial-gap-x: SPACING;
+    --tw-bg-radial-gap-y: SPACING;
+}
+```
+
+- [CSS custom properties (variables)](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties)
+
+#### X
+
+<Preview useGrid={false}>
+    <div class="bg-radial-gray-700 bg-radial-gap-x-16 h-32"></div>
+</Preview>
+
+```svelte /bg-radial-gap-x-16/
+<div class="bg-radial-gray-700 bg-radial-gap-x-16 ..." />
+```
+
+```css
+.bg-radial-gap-x-SPACING: {
+    --tw-bg-radial-gap-x: SPACING;
+}
+```
+
+- [CSS custom properties (variables)](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties)
+
+#### Y
+
+<Preview useGrid={false}>
+    <div class="bg-radial-gray-700 bg-radial-gap-y-16 h-32"></div>
+</Preview>
+
+```svelte /bg-radial-gap-y-16/
+<div class="bg-radial-gray-700 bg-radial-gap-y-16 ..." />
+```
+
+```css
+.bg-radial-gap-y-SPACING: {
+    --tw-bg-radial-gap-y: SPACING;
+}
+```
+
+- [CSS custom properties (variables)](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties)
+
+## Size
+
+<Preview useGrid={false}>
+    <div class="bg-radial-gray-700 bg-radial-size-2 h-32"></div>
+</Preview>
+
+```svelte /bg-radial-size-2/
+<div class="bg-radial-gray-700 bg-radial-size-2 ..." />
+```
+
+```css
+.bg-radial-size-BORDER_WIDTH: {
+    --tw-bg-radial-size: BORDER_WIDTH;
+}
+```
+
+- [CSS custom properties (variables)](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties)
+
+## How to import?
+
+[How to import?](/#how-to-import)
