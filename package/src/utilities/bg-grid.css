@@ -24,5 +24,7 @@
 
 @utility bg-grid-border-* {
     /* prettier-ignore */
-    --tw-bg-grid-border-w: --value(--border-width-*, number, [length]);
+    --tw-bg-grid-border-w: --value(--border-width-*, [length]);
+    /* prettier-ignore */
+    --tw-bg-grid-border-w: --value(number)px;
 }
