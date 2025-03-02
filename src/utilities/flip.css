@@ -1,0 +1,11 @@
+@utility flip {
+    @apply scale-x-[-1] scale-y-[-1];
+}
+
+@utility flip-x {
+    @apply scale-x-[-1];
+}
+
+@utility flip-y {
+    @apply scale-y-[-1];
+}

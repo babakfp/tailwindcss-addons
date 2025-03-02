@@ -1,0 +1,13 @@
+@utility scrollbar-thumb-* {
+    --opacity: calc(--modifier(integer) * 1%);
+    /* prettier-ignore */
+    --tw-scrollbar-thumb: --alpha(--value(--color-*, [color]) / var(--opacity, 100%));
+    scrollbar-color: var(--tw-scrollbar-thumb) var(--tw-scrollbar-track);
+}
+
+@utility scrollbar-track-* {
+    --opacity: calc(--modifier(integer) * 1%);
+    /* prettier-ignore */
+    --tw-scrollbar-track: --alpha(--value(--color-*, [color]) / var(--opacity, 100%));
+    scrollbar-color: var(--tw-scrollbar-thumb) var(--tw-scrollbar-track);
+}

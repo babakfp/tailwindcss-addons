@@ -1,0 +1,7 @@
+@theme {
+    --text-2xs: 0.625rem;
+    --text-2xs--line-height: calc(1 / 0.625);
+
+    --text-3xs: 0.5rem;
+    --text-3xs--line-height: calc(1 / 0.5);
+}

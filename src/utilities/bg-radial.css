@@ -1,0 +1,25 @@
+@utility bg-radial-* {
+    /* prettier-ignore */
+    background-size: var(--tw-bg-radial-gap-x, 32px) var(--tw-bg-radial-gap-y, 32px);
+    --opacity: calc(--modifier(integer) * 1%);
+    /* prettier-ignore */
+    background-image: radial-gradient(circle, --alpha(--value(--color-*, [color]) / var(--opacity, 100%)) var(--tw-bg-radial-size, 1px), transparent 0);
+}
+
+@utility bg-radial-gap-* {
+    --tw-bg-radial-gap-x: --spacing(--value(number, [length], [percentage]));
+    --tw-bg-radial-gap-y: --spacing(--value(number, [length], [percentage]));
+}
+
+@utility bg-radial-gap-x-* {
+    --tw-bg-radial-gap-x: --spacing(--value(number, [length], [percentage]));
+}
+
+@utility bg-radial-gap-y-* {
+    --tw-bg-radial-gap-y: --spacing(--value(number, [length], [percentage]));
+}
+
+@utility bg-radial-size-* {
+    /* prettier-ignore */
+    --tw-bg-radial-size: --modifier(--border-width-*, [length]);
+}

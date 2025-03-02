@@ -1,0 +1,6 @@
+/* NOTE: for some reason `@base` didn't work here. */
+@layer base {
+    input[type="search"] {
+        @apply reset-search-input;
+    }
+}

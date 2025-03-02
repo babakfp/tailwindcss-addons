@@ -1,0 +1,154 @@
+/* [Disabling core plugins](https://tailwindcss.com/docs/upgrade-guide#disabling-core-plugins) is no longer supported in Tailwind CSS 4. */
+
+@utility ac-center {
+    align-content: center;
+}
+@utility ac-start {
+    align-content: flex-start;
+}
+@utility ac-end {
+    align-content: flex-end;
+}
+@utility ac-between {
+    align-content: space-between;
+}
+@utility ac-around {
+    align-content: space-around;
+}
+@utility ac-evenly {
+    align-content: space-evenly;
+}
+
+@utility ai-start {
+    align-items: flex-start;
+}
+@utility ai-end {
+    align-items: flex-end;
+}
+@utility ai-center {
+    align-items: center;
+}
+@utility ai-baseline {
+    align-items: baseline;
+}
+@utility ai-stretch {
+    align-items: stretch;
+}
+
+@utility as-auto {
+    align-self: auto;
+}
+@utility as-start {
+    align-self: flex-start;
+}
+@utility as-end {
+    align-self: flex-end;
+}
+@utility as-center {
+    align-self: center;
+}
+@utility as-stretch {
+    align-self: stretch;
+}
+@utility as-baseline {
+    align-self: baseline;
+}
+
+@utility jc-start {
+    justify-content: flex-start;
+}
+@utility jc-end {
+    justify-content: flex-end;
+}
+@utility jc-center {
+    justify-content: center;
+}
+@utility jc-between {
+    justify-content: space-between;
+}
+@utility jc-around {
+    justify-content: space-around;
+}
+@utility jc-evenly {
+    justify-content: space-evenly;
+}
+
+@utility ji-start {
+    justify-items: start;
+}
+@utility ji-end {
+    justify-items: end;
+}
+@utility ji-center {
+    justify-items: center;
+}
+@utility ji-stretch {
+    justify-items: stretch;
+}
+
+@utility js-auto {
+    justify-self: auto;
+}
+@utility js-start {
+    justify-self: start;
+}
+@utility js-end {
+    justify-self: end;
+}
+@utility js-center {
+    justify-self: center;
+}
+@utility js-stretch {
+    justify-self: stretch;
+}
+
+@utility pc-center {
+    place-content: center;
+}
+@utility pc-start {
+    place-content: start;
+}
+@utility pc-end {
+    place-content: end;
+}
+@utility pc-between {
+    place-content: space-between;
+}
+@utility pc-around {
+    place-content: space-around;
+}
+@utility pc-evenly {
+    place-content: space-evenly;
+}
+@utility pc-stretch {
+    place-content: stretch;
+}
+
+@utility pi-start {
+    place-items: start;
+}
+@utility pi-end {
+    place-items: end;
+}
+@utility pi-center {
+    place-items: center;
+}
+@utility pi-stretch {
+    place-items: stretch;
+}
+
+@utility ps-auto {
+    place-self: auto;
+}
+@utility ps-start {
+    place-self: start;
+}
+@utility ps-end {
+    place-self: end;
+}
+@utility ps-center {
+    place-self: center;
+}
+@utility ps-stretch {
+    place-self: stretch;
+}

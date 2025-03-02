@@ -1,0 +1,11 @@
+@utility scrollbar-auto {
+    scrollbar-width: auto;
+}
+
+@utility scrollbar-thin {
+    scrollbar-width: thin;
+}
+
+@utility scrollbar-none {
+    scrollbar-width: none;
+}

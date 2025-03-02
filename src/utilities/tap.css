@@ -1,0 +1,5 @@
+@utility tap-* {
+    --opacity: calc(--modifier(integer) * 1%);
+    /* prettier-ignore */
+    -webkit-tap-highlight-color: --alpha(--value(--color-*, [color]) / var(--opacity, 100%));
+}

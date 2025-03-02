@@ -1,0 +1,11 @@
+@utility hide {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+
+@utility show {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+}

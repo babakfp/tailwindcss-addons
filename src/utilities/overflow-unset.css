@@ -1,0 +1,11 @@
+@utility overflow-unset {
+    overflow: unset;
+}
+
+@utility overflow-y-unset {
+    overflow-y: unset;
+}
+
+@utility overflow-x-unset {
+    overflow-x: unset;
+}

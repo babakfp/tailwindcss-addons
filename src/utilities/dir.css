@@ -1,0 +1,7 @@
+@utility dir-rtl {
+    direction: rtl;
+}
+
+@utility dir-ltr {
+    direction: ltr;
+}

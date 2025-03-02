@@ -1,0 +1,49 @@
+/*
+NOTE: this is how Tailwind CSS does the order of the selector and the media query; That is why we do it this way.
+
+```css
+@layer utilities {
+    . {
+        &:hover {
+            @media (hover: hover) {
+                ...
+            }
+        }
+    }
+    . {
+        &:hover, &:focus {
+            @media (hover: hover) {
+                ...
+            }
+        }
+    }
+}
+```
+*/
+
+@custom-variant hocus-within {
+    &:hover,
+    &:focus-within {
+        @media (hover: hover) {
+            @slot;
+        }
+    }
+}
+
+@custom-variant hocus {
+    &:hover,
+    &:focus {
+        @media (hover: hover) {
+            @slot;
+        }
+    }
+}
+
+@custom-variant hocus-visible {
+    &:hover,
+    &:focus-visible {
+        @media (hover: hover) {
+            @slot;
+        }
+    }
+}

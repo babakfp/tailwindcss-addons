@@ -1,0 +1,11 @@
+@utility reset-number-input {
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+        /* Using `display: none` crashes Chrome on hover. */
+        -webkit-appearance: none;
+        /* Apparently some margin are still there even though it's hidden. */
+        margin: 0;
+        /* Firefox. */
+        -moz-appearance: textfield;
+    }
+}

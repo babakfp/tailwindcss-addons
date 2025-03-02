@@ -1,0 +1,11 @@
+@utility inset-center {
+    @apply top-1/2 right-1/2 translate-x-1/2 -translate-y-1/2;
+}
+
+@utility inset-x-center {
+    @apply right-1/2 translate-x-1/2;
+}
+
+@utility inset-y-center {
+    @apply top-1/2 -translate-y-1/2;
+}

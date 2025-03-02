@@ -1,0 +1,28 @@
+@utility bg-grid-* {
+    background-size: var(--tw-bg-grid-w, 32px) var(--tw-bg-grid-h, 32px);
+    --opacity: calc(--modifier(integer) * 1%);
+    /* prettier-ignore */
+    --color: --alpha(--value(--color-*, [color]) / var(--opacity, 100%));
+    /* prettier-ignore */
+    background-image:
+        linear-gradient(to right, var(--color) var(--tw-bg-grid-border-w, 1px), transparent 0)
+    ,   linear-gradient(to bottom, var(--color) var(--tw-bg-grid-border-w, 1px), transparent 0);
+}
+
+@utility bg-grid-* {
+    --tw-bg-grid-w: --spacing(--value(number, [length], [percentage]));
+    --tw-bg-grid-h: --spacing(--value(number, [length], [percentage]));
+}
+
+@utility bg-grid-w-* {
+    --tw-bg-grid-w: --spacing(--value(number, [length], [percentage]));
+}
+
+@utility bg-grid-h-* {
+    --tw-bg-grid-h: --spacing(--value(number, [length], [percentage]));
+}
+
+@utility bg-grid-border-w-* {
+    /* prettier-ignore */
+    --tw-bg-grid-border-w: --modifier(--border-width-*, [length]);
+}

@@ -1,0 +1,11 @@
+@utility drag-none {
+    -webkit-user-drag: none;
+}
+
+@utility drag-element {
+    -webkit-user-drag: element;
+}
+
+@utility drag-auto {
+    -webkit-user-drag: auto;
+}

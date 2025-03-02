@@ -1,56 +1,37 @@
 {
     "name": "tailwindcss-addons",
-    "description": "A set of Tailwind CSS plugins that add extra defaults, utilities, variants, and more.",
-    "version": "3.0.0",
+    "description": "A set of Tailwind CSS preflights, themes, utilities and variants.",
+    "version": "4.0.0-beta.8",
     "license": "MIT",
-    "main": "./dist/index.js",
     "repository": "github:babakfp/tailwindcss-addons",
     "homepage": "https://babakfp.ir/docs/tailwindcss-addons",
     "scripts": {
-        "dev": "rimraf dist && tsc -w",
-        "build": "rimraf dist && tsc",
-        "prepublishOnly": "rimraf dist && tsc",
         "format": "prettier -w ."
     },
     "peerDependencies": {
-        "tailwindcss": ">= 3.4.1 < 4"
+        "tailwindcss": "4"
     },
     "devDependencies": {
-        "prettier": "3.3.3",
-        "rimraf": "6.0.1",
-        "tailwindcss": "3.4.10",
-        "typescript": "5.5.4"
+        "prettier": "3.4.2",
+        "tailwindcss": "4.0.9"
     },
     "files": [
-        "/dist/"
+        "/src/"
     ],
     "exports": {
-        ".": "./dist/index.js"
+        ".": "./src/main.css",
+        "./preflight.css": "./src/preflight.css",
+        "./theme.css": "./src/theme.css",
+        "./utilities.css": "./src/utilities.css",
+        "./variants.css": "./src/variants.css",
+        "./preflight/*": "./src/preflight/*",
+        "./theme/*": "./src/theme/*",
+        "./utilities/*": "./src/utilities/*",
+        "./variants/*": "./src/variants/*"
     },
     "keywords": [
-        "ui",
-        "css",
         "tailwind",
-        "tailwindcss",
-        "bg-grid",
-        "bg-radial",
-        "dir",
-        "drag",
-        "extra-defaults",
-        "flex-grid",
-        "flip",
-        "font-regular",
-        "hide-show",
-        "hocus",
-        "inset-center",
-        "not",
-        "overflow-unset",
-        "reset-number-input",
-        "reset-search-input",
-        "supports-focus",
-        "supports-hocus",
-        "supports-hover",
-        "tap"
+        "tailwindcss"
     ],
     "type": "module"
 }
