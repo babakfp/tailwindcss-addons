@@ -45,6 +45,7 @@ export default defineConfig({
             ],
             components: {
                 ThemeSelect: "./src/components/ThemeSelect.astro",
+                ThemeProvider: "./src/components/ThemeProvider.astro",
             },
             editLink: {
                 baseUrl:
