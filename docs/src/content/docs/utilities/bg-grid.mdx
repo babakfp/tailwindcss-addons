@@ -37,18 +37,18 @@ export const utilities = [
 
 export const examples = {
     basic: "bg-grid-gray-800 h-32",
-    center: "bg-grid-gray-800 h-32 bg-center",
-    shadow: "bg-grid-gray-800 h-32 bg-center shadow-[inset_0_0_4rem_2rem_var(--sl-color-black)]",
-    widthAndHeight: "bg-grid-gray-800 bg-grid-4 h-32",
-    rows: "bg-grid-gray-800 bg-grid-w-16 h-32",
-    columns: "bg-grid-gray-800 bg-grid-h-16 h-32",
-    borderWidth: "bg-grid-gray-800 bg-grid-border-2 h-32",
+    center: "bg-center",
+    shadow: "shadow-[inset_0_0_4rem_2rem_var(--sl-color-black)]",
+    widthAndHeight: "bg-grid-4",
+    rows: "bg-grid-w-16",
+    columns: "bg-grid-h-16",
+    borderWidth: "bg-grid-border-2",
 }
 
 ### Basic
 
 <Preview useGrid={false}>
-    <div class={examples.basic}></div>
+    <div class={examples.basic} />
 </Preview>
 
 <Code
@@ -60,11 +60,11 @@ export const examples = {
 ### Center
 
 <Preview useGrid={false}>
-    <div class={examples.center}></div>
+    <div class={`${examples.center} ${examples.basic}`} />
 </Preview>
 
 <Code
-    code={`<div class="${examples.center}"></div>`}
+    code={`<div class="${examples.center} ${examples.basic}"></div>`}
     lang="jsx"
     mark={["bg-center"]}
 />
@@ -74,11 +74,11 @@ export const examples = {
 ### Shadow
 
 <Preview useGrid={false}>
-    <div class={examples.shadow}></div>
+    <div class={`${examples.shadow} ${examples.basic} ${examples.center}`} />
 </Preview>
 
 <Code
-    code={`<div class="${examples.shadow}"></div>`}
+    code={`<div class="${examples.shadow} ${examples.basic} ${examples.center}"></div>`}
     lang="jsx"
     mark={["shadow-[inset_0_0_4rem_2rem_var(--sl-color-black)]"]}
 />
@@ -123,11 +123,13 @@ export const examples = {
 />
 
 <Preview useGrid={false}>
-    <div class={examples.widthAndHeight}></div>
+    <div
+        class={`${examples.widthAndHeight} ${examples.basic} ${examples.center} ${examples.shadow}`}
+    />
 </Preview>
 
 <Code
-    code={`<div class="${examples.widthAndHeight}"></div>`}
+    code={`<div class="${examples.widthAndHeight} ${examples.basic} ${examples.center} ${examples.shadow}"></div>`}
     lang="jsx"
     mark={["bg-grid-4"]}
 />
@@ -153,11 +155,13 @@ export const examples = {
 />
 
 <Preview useGrid={false}>
-    <div class={examples.rows}></div>
+    <div
+        class={`${examples.rows} ${examples.basic} ${examples.center} ${examples.shadow}`}
+    />
 </Preview>
 
 <Code
-    code={`<div class="${examples.rows}"></div>`}
+    code={`<div class="${examples.rows} ${examples.basic} ${examples.center} ${examples.shadow}"></div>`}
     lang="jsx"
     mark={["bg-grid-w-16"]}
 />
@@ -183,11 +187,13 @@ export const examples = {
 />
 
 <Preview useGrid={false}>
-    <div class={examples.columns}></div>
+    <div
+        class={`${examples.columns} ${examples.basic} ${examples.center} ${examples.shadow}`}
+    />
 </Preview>
 
 <Code
-    code={`<div class="${examples.columns}"></div>`}
+    code={`<div class="${examples.columns} ${examples.basic} ${examples.center} ${examples.shadow}"></div>`}
     lang="jsx"
     mark={["bg-grid-h-16"]}
 />
@@ -209,11 +215,13 @@ export const examples = {
 />
 
 <Preview useGrid={false}>
-    <div class={examples.borderWidth}></div>
+    <div
+        class={`${examples.borderWidth} ${examples.basic} ${examples.center} ${examples.shadow}`}
+    />
 </Preview>
 
 <Code
-    code={`<div class="${examples.borderWidth}"></div>`}
+    code={`<div class="${examples.borderWidth} ${examples.basic} ${examples.center} ${examples.shadow}"></div>`}
     lang="jsx"
     mark={["bg-grid-border-2"]}
 />
