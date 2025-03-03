@@ -3,7 +3,6 @@
     import type { Snippet } from "svelte"
 
     let {
-        class: class_,
         useGrid = true,
         children,
     }: {
