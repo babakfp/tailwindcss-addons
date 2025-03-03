@@ -15,7 +15,7 @@
 
 {#snippet Item({ utility, className }: { utility: string; className?: string })}
     <div
-        class="mt-0! flex flex-1 flex-col items-center justify-center gap-2 p-8 text-nowrap"
+        class="flex flex-1 flex-col items-center justify-center gap-2 p-8 text-nowrap"
     >
         <span class="text-sm text-gray-400 {className}">{utility}</span>
         <div
