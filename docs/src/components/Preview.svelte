@@ -6,7 +6,6 @@
         useGrid = true,
         children,
     }: {
-        class?: string
         useGrid?: boolean
         children: Snippet
     } = $props()
