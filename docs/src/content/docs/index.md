@@ -28,8 +28,8 @@ As tested, all utilities work fine, however autocomplete/intellisense may not wo
 
 All of the preflights, themes, utilities, and variants are imported by default, except:
 
-- `"tailwindcss-addons/theme/font-weight-regular.css"{:js}`
-- `"tailwindcss-addons/utilities/align-justify-place.css"{:js}`
+- `"tailwindcss-addons/theme/font-weight-regular.css"`
+- `"tailwindcss-addons/utilities/align-justify-place.css"`
 
 ### Preflight
 
