@@ -43,21 +43,25 @@
 
 <div
     id="quick-reference"
-    class="relative isolate scroll-mt-[calc(var(--sl-nav-height)+var(--sl-mobile-toc-height))]"
+    class="not-content relative isolate scroll-mt-[calc(var(--sl-nav-height)+var(--sl-mobile-toc-height))]"
 >
     <div class="w-full overflow-x-auto whitespace-nowrap">
-        <table class="grid! w-full grid-cols-[auto_auto]">
+        <table
+            class="grid w-full grid-cols-[auto_auto] border-b border-(--sl-color-gray-5)"
+        >
             <thead class="col-span-2 grid grid-cols-subgrid">
                 <tr class="col-span-2 grid grid-cols-subgrid">
-                    <th class="px-2! py-2.5 text-sm/7 font-semibold">
+                    <th class="px-2 py-2.5 text-left text-sm/7 font-semibold">
                         Class
                     </th>
-                    <th class="mt-0! px-2! py-2.5 text-sm/7 font-semibold">
+                    <th class="px-2 py-2.5 text-left text-sm/7 font-semibold">
                         Styles
                     </th>
                 </tr>
             </thead>
-            <tbody class="col-span-2 mt-0! grid grid-cols-subgrid">
+            <tbody
+                class="col-span-2 mt-0 grid grid-cols-subgrid border-t border-(--sl-color-gray-5)"
+            >
                 {#each aboveTheFold as [utility, styles], i}
                     {@render ApiTableRow({ utility, styles })}
                 {/each}
@@ -129,20 +133,18 @@
 })}
     <tr
         class={clsx(
-            "col-span-2 mt-0! grid grid-cols-subgrid not-last:border-b not-last:border-white/5",
+            "col-span-2 grid grid-cols-subgrid not-last:border-b not-last:border-white/5",
             className,
         )}
     >
         <td
-            class="px-2! py-2! align-top font-mono text-xs/6 font-medium text-sky-400"
+            class="px-2 py-2 align-top font-mono text-xs/6 font-medium text-sky-400"
         >
             {@render highlight(utility)}
         </td>
-        <td
-            class="mt-0! px-2! py-2! align-top font-mono text-xs/6 text-violet-400"
-        >
+        <td class="px-2 py-2 align-top font-mono text-xs/6 text-violet-400">
             {#each Array.isArray(styles) ? styles : [styles] as style, i}
-                <div class="*:whitespace-pre!">
+                <div class="*:whitespace-pre">
                     {@render highlight(style)}
                 </div>
             {/each}
