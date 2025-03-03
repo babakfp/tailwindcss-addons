@@ -87,9 +87,9 @@
         <div
             class={clsx(
                 "z-10 flex justify-center bg-linear-to-t from-gray-950 to-gray-950/40 hover:text-white/70",
-                isExpanded
-                    ? "sticky bottom-0 h-12 to-white/80 py-1"
-                    : "absolute bottom-0 h-26 w-full translate-y-1/2 py-8",
+                isExpanded ?
+                    "sticky bottom-0 h-12 to-white/80 py-1"
+                :   "absolute bottom-0 h-26 w-full translate-y-1/2 py-8",
             )}
         >
             <button

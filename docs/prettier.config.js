@@ -2,6 +2,7 @@
 export default {
     semi: false,
     tabWidth: 4,
+    experimentalTernaries: true,
     plugins: [
         "prettier-plugin-svelte",
         "@ianvs/prettier-plugin-sort-imports",
