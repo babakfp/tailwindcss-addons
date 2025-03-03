@@ -18,7 +18,6 @@
         "dedent": "^1.5.3",
         "sharp": "^0.33.5",
         "svelte": "^5.20.5",
-        "tailwind-merge": "^3.0.1",
         "tailwindcss": "^4.0.9",
         "tailwindcss-addons": "workspace:*",
         "typescript": "^5.8.2"
