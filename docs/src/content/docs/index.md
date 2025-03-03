@@ -20,6 +20,10 @@ npm install tailwindcss-addons
 @import "tailwindcss-addons";
 ```
 
+:::note
+As tested, all utilities work fine, however autocomplete/intellisense may not work for some utilities and/or in some cases.
+:::
+
 ## How to import?
 
 All of the preflights, themes, utilities, and variants are imported by default, except:
