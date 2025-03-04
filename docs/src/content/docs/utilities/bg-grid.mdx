@@ -41,8 +41,8 @@ export const examples = {
     center: "bg-center",
     shadow: "shadow-[inset_0_0_4rem_2rem_var(--sl-color-black)]",
     size: "bg-grid-4",
-    rows: "bg-grid-w-16",
-    columns: "bg-grid-h-16",
+    width: "bg-grid-w-16",
+    height: "bg-grid-h-16",
     borderWidth: "bg-grid-border-2",
 }
 
@@ -84,9 +84,7 @@ export const examples = {
     mark={[examples.shadow]}
 />
 
-### Sizes
-
-#### Width and Height
+### Size
 
 <ApiTable
     rows={[
@@ -133,7 +131,7 @@ export const examples = {
     mark={[examples.size]}
 />
 
-#### Rows
+### Width
 
 <ApiTable
     rows={[
@@ -155,17 +153,17 @@ export const examples = {
 
 <Preview useGrid={false}>
     <div
-        class={`${examples.rows} ${examples._base_} ${examples.basic} ${examples.center} ${examples.shadow}`}
+        class={`${examples.width} ${examples._base_} ${examples.basic} ${examples.center} ${examples.shadow}`}
     />
 </Preview>
 
 <Code
-    code={`<div class="${examples.rows} ${examples._base_} ${examples.basic} ${examples.center} ${examples.shadow}"></div>`}
+    code={`<div class="${examples.width} ${examples._base_} ${examples.basic} ${examples.center} ${examples.shadow}"></div>`}
     lang="jsx"
-    mark={[examples.rows]}
+    mark={[examples.width]}
 />
 
-#### Columns
+### Height
 
 <ApiTable
     rows={[
@@ -187,14 +185,14 @@ export const examples = {
 
 <Preview useGrid={false}>
     <div
-        class={`${examples.columns} ${examples._base_} ${examples.basic} ${examples.center} ${examples.shadow}`}
+        class={`${examples.height} ${examples._base_} ${examples.basic} ${examples.center} ${examples.shadow}`}
     />
 </Preview>
 
 <Code
-    code={`<div class="${examples.columns} ${examples._base_} ${examples.basic} ${examples.center} ${examples.shadow}"></div>`}
+    code={`<div class="${examples.height} ${examples._base_} ${examples.basic} ${examples.center} ${examples.shadow}"></div>`}
     lang="jsx"
-    mark={[examples.columns]}
+    mark={[examples.height]}
 />
 
 ### Border Width
