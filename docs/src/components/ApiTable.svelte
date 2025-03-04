@@ -43,7 +43,7 @@
 
 <div
     id="quick-reference"
-    class="not-content relative isolate scroll-mt-[calc(var(--sl-nav-height)+var(--sl-mobile-toc-height))]"
+    class="not-content relative isolate mb-[52.500px]! scroll-mt-[calc(var(--sl-nav-height)+var(--sl-mobile-toc-height))]"
 >
     <div class="w-full overflow-x-auto whitespace-nowrap">
         <table
@@ -51,10 +51,14 @@
         >
             <thead class="col-span-2 grid grid-cols-subgrid">
                 <tr class="col-span-2 grid grid-cols-subgrid">
-                    <th class="px-2 py-2.5 text-left text-sm/7 font-semibold">
+                    <th
+                        class="px-2 py-2.5 text-left text-sm/7 font-semibold"
+                    >
                         Class
                     </th>
-                    <th class="px-2 py-2.5 text-left text-sm/7 font-semibold">
+                    <th
+                        class="px-2 py-2.5 text-left text-sm/7 font-semibold"
+                    >
                         Styles
                     </th>
                 </tr>
@@ -151,10 +155,3 @@
         </td>
     </tr>
 {/snippet}
-
-<style>
-    table :global(code) {
-        background: transparent;
-        padding: 0;
-    }
-</style>
