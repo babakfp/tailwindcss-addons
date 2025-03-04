@@ -40,7 +40,7 @@ export const examples = {
     basic: "bg-grid-gray-800",
     center: "bg-center",
     shadow: "shadow-[inset_0_0_4rem_2rem_var(--sl-color-black)]",
-    widthAndHeight: "bg-grid-4",
+    size: "bg-grid-4",
     rows: "bg-grid-w-16",
     columns: "bg-grid-h-16",
     borderWidth: "bg-grid-border-2",
@@ -123,14 +123,14 @@ export const examples = {
 
 <Preview useGrid={false}>
     <div
-        class={`${examples.widthAndHeight} ${examples._base_} ${examples.basic} ${examples.center} ${examples.shadow}`}
+        class={`${examples.size} ${examples._base_} ${examples.basic} ${examples.center} ${examples.shadow}`}
     />
 </Preview>
 
 <Code
-    code={`<div class="${examples.widthAndHeight} ${examples._base_} ${examples.basic} ${examples.center} ${examples.shadow}"></div>`}
+    code={`<div class="${examples.size} ${examples._base_} ${examples.basic} ${examples.center} ${examples.shadow}"></div>`}
     lang="jsx"
-    mark={[examples.widthAndHeight]}
+    mark={[examples.size]}
 />
 
 #### Rows
