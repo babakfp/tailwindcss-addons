@@ -9,7 +9,7 @@
     ,   linear-gradient(to bottom, var(--color) var(--tw-bg-grid-border-w, 1px), transparent 0);
 }
 
-@utility bg-grid-* {
+@utility bg-grid-size-* {
     --tw-bg-grid-w: --spacing(--value(number, [length], [percentage]));
     --tw-bg-grid-h: --spacing(--value(number, [length], [percentage]));
 }

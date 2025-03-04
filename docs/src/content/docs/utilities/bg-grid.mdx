@@ -40,7 +40,7 @@ export const examples = {
     basic: "bg-grid-gray-800",
     center: "bg-center",
     shadow: "shadow-[inset_0_0_4rem_2rem_var(--sl-color-black)]",
-    size: "bg-grid-4",
+    size: "bg-grid-size-4",
     width: "bg-grid-w-16",
     height: "bg-grid-h-16",
     borderWidth: "bg-grid-border-2",
@@ -89,28 +89,28 @@ export const examples = {
 <ApiTable
     rows={[
         [
-            "bg-grid-<theme-spacing>",
+            "bg-grid-size-<theme-spacing>",
             dedent`
                 --tw-bg-grid-w: calc(var(--spacing) * <theme-spacing>);
                 --tw-bg-grid-h: calc(var(--spacing) * <theme-spacing>);
             `,
         ],
         [
-            "bg-grid-<number>",
+            "bg-grid-size-<number>",
             dedent`
                 --tw-bg-grid-w: calc(var(--spacing) * <number>);
                 --tw-bg-grid-h: calc(var(--spacing) * <number>);
             `,
         ],
         [
-            "bg-grid-(<custom-property>)",
+            "bg-grid-size-(<custom-property>)",
             dedent`
                 --tw-bg-grid-w: var(<custom-property>);
                 --tw-bg-grid-h: var(<custom-property>);
             `,
         ],
         [
-            "bg-grid-[<arbitrary-value>]",
+            "bg-grid-size-[<arbitrary-value>]",
             dedent`
                 --tw-bg-grid-w: <arbitrary-value>;
                 --tw-bg-grid-h: <arbitrary-value>;

@@ -2,6 +2,10 @@
 title: CHANGELOG
 ---
 
+## 4.0.3
+
+- fix: rename sizing utility of `bg-grid-*` to `bg-grid-size-*` because of issues with Tailwind CSS 4.
+
 ## 4.0.2
 
 - fix: `bg-grid-border-*` and `bg-radial-size-*` utilities not working.
