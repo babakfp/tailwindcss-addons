@@ -1,0 +1,21 @@
+---
+import Preview from "../Preview.astro"
+import Item from "./Item.astro"
+
+interface Props {
+    utilities: [string, string][]
+}
+
+const { utilities } = Astro.props
+---
+
+<Preview>
+    <div class="flex flex-wrap gap-8">
+        <Item utility="ORIGINAL" />
+        {
+            utilities.map(([utility]) => (
+                <Item utility={utility} className="font-mono" />
+            ))
+        }
+    </div>
+</Preview>

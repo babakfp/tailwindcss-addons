@@ -1,0 +1,21 @@
+---
+interface Props {
+    utility: string
+    className?: string
+}
+
+const { utility, className } = Astro.props
+---
+
+<div
+    class="flex flex-1 flex-col items-center justify-center gap-2 p-8 text-nowrap"
+>
+    <span class:list={[className, "text-sm text-gray-400"]}>{utility}</span>
+    <div
+        class:list={[
+            utility,
+            "size-8 border-4 border-gray-200 border-r-(--sl-color-green) border-b-(--sl-color-green)",
+        ]}
+    >
+    </div>
+</div>

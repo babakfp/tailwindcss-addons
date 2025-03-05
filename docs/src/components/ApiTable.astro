@@ -1,0 +1,50 @@
+---
+interface Props {
+    rows: [string, string][]
+}
+
+const { rows } = Astro.props
+---
+
+<div
+    id="quick-reference"
+    class="not-content relative isolate mb-[52.500px]! scroll-mt-[calc(var(--sl-nav-height)+var(--sl-mobile-toc-height))]"
+>
+    <div class="w-full overflow-x-auto whitespace-nowrap">
+        <table
+            class="grid w-full grid-cols-[auto_auto] border-b border-(--sl-color-gray-5)"
+        >
+            <thead class="col-span-2 grid grid-cols-subgrid">
+                <tr class="col-span-2 grid grid-cols-subgrid">
+                    <th class="px-2 py-2.5 text-left text-sm/7 font-semibold">
+                        Class
+                    </th>
+                    <th class="px-2 py-2.5 text-left text-sm/7 font-semibold">
+                        Styles
+                    </th>
+                </tr>
+            </thead>
+            <tbody
+                class="col-span-2 mt-0 grid grid-cols-subgrid border-t border-(--sl-color-gray-5)"
+            >
+                {
+                    rows.map(([utility, styles]) => (
+                        <tr class="col-span-2 grid grid-cols-subgrid not-last:border-b not-last:border-white/5">
+                            <td class="px-2 py-2 align-top font-mono text-xs/6 font-medium text-sky-400">
+                                <code>{utility}</code>
+                            </td>
+                            <td class="px-2 py-2 align-top font-mono text-xs/6 text-violet-400">
+                                {(Array.isArray(styles) ? styles : [styles]
+                                ).map((style) => (
+                                    <div class="*:whitespace-pre">
+                                        <code>{style}</code>
+                                    </div>
+                                ))}
+                            </td>
+                        </tr>
+                    ))
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

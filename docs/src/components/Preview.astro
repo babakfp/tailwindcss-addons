@@ -1,0 +1,16 @@
+---
+interface Props {
+    useGrid?: boolean
+}
+
+const { useGrid = true } = Astro.props
+---
+
+<div
+    class:list={[
+        "not-content rounded border-2 border-gray-800 p-4",
+        { "bg-grid-gray-800/50 bg-center shadow-[inset_0_0_4rem_2rem_var(--sl-color-black)]": useGrid }, // prettier-ignore
+    ]}
+>
+    <slot />
+</div>
