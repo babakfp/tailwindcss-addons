@@ -12,7 +12,7 @@ const { rows } = Astro.props
 >
     <div class="w-full overflow-x-auto whitespace-nowrap">
         <table
-            class="grid gap-x-4 w-full grid-cols-[auto_auto] border-b border-(--sl-color-gray-5)"
+            class="grid gap-x-4 w-full grid-cols-[auto_auto] border-b border-(--sl-color-hairline-light)"
         >
             <thead class="col-span-2 grid grid-cols-subgrid">
                 <tr class="col-span-2 grid grid-cols-subgrid">
@@ -25,11 +25,11 @@ const { rows } = Astro.props
                 </tr>
             </thead>
             <tbody
-                class="col-span-2 mt-0 grid grid-cols-subgrid border-t border-(--sl-color-gray-5)"
+                class="col-span-2 mt-0 grid grid-cols-subgrid border-t border-(--sl-color-hairline-light)"
             >
                 {
                     rows.map(([utility, styles]) => (
-                        <tr class="col-span-2 grid grid-cols-subgrid not-last:border-b not-last:border-white/5">
+                        <tr class="col-span-2 grid grid-cols-subgrid not-last:border-b not-last:border-(--sl-color-hairline-light)">
                             <td class="px-2 py-2 align-top font-mono text-xs/6 font-medium text-sky-400">
                                 <code>{utility}</code>
                             </td>
