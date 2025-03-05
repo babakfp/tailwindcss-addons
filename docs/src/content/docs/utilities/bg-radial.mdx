@@ -36,10 +36,8 @@ import Preview from "../../../components/Preview.astro"
 ## Examples
 
 export const examples = {
-    _base_: "h-48",
-    basic: "bg-radial-gray-700",
-    center: "bg-center",
-    shadow: "shadow-[inset_0_0_2rem_2rem_var(--sl-color-black)]",
+    _base_: "h-48 bg-center shadow-[inset_0_0_2rem_2rem_var(--sl-color-black)]",
+    basic: "bg-radial-gray-600",
     gap: "bg-radial-gap-4",
     gapX: "bg-radial-gap-x-16",
     gapY: "bg-radial-gap-y-16",
@@ -58,35 +56,7 @@ export const examples = {
     mark={[examples.basic]}
 />
 
-### Center
-
-<Preview useGrid={false}>
-    <div class={`${examples.center} ${examples._base_} ${examples.basic}`} />
-</Preview>
-
-<Code
-    code={`<div class="${examples.center} ${examples._base_} ${examples.basic}"></div>`}
-    lang="jsx"
-    mark={[examples.center]}
-/>
-
-### Shadow
-
-<Preview useGrid={false}>
-    <div
-        class={`${examples.shadow} ${examples._base_} ${examples.basic} ${examples.center}`}
-    />
-</Preview>
-
-<Code
-    code={`<div class="${examples.shadow} ${examples._base_} ${examples.basic} ${examples.center}"></div>`}
-    lang="jsx"
-    mark={[examples.shadow]}
-/>
-
-### Spacing
-
-#### X and Y
+### Gap
 
 <ApiTable
     rows={[
@@ -122,18 +92,16 @@ export const examples = {
 />
 
 <Preview useGrid={false}>
-    <div
-        class={`${examples.gap} ${examples._base_} ${examples.basic} ${examples.center} ${examples.shadow}`}
-    />
+    <div class={`${examples.gap} ${examples._base_} ${examples.basic}`} />
 </Preview>
 
 <Code
-    code={`<div class="${examples.gap} ${examples._base_} ${examples.basic} ${examples.center} ${examples.shadow}"></div>`}
+    code={`<div class="${examples.gap} ${examples._base_} ${examples.basic}"></div>`}
     lang="jsx"
     mark={[examples.gap]}
 />
 
-#### X
+### Gap X
 
 <ApiTable
     rows={[
@@ -165,18 +133,16 @@ export const examples = {
 />
 
 <Preview useGrid={false}>
-    <div
-        class={`${examples.gapX} ${examples._base_} ${examples.basic} ${examples.center} ${examples.shadow}`}
-    />
+    <div class={`${examples.gapX} ${examples._base_} ${examples.basic}`} />
 </Preview>
 
 <Code
-    code={`<div class="${examples.gapX} ${examples._base_} ${examples.basic} ${examples.center} ${examples.shadow}"></div>`}
+    code={`<div class="${examples.gapX} ${examples._base_} ${examples.basic}"></div>`}
     lang="jsx"
     mark={[examples.gapX]}
 />
 
-#### Y
+### Gap Y
 
 <ApiTable
     rows={[
@@ -208,18 +174,16 @@ export const examples = {
 />
 
 <Preview useGrid={false}>
-    <div
-        class={`${examples.gapY} ${examples._base_} ${examples.basic} ${examples.center} ${examples.shadow}`}
-    />
+    <div class={`${examples.gapY} ${examples._base_} ${examples.basic}`} />
 </Preview>
 
 <Code
-    code={`<div class="${examples.gapY} ${examples._base_} ${examples.basic} ${examples.center} ${examples.shadow}"></div>`}
+    code={`<div class="${examples.gapY} ${examples._base_} ${examples.basic}"></div>`}
     lang="jsx"
     mark={[examples.gapY]}
 />
 
-## Size
+### Size
 
 <ApiTable
     rows={[
@@ -236,13 +200,11 @@ export const examples = {
 />
 
 <Preview useGrid={false}>
-    <div
-        class={`${examples.size} ${examples._base_} ${examples.basic} ${examples.center} ${examples.shadow}`}
-    />
+    <div class={`${examples.size} ${examples._base_} ${examples.basic}`} />
 </Preview>
 
 <Code
-    code={`<div class="${examples.size} ${examples._base_} ${examples.basic} ${examples.center} ${examples.shadow}"></div>`}
+    code={`<div class="${examples.size} ${examples._base_} ${examples.basic}"></div>`}
     lang="jsx"
     mark={[examples.size]}
 />

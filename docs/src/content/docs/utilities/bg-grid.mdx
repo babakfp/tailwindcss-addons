@@ -36,10 +36,8 @@ import Preview from "../../../components/Preview.astro"
 ## Examples
 
 export const examples = {
-    _base_: "h-32",
-    basic: "bg-grid-gray-800",
-    center: "bg-center",
-    shadow: "shadow-[inset_0_0_4rem_2rem_var(--sl-color-black)]",
+    _base_: "h-32 bg-center shadow-[inset_0_0_2rem_2rem_var(--sl-color-black)]",
+    basic: "bg-grid-gray-700",
     size: "bg-grid-size-4",
     width: "bg-grid-w-16",
     height: "bg-grid-h-16",
@@ -56,32 +54,6 @@ export const examples = {
     code={`<div class="${examples.basic} ${examples._base_}"></div>`}
     lang="jsx"
     mark={[examples.basic]}
-/>
-
-### Center
-
-<Preview useGrid={false}>
-    <div class={`${examples.center} ${examples._base_} ${examples.basic}`} />
-</Preview>
-
-<Code
-    code={`<div class="${examples.center} ${examples._base_} ${examples.basic}"></div>`}
-    lang="jsx"
-    mark={[examples.center]}
-/>
-
-### Shadow
-
-<Preview useGrid={false}>
-    <div
-        class={`${examples.shadow} ${examples._base_} ${examples.basic} ${examples.center}`}
-    />
-</Preview>
-
-<Code
-    code={`<div class="${examples.shadow} ${examples._base_} ${examples.basic} ${examples.center}"></div>`}
-    lang="jsx"
-    mark={[examples.shadow]}
 />
 
 ### Size
@@ -120,13 +92,11 @@ export const examples = {
 />
 
 <Preview useGrid={false}>
-    <div
-        class={`${examples.size} ${examples._base_} ${examples.basic} ${examples.center} ${examples.shadow}`}
-    />
+    <div class={`${examples.size} ${examples._base_} ${examples.basic}`} />
 </Preview>
 
 <Code
-    code={`<div class="${examples.size} ${examples._base_} ${examples.basic} ${examples.center} ${examples.shadow}"></div>`}
+    code={`<div class="${examples.size} ${examples._base_} ${examples.basic}"></div>`}
     lang="jsx"
     mark={[examples.size]}
 />
@@ -152,13 +122,11 @@ export const examples = {
 />
 
 <Preview useGrid={false}>
-    <div
-        class={`${examples.width} ${examples._base_} ${examples.basic} ${examples.center} ${examples.shadow}`}
-    />
+    <div class={`${examples.width} ${examples._base_} ${examples.basic}`} />
 </Preview>
 
 <Code
-    code={`<div class="${examples.width} ${examples._base_} ${examples.basic} ${examples.center} ${examples.shadow}"></div>`}
+    code={`<div class="${examples.width} ${examples._base_} ${examples.basic}"></div>`}
     lang="jsx"
     mark={[examples.width]}
 />
@@ -184,13 +152,11 @@ export const examples = {
 />
 
 <Preview useGrid={false}>
-    <div
-        class={`${examples.height} ${examples._base_} ${examples.basic} ${examples.center} ${examples.shadow}`}
-    />
+    <div class={`${examples.height} ${examples._base_} ${examples.basic}`} />
 </Preview>
 
 <Code
-    code={`<div class="${examples.height} ${examples._base_} ${examples.basic} ${examples.center} ${examples.shadow}"></div>`}
+    code={`<div class="${examples.height} ${examples._base_} ${examples.basic}"></div>`}
     lang="jsx"
     mark={[examples.height]}
 />
@@ -213,12 +179,12 @@ export const examples = {
 
 <Preview useGrid={false}>
     <div
-        class={`${examples.borderWidth} ${examples._base_} ${examples.basic} ${examples.center} ${examples.shadow}`}
+        class={`${examples.borderWidth} ${examples._base_} ${examples.basic}`}
     />
 </Preview>
 
 <Code
-    code={`<div class="${examples.borderWidth} ${examples._base_} ${examples.basic} ${examples.center} ${examples.shadow}"></div>`}
+    code={`<div class="${examples.borderWidth} ${examples._base_} ${examples.basic}"></div>`}
     lang="jsx"
     mark={[examples.borderWidth]}
 />
