@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "tailwindcss-addons";
+@plugin "tailwindcss-addons/utilities/bg-pattern";
 
 @theme {
     --color-gray-50: var(--color-neutral-50);

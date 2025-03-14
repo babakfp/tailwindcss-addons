@@ -1,0 +1,33 @@
+---
+title: Background Pattern
+---
+
+import { Code } from "@astrojs/starlight/components"
+import ApiTable from "../../../components/ApiTable.astro"
+import Preview from "../../../components/Preview.astro"
+
+<ApiTable
+    rows={[
+        ["bg-pattern-<name>-<theme-color>", "background-image: ..."],
+        ["bg-pattern-<name>-[<arbitrary-value>]", "background-image: ..."],
+    ]}
+/>
+
+## Examples
+
+export const examples = {
+    _base_: "h-48 bg-center shadow-[inset_0_0_1rem_2rem_var(--sl-color-black)]",
+    basic: "bg-pattern-4-point-stars-gray-100",
+}
+
+### Basic
+
+<Preview useGrid={false}>
+    <div class={`${examples.basic} ${examples._base_}`} />
+</Preview>
+
+<Code
+    code={`<div class="${examples.basic} ${examples._base_}"></div>`}
+    lang="jsx"
+    mark={[examples.basic]}
+/>

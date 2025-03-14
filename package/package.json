@@ -27,7 +27,8 @@
         "./variants.css": "./src/variants.css",
         "./preflight/*": "./src/preflight/*",
         "./theme/*": "./src/theme/*",
-        "./utilities/*": "./src/utilities/*",
+        "./utilities/*": "./src/utilities/*.css",
+        "./utilities/bg-pattern": "./src/utilities/bg-pattern.js",
         "./variants/*": "./src/variants/*"
     },
     "keywords": [
