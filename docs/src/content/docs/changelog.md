@@ -4,7 +4,7 @@ title: CHANGELOG
 
 ## 4.0.3
 
-- fix: rename sizing utility of `bg-grid-*` to `bg-grid-size-*` because of issues with Tailwind CSS 4.
+- fix: rename sizing utility of `bg-grid-*` to `bg-grid-size-*` because of an [issue](https://github.com/tailwindlabs/tailwindcss/issues/16948) with Tailwind CSS 4.
 
 ## 4.0.2
 
