@@ -10,9 +10,11 @@ A set of Tailwind CSS preflights, themes, utilities and variants.
 :::danger
 The newest version of this library is designed for Tailwind CSS v4.
 If you're using Tailwind CSS v3, you can install the previous version instead:
+
 ```bash
 npm install tailwindcss-addons@3.0.0
 ```
+
 These docs are for the latest version and Tailwind CSS v4, so some things may be different from the previous version. If possible, we recommend updating to the latest version for the best experience.
 :::
 
