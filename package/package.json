@@ -12,9 +12,9 @@
         "tailwindcss": "4"
     },
     "devDependencies": {
-        "prettier": "^3.4.2",
-        "prettier-plugin-tailwindcss": "^0.6.11",
-        "tailwindcss": "^4.0.9"
+        "prettier": "3.5.3",
+        "prettier-plugin-tailwindcss": "0.6.11",
+        "tailwindcss": "4.0.17"
     },
     "files": [
         "/src/"
@@ -34,5 +34,11 @@
         "tailwind",
         "tailwindcss"
     ],
+    "pnpm": {
+        "onlyBuiltDependencies": [
+            "esbuild",
+            "sharp"
+        ]
+    },
     "type": "module"
 }

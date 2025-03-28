@@ -2,8 +2,8 @@
 export default {
     semi: false,
     tabWidth: 4,
-    experimentalTernaries: true,
     experimentalOperatorPosition: "start",
+    experimentalTernaries: true,
     plugins: [
         "prettier-plugin-astro",
         "@ianvs/prettier-plugin-sort-imports",
