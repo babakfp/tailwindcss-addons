@@ -1,0 +1,46 @@
+---
+title: Background Pattern
+---
+
+import ApiTable from "../../../components/ApiTable.astro"
+import BackgroundPatternPreviewAndCode from "../../../components/BackgroundPatternPreviewAndCode.astro"
+
+Use the patterns from [Hero Patterns](https://heropatterns.com) as Tailwind CSS utilities.
+
+<ApiTable
+    rows={[
+        [
+            "bg-pattern-<pattern-name>-<theme-color>",
+            'background-image: url("...")',
+        ],
+        [
+            "bg-pattern-<pattern-name>-[<arbitrary-value>]",
+            "background-image: <arbitrary-value>",
+        ],
+    ]}
+/>
+
+:::danger
+Avoid using CSS variables for Tailwind CSS colors. [Learn more](https://github.com/tailwindlabs/tailwindcss/discussions/17460). Raw color values are used instead, as CSS variables cannot be used inside strings.
+:::
+
+:::note
+This utility is implemented in JavaScript. To import it, use the [`@plugin`](https://tailwindcss.com/docs/functions-and-directives#plugin-directive) directive.
+:::
+
+## Examples
+
+export const examples = {
+    _base_: "h-48 bg-center shadow-[inset_0_0_1rem_1rem_var(--sl-color-black)]",
+}
+
+--pattern-start--
+
+### --pattern-title--
+
+<BackgroundPatternPreviewAndCode
+    baseClassName={[examples._base_]}
+    mainClassName="--pattern-class--"
+/>
+
+--pattern-end--

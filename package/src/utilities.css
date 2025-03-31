@@ -1,5 +1,6 @@
 /* @import "./utilities/align-justify-place.css"; */
 @import "./utilities/bg-grid.css";
+@plugin "./utilities/bg-pattern.js";
 @import "./utilities/bg-radial.css";
 @import "./utilities/dir.css";
 @import "./utilities/drag.css";

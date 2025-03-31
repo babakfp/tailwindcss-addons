@@ -1,0 +1,10 @@
+{
+    "scripts": {
+        "build": "node bg-pattern/index.ts"
+    },
+    "devDependencies": {
+        "@types/node": "22.13.10"
+    },
+    "type": "module",
+    "private": true
+}

@@ -1,0 +1,644 @@
+---
+title: Background Pattern
+---
+
+import ApiTable from "../../../components/ApiTable.astro"
+import BackgroundPatternPreviewAndCode from "../../../components/BackgroundPatternPreviewAndCode.astro"
+
+Use the patterns from [Hero Patterns](https://heropatterns.com) as Tailwind CSS utilities.
+
+<ApiTable
+    rows={[
+        [
+            "bg-pattern-<pattern-name>-<theme-color>",
+            'background-image: url("...")',
+        ],
+        [
+            "bg-pattern-<pattern-name>-[<arbitrary-value>]",
+            "background-image: <arbitrary-value>",
+        ],
+    ]}
+/>
+
+:::danger
+Avoid using CSS variables for Tailwind CSS colors. [Learn more](https://github.com/tailwindlabs/tailwindcss/discussions/17460). Raw color values are used instead, as CSS variables cannot be used inside strings.
+:::
+
+:::note
+This utility is implemented in JavaScript. To import it, use the [`@plugin`](https://tailwindcss.com/docs/functions-and-directives#plugin-directive) directive.
+:::
+
+## Examples
+
+export const examples = {
+    _base_: "h-48 bg-center shadow-[inset_0_0_1rem_1rem_var(--sl-color-black)]",
+}
+
+### Jigsaw
+
+<BackgroundPatternPreviewAndCode
+    baseClassName={[examples._base_]}
+    mainClassName="bg-pattern-jigsaw-gray-700"
+/>
+
+### Overcast
+
+<BackgroundPatternPreviewAndCode
+    baseClassName={[examples._base_]}
+    mainClassName="bg-pattern-overcast-gray-700"
+/>
+
+### Formal Invitation
+
+<BackgroundPatternPreviewAndCode
+    baseClassName={[examples._base_]}
+    mainClassName="bg-pattern-formal-invitation-gray-700"
+/>
+
+### Topography
+
+<BackgroundPatternPreviewAndCode
+    baseClassName={[examples._base_]}
+    mainClassName="bg-pattern-topography-gray-700"
+/>
+
+### Texture
+
+<BackgroundPatternPreviewAndCode
+    baseClassName={[examples._base_]}
+    mainClassName="bg-pattern-texture-gray-700"
+/>
+
+### Jupiter
+
+<BackgroundPatternPreviewAndCode
+    baseClassName={[examples._base_]}
+    mainClassName="bg-pattern-jupiter-gray-700"
+/>
+
+### Architect
+
+<BackgroundPatternPreviewAndCode
+    baseClassName={[examples._base_]}
+    mainClassName="bg-pattern-architect-gray-700"
+/>
+
+### Cutout
+
+<BackgroundPatternPreviewAndCode
+    baseClassName={[examples._base_]}
+    mainClassName="bg-pattern-cutout-gray-700"
+/>
+
+### Hideout
+
+<BackgroundPatternPreviewAndCode
+    baseClassName={[examples._base_]}
+    mainClassName="bg-pattern-hideout-gray-700"
+/>
+
+### Graph Paper
+
+<BackgroundPatternPreviewAndCode
+    baseClassName={[examples._base_]}
+    mainClassName="bg-pattern-graph-paper-gray-700"
+/>
+
+### YYY
+
+<BackgroundPatternPreviewAndCode
+    baseClassName={[examples._base_]}
+    mainClassName="bg-pattern-yyy-gray-700"
+/>
+
+### Squares
+
+<BackgroundPatternPreviewAndCode
+    baseClassName={[examples._base_]}
+    mainClassName="bg-pattern-squares-gray-700"
+/>
+
+### Falling Triangles
+
+<BackgroundPatternPreviewAndCode
+    baseClassName={[examples._base_]}
+    mainClassName="bg-pattern-falling-triangles-gray-700"
+/>
+
+### Piano Man
+
+<BackgroundPatternPreviewAndCode
+    baseClassName={[examples._base_]}
+    mainClassName="bg-pattern-piano-man-gray-700"
+/>
+
+### Pie Factory
+
+<BackgroundPatternPreviewAndCode
+    baseClassName={[examples._base_]}
+    mainClassName="bg-pattern-pie-factory-gray-700"
+/>
+
+### Dominos
+
+<BackgroundPatternPreviewAndCode
+    baseClassName={[examples._base_]}
+    mainClassName="bg-pattern-dominos-gray-700"
+/>
+
+### Hexagons
+
+<BackgroundPatternPreviewAndCode
+    baseClassName={[examples._base_]}
+    mainClassName="bg-pattern-hexagons-gray-700"
+/>
+
+### Charlie Brown
+
+<BackgroundPatternPreviewAndCode
+    baseClassName={[examples._base_]}
+    mainClassName="bg-pattern-charlie-brown-gray-700"
+/>
+
+### Autumn
+
+<BackgroundPatternPreviewAndCode
+    baseClassName={[examples._base_]}
+    mainClassName="bg-pattern-autumn-gray-700"
+/>
+
+### Temple
+
+<BackgroundPatternPreviewAndCode
+    baseClassName={[examples._base_]}
+    mainClassName="bg-pattern-temple-gray-700"
+/>
+
+### Stamp Collection
+
+<BackgroundPatternPreviewAndCode
+    baseClassName={[examples._base_]}
+    mainClassName="bg-pattern-stamp-collection-gray-700"
+/>
+
+### Death Star
+
+<BackgroundPatternPreviewAndCode
+    baseClassName={[examples._base_]}
+    mainClassName="bg-pattern-death-star-gray-700"
+/>
+
+### Church on Sunday
+
+<BackgroundPatternPreviewAndCode
+    baseClassName={[examples._base_]}
+    mainClassName="bg-pattern-church-on-sunday-gray-700"
+/>
+
+### I Like Food
+
+<BackgroundPatternPreviewAndCode
+    baseClassName={[examples._base_]}
+    mainClassName="bg-pattern-i-like-food-gray-700"
+/>
+
+### Overlapping Hexagons
+
+<BackgroundPatternPreviewAndCode
+    baseClassName={[examples._base_]}
+    mainClassName="bg-pattern-overlapping-hexagons-gray-700"
+/>
+
+### 4 Point Stars
+
+<BackgroundPatternPreviewAndCode
+    baseClassName={[examples._base_]}
+    mainClassName="bg-pattern-4-point-stars-gray-700"
+/>
+
+### Bamboo
+
+<BackgroundPatternPreviewAndCode
+    baseClassName={[examples._base_]}
+    mainClassName="bg-pattern-bamboo-gray-700"
+/>
+
+### Bathroom Floor
+
+<BackgroundPatternPreviewAndCode
+    baseClassName={[examples._base_]}
+    mainClassName="bg-pattern-bathroom-floor-gray-700"
+/>
+
+### Cork Screw
+
+<BackgroundPatternPreviewAndCode
+    baseClassName={[examples._base_]}
+    mainClassName="bg-pattern-cork-screw-gray-700"
+/>
+
+### Happy Intersection
+
+<BackgroundPatternPreviewAndCode
+    baseClassName={[examples._base_]}
+    mainClassName="bg-pattern-happy-intersection-gray-700"
+/>
+
+### Kiwi
+
+<BackgroundPatternPreviewAndCode
+    baseClassName={[examples._base_]}
+    mainClassName="bg-pattern-kiwi-gray-700"
+/>
+
+### Lips
+
+<BackgroundPatternPreviewAndCode
+    baseClassName={[examples._base_]}
+    mainClassName="bg-pattern-lips-gray-700"
+/>
+
+### Lisbon
+
+<BackgroundPatternPreviewAndCode
+    baseClassName={[examples._base_]}
+    mainClassName="bg-pattern-lisbon-gray-700"
+/>
+
+### Random Shapes
+
+<BackgroundPatternPreviewAndCode
+    baseClassName={[examples._base_]}
+    mainClassName="bg-pattern-random-shapes-gray-700"
+/>
+
+### Steel Beams
+
+<BackgroundPatternPreviewAndCode
+    baseClassName={[examples._base_]}
+    mainClassName="bg-pattern-steel-beams-gray-700"
+/>
+
+### Tiny Checkers
+
+<BackgroundPatternPreviewAndCode
+    baseClassName={[examples._base_]}
+    mainClassName="bg-pattern-tiny-checkers-gray-700"
+/>
+
+### X Equals
+
+<BackgroundPatternPreviewAndCode
+    baseClassName={[examples._base_]}
+    mainClassName="bg-pattern-x-equals-gray-700"
+/>
+
+### Anchors Away
+
+<BackgroundPatternPreviewAndCode
+    baseClassName={[examples._base_]}
+    mainClassName="bg-pattern-anchors-away-gray-700"
+/>
+
+### Bevel Circle
+
+<BackgroundPatternPreviewAndCode
+    baseClassName={[examples._base_]}
+    mainClassName="bg-pattern-bevel-circle-gray-700"
+/>
+
+### Brick Wall
+
+<BackgroundPatternPreviewAndCode
+    baseClassName={[examples._base_]}
+    mainClassName="bg-pattern-brick-wall-gray-700"
+/>
+
+### Fancy Rectangles
+
+<BackgroundPatternPreviewAndCode
+    baseClassName={[examples._base_]}
+    mainClassName="bg-pattern-fancy-rectangles-gray-700"
+/>
+
+### Heavy Rain
+
+<BackgroundPatternPreviewAndCode
+    baseClassName={[examples._base_]}
+    mainClassName="bg-pattern-heavy-rain-gray-700"
+/>
+
+### Overlapping Circles
+
+<BackgroundPatternPreviewAndCode
+    baseClassName={[examples._base_]}
+    mainClassName="bg-pattern-overlapping-circles-gray-700"
+/>
+
+### Plus
+
+<BackgroundPatternPreviewAndCode
+    baseClassName={[examples._base_]}
+    mainClassName="bg-pattern-plus-gray-700"
+/>
+
+### Rounded Plus Connected
+
+<BackgroundPatternPreviewAndCode
+    baseClassName={[examples._base_]}
+    mainClassName="bg-pattern-rounded-plus-connected-gray-700"
+/>
+
+### Volcano Lamp
+
+<BackgroundPatternPreviewAndCode
+    baseClassName={[examples._base_]}
+    mainClassName="bg-pattern-volcano-lamp-gray-700"
+/>
+
+### Wiggle
+
+<BackgroundPatternPreviewAndCode
+    baseClassName={[examples._base_]}
+    mainClassName="bg-pattern-wiggle-gray-700"
+/>
+
+### Bubbles
+
+<BackgroundPatternPreviewAndCode
+    baseClassName={[examples._base_]}
+    mainClassName="bg-pattern-bubbles-gray-700"
+/>
+
+### Cage
+
+<BackgroundPatternPreviewAndCode
+    baseClassName={[examples._base_]}
+    mainClassName="bg-pattern-cage-gray-700"
+/>
+
+### Connections
+
+<BackgroundPatternPreviewAndCode
+    baseClassName={[examples._base_]}
+    mainClassName="bg-pattern-connections-gray-700"
+/>
+
+### Current
+
+<BackgroundPatternPreviewAndCode
+    baseClassName={[examples._base_]}
+    mainClassName="bg-pattern-current-gray-700"
+/>
+
+### Diagonal Stripes
+
+<BackgroundPatternPreviewAndCode
+    baseClassName={[examples._base_]}
+    mainClassName="bg-pattern-diagonal-stripes-gray-700"
+/>
+
+### Flipped Diamonds
+
+<BackgroundPatternPreviewAndCode
+    baseClassName={[examples._base_]}
+    mainClassName="bg-pattern-flipped-diamonds-gray-700"
+/>
+
+### Floating Cogs
+
+<BackgroundPatternPreviewAndCode
+    baseClassName={[examples._base_]}
+    mainClassName="bg-pattern-floating-cogs-gray-700"
+/>
+
+### Glamorous
+
+<BackgroundPatternPreviewAndCode
+    baseClassName={[examples._base_]}
+    mainClassName="bg-pattern-glamorous-gray-700"
+/>
+
+### Houndstooth
+
+<BackgroundPatternPreviewAndCode
+    baseClassName={[examples._base_]}
+    mainClassName="bg-pattern-houndstooth-gray-700"
+/>
+
+### Leaf
+
+<BackgroundPatternPreviewAndCode
+    baseClassName={[examples._base_]}
+    mainClassName="bg-pattern-leaf-gray-700"
+/>
+
+### Lines in Motion
+
+<BackgroundPatternPreviewAndCode
+    baseClassName={[examples._base_]}
+    mainClassName="bg-pattern-lines-in-motion-gray-700"
+/>
+
+### Moroccan
+
+<BackgroundPatternPreviewAndCode
+    baseClassName={[examples._base_]}
+    mainClassName="bg-pattern-moroccan-gray-700"
+/>
+
+### Morphing Diamonds
+
+<BackgroundPatternPreviewAndCode
+    baseClassName={[examples._base_]}
+    mainClassName="bg-pattern-morphing-diamonds-gray-700"
+/>
+
+### Rails
+
+<BackgroundPatternPreviewAndCode
+    baseClassName={[examples._base_]}
+    mainClassName="bg-pattern-rails-gray-700"
+/>
+
+### Rain
+
+<BackgroundPatternPreviewAndCode
+    baseClassName={[examples._base_]}
+    mainClassName="bg-pattern-rain-gray-700"
+/>
+
+### Skulls
+
+<BackgroundPatternPreviewAndCode
+    baseClassName={[examples._base_]}
+    mainClassName="bg-pattern-skulls-gray-700"
+/>
+
+### Squares in Squares
+
+<BackgroundPatternPreviewAndCode
+    baseClassName={[examples._base_]}
+    mainClassName="bg-pattern-squares-in-squares-gray-700"
+/>
+
+### Stripes
+
+<BackgroundPatternPreviewAndCode
+    baseClassName={[examples._base_]}
+    mainClassName="bg-pattern-stripes-gray-700"
+/>
+
+### Tic Tac Toe
+
+<BackgroundPatternPreviewAndCode
+    baseClassName={[examples._base_]}
+    mainClassName="bg-pattern-tic-tac-toe-gray-700"
+/>
+
+### Zig Zag
+
+<BackgroundPatternPreviewAndCode
+    baseClassName={[examples._base_]}
+    mainClassName="bg-pattern-zig-zag-gray-700"
+/>
+
+### Aztec
+
+<BackgroundPatternPreviewAndCode
+    baseClassName={[examples._base_]}
+    mainClassName="bg-pattern-aztec-gray-700"
+/>
+
+### Bank Note
+
+<BackgroundPatternPreviewAndCode
+    baseClassName={[examples._base_]}
+    mainClassName="bg-pattern-bank-note-gray-700"
+/>
+
+### Boxes
+
+<BackgroundPatternPreviewAndCode
+    baseClassName={[examples._base_]}
+    mainClassName="bg-pattern-boxes-gray-700"
+/>
+
+### Circles & Squares
+
+<BackgroundPatternPreviewAndCode
+    baseClassName={[examples._base_]}
+    mainClassName="bg-pattern-circles-and-squares-gray-700"
+/>
+
+### Circuit Board
+
+<BackgroundPatternPreviewAndCode
+    baseClassName={[examples._base_]}
+    mainClassName="bg-pattern-circuit-board-gray-700"
+/>
+
+### Curtain
+
+<BackgroundPatternPreviewAndCode
+    baseClassName={[examples._base_]}
+    mainClassName="bg-pattern-curtain-gray-700"
+/>
+
+### Diagonal Lines
+
+<BackgroundPatternPreviewAndCode
+    baseClassName={[examples._base_]}
+    mainClassName="bg-pattern-diagonal-lines-gray-700"
+/>
+
+### Endless Clouds
+
+<BackgroundPatternPreviewAndCode
+    baseClassName={[examples._base_]}
+    mainClassName="bg-pattern-endless-clouds-gray-700"
+/>
+
+### Eyes
+
+<BackgroundPatternPreviewAndCode
+    baseClassName={[examples._base_]}
+    mainClassName="bg-pattern-eyes-gray-700"
+/>
+
+### Floor Tile
+
+<BackgroundPatternPreviewAndCode
+    baseClassName={[examples._base_]}
+    mainClassName="bg-pattern-floor-tile-gray-700"
+/>
+
+### Groovy
+
+<BackgroundPatternPreviewAndCode
+    baseClassName={[examples._base_]}
+    mainClassName="bg-pattern-groovy-gray-700"
+/>
+
+### Intersecting Circles
+
+<BackgroundPatternPreviewAndCode
+    baseClassName={[examples._base_]}
+    mainClassName="bg-pattern-intersecting-circles-gray-700"
+/>
+
+### Melt
+
+<BackgroundPatternPreviewAndCode
+    baseClassName={[examples._base_]}
+    mainClassName="bg-pattern-melt-gray-700"
+/>
+
+### Overlapping Diamonds
+
+<BackgroundPatternPreviewAndCode
+    baseClassName={[examples._base_]}
+    mainClassName="bg-pattern-overlapping-diamonds-gray-700"
+/>
+
+### Parkay Floor
+
+<BackgroundPatternPreviewAndCode
+    baseClassName={[examples._base_]}
+    mainClassName="bg-pattern-parkay-floor-gray-700"
+/>
+
+### Pixel Dots
+
+<BackgroundPatternPreviewAndCode
+    baseClassName={[examples._base_]}
+    mainClassName="bg-pattern-pixel-dots-gray-700"
+/>
+
+### Polka Dots
+
+<BackgroundPatternPreviewAndCode
+    baseClassName={[examples._base_]}
+    mainClassName="bg-pattern-polka-dots-gray-700"
+/>
+
+### Signal
+
+<BackgroundPatternPreviewAndCode
+    baseClassName={[examples._base_]}
+    mainClassName="bg-pattern-signal-gray-700"
+/>
+
+### Slanted Stars
+
+<BackgroundPatternPreviewAndCode
+    baseClassName={[examples._base_]}
+    mainClassName="bg-pattern-slanted-stars-gray-700"
+/>
+
+### Wallpaper
+
+<BackgroundPatternPreviewAndCode
+    baseClassName={[examples._base_]}
+    mainClassName="bg-pattern-wallpaper-gray-700"
+/>

@@ -2,10 +2,9 @@
 title: Background Radial
 ---
 
-import { Code } from "@astrojs/starlight/components"
 import dedent from "dedent"
 import ApiTable from "../../../components/ApiTable.astro"
-import Preview from "../../../components/Preview.astro"
+import BackgroundPatternPreviewAndCode from "../../../components/BackgroundPatternPreviewAndCode.astro"
 
 <ApiTable
     rows={[
@@ -46,14 +45,9 @@ export const examples = {
 
 ### Basic
 
-<Preview useGrid={false}>
-    <div class={`${examples.basic} ${examples._base_}`} />
-</Preview>
-
-<Code
-    code={`<div class="${examples.basic} ${examples._base_}"></div>`}
-    lang="jsx"
-    mark={[examples.basic]}
+<BackgroundPatternPreviewAndCode
+    baseClassName={[examples._base_]}
+    mainClassName={examples.basic}
 />
 
 ### Gap
@@ -91,14 +85,9 @@ export const examples = {
     ]}
 />
 
-<Preview useGrid={false}>
-    <div class={`${examples.gap} ${examples._base_} ${examples.basic}`} />
-</Preview>
-
-<Code
-    code={`<div class="${examples.gap} ${examples._base_} ${examples.basic}"></div>`}
-    lang="jsx"
-    mark={[examples.gap]}
+<BackgroundPatternPreviewAndCode
+    baseClassName={[examples._base_, examples.basic]}
+    mainClassName={examples.gap}
 />
 
 ### Gap X
@@ -132,14 +121,9 @@ export const examples = {
     ]}
 />
 
-<Preview useGrid={false}>
-    <div class={`${examples.gapX} ${examples._base_} ${examples.basic}`} />
-</Preview>
-
-<Code
-    code={`<div class="${examples.gapX} ${examples._base_} ${examples.basic}"></div>`}
-    lang="jsx"
-    mark={[examples.gapX]}
+<BackgroundPatternPreviewAndCode
+    baseClassName={[examples._base_, examples.basic]}
+    mainClassName={examples.gapX}
 />
 
 ### Gap Y
@@ -173,14 +157,9 @@ export const examples = {
     ]}
 />
 
-<Preview useGrid={false}>
-    <div class={`${examples.gapY} ${examples._base_} ${examples.basic}`} />
-</Preview>
-
-<Code
-    code={`<div class="${examples.gapY} ${examples._base_} ${examples.basic}"></div>`}
-    lang="jsx"
-    mark={[examples.gapY]}
+<BackgroundPatternPreviewAndCode
+    baseClassName={[examples._base_, examples.basic]}
+    mainClassName={examples.gapY}
 />
 
 ### Size
@@ -199,22 +178,11 @@ export const examples = {
     ]}
 />
 
-<Preview useGrid={false}>
-    <div class={`${examples.size} ${examples._base_} ${examples.basic}`} />
-</Preview>
-
-<Code
-    code={`<div class="${examples.size} ${examples._base_} ${examples.basic}"></div>`}
-    lang="jsx"
-    mark={[examples.size]}
+<BackgroundPatternPreviewAndCode
+    baseClassName={[examples._base_, examples.basic]}
+    mainClassName={examples.size}
 />
 
 ## How to import?
 
 [How to import?](/#how-to-import)
-
-## Resources
-
-- [Hero Patterns](https://heropatterns.com)
-    - [NPM: `tailwind-heropatterns`](https://www.npmjs.com/package/tailwind-heropatterns)
-    - [NPM: `tailwindcss-hero-patterns`](https://www.npmjs.com/package/tailwindcss-hero-patterns)

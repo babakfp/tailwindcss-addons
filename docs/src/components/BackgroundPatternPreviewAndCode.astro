@@ -1,0 +1,21 @@
+---
+import { Code } from "@astrojs/starlight/components"
+import Preview from "./Preview.astro"
+
+interface Props {
+    baseClassName: string[]
+    mainClassName: string
+}
+
+const { baseClassName, mainClassName } = Astro.props
+---
+
+<Preview useGrid={false}>
+    <div class:list={[mainClassName, baseClassName]} />
+</Preview>
+
+<Code
+    code={`<div class="${mainClassName} ${baseClassName.join(" ")}"></div>`}
+    lang="html"
+    mark={[mainClassName]}
+/>

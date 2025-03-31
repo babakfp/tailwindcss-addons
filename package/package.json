@@ -1,7 +1,7 @@
 {
     "name": "tailwindcss-addons",
     "description": "A set of Tailwind CSS preflights, themes, utilities and variants.",
-    "version": "4.0.3",
+    "version": "4.1.3",
     "license": "MIT",
     "repository": "github:babakfp/tailwindcss-addons",
     "homepage": "https://tailwindcss-addons.vercel.app",
