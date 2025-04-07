@@ -2,11 +2,16 @@
 title: Reset Search Input
 ---
 
-import ApiTable from "../../../components/ApiTable.astro"
-
 A [preflight](https://tailwindcss.com/docs/preflight) that removes the x button from the search inputs.
 
-<ApiTable rows={[["reset-search-input", "@apply reset-search-input;"]]} />
+```css
+/* NOTE: for some reason `@base` didn't work here. */
+@layer base {
+    input[type="search"] {
+        @apply reset-search-input;
+    }
+}
+```
 
 :::note
 Usage as a [utility](/utilities/reset-search-input).

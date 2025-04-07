@@ -2,11 +2,16 @@
 title: Reset Number Input
 ---
 
-import ApiTable from "../../../components/ApiTable.astro"
-
 A [preflight](https://tailwindcss.com/docs/preflight) that removes the arrows from the number inputs.
 
-<ApiTable rows={[["reset-number-input", "@apply reset-number-input;"]]} />
+```css
+/* NOTE: for some reason `@base` didn't work here. */
+@layer base {
+    input[type="number"] {
+        @apply reset-number-input;
+    }
+}
+```
 
 :::note
 Usage as a [utility](/utilities/reset-number-input).
