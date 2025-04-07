@@ -2,6 +2,10 @@
 title: CHANGELOG
 ---
 
+## 4.2.0
+
+- feat: add `reset-details-summary-marker` preflight.
+
 ## 4.1.3
 
 - feat: add new `bg-pattern` utilities.
