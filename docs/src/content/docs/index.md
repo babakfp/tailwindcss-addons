@@ -53,6 +53,7 @@ Import all preflights using:
 The following preflights are available:
 
 ```css
+@import "tailwindcss-addons/preflight/reset-details-summary-marker.css";
 @import "tailwindcss-addons/preflight/reset-number-input.css";
 @import "tailwindcss-addons/preflight/reset-search-input.css";
 ```
