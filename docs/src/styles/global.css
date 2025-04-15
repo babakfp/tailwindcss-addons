@@ -58,6 +58,10 @@
     scrollbar-width: none;
 }
 
+body {
+    font-variant-ligatures: none;
+}
+
 .header,
 #starlight__sidebar,
 #starlight__on-this-page--mobile {
