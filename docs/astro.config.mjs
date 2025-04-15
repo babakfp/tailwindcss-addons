@@ -48,7 +48,7 @@ export default defineConfig({
             },
             editLink: {
                 baseUrl:
-                    "https://github.com/babakfp/tailwindcss-addons/edit/main/package",
+                    "https://github.com/babakfp/tailwindcss-addons/edit/main/docs",
             },
             lastUpdated: true,
         }),
