@@ -6,6 +6,7 @@ import { defineConfig } from "astro/config"
 // TODO: https://github.com/expressive-code/expressive-code/issues/250
 
 export default defineConfig({
+    site: "https://tailwindcss-addons.vercel.app",
     integrations: [
         starlight({
             title: "Tailwind CSS Addons",
