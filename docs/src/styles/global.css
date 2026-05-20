@@ -1,4 +1,5 @@
-@import "tailwindcss";
+@import "tailwindcss/theme";
+@import "tailwindcss/utilities";
 @import "tailwindcss-addons";
 
 @theme {
@@ -52,99 +53,189 @@
     --sl-color-accent-low: var(--color-sky-950);
     --sl-color-accent: var(--color-sky-900);
     --sl-color-accent-high: var(--color-sky-300);
+
+    --sl-main-pad: 0 0 25vh 0;
 }
 
-* {
+*,
+::before,
+::after {
     scrollbar-width: none;
+    border-radius: initial;
 }
 
 body {
     font-variant-ligatures: none;
 }
 
-.header,
-#starlight__sidebar,
-#starlight__on-this-page--mobile {
-    border-color: var(--sl-color-hairline-light);
+:root {
+    /* Border width for code block inline markers */
+    --ec-tm-inlMarkerBrdWd: 0;
+    /* Background color code block for line markers */
+    --ec-tm-markBg: hsl(0 0% 100% / 15%);
 }
 
-/* Site name. */
 .site-title {
     font-size: var(--sl-text-h5);
 }
 
+.header,
+#starlight__sidebar {
+    border-color: var(--sl-color-gray-5);
+}
+@media (min-width: 72rem) {
+    .right-sidebar {
+        border-color: var(--sl-color-gray-5);
+    }
+}
+#starlight__mobile-toc .dropdown {
+    border-inline: initial;
+}
+@media (min-width: 50rem) {
+    #starlight__on-this-page--mobile {
+        border-color: var(--sl-color-gray-5);
+    }
+}
+
 /* Mobile toggle. */
 [aria-controls="starlight__sidebar"] {
-    background: unset !important;
-    box-shadow: unset;
-    color: currentColor;
-}
-
-.content-panel {
-    border-top: unset !important;
-}
-
-.sl-markdown-content {
-    ul,
-    ol {
-        @apply list-inside;
-        p {
-            @apply inline;
-        }
-    }
-    ul {
-        @apply list-disc;
-    }
-    ol {
-        @apply list-decimal;
-    }
-}
-
-/* Highlighted word in code block. */
-:root,
-:root:not([data-theme="dark"]) .expressive-code[data-theme="dark"] {
-    /* Border. */
-    --ec-tm-inlMarkerBrdWd: 0 !important;
-    /* Background. */
-    --ec-tm-markBg: hsl(0 0% 100% / 15%) !important;
+    background: initial;
+    box-shadow: initial;
+    color: initial;
 }
 
 /* Sidebar accordion. */
 #starlight__sidebar {
     summary {
         pointer-events: none;
-        margin-bottom: 0.25rem;
-        .large {
-            font-weight: normal !important;
-            color: var(--sl-color-gray-3);
-            font-size: var(--sl-text-sm);
-        }
         .caret {
             display: none;
         }
+
+        .large {
+            color: var(--sl-color-gray-3);
+        }
     }
+
+    details > ul {
+        margin-top: 0.25rem;
+    }
+
     .top-level > li + li {
-        margin-top: 1.5rem !important;
+        margin-top: 1.5rem;
     }
-    .top-level > li > a.large {
+    ul.top-level > li:not(:has(details)) + li:not(:has(details)) {
+        margin-top: 0.5rem;
+    }
+
+    .large {
         font-size: var(--sl-text-sm);
     }
-    .top-level > li > a.large[aria-current="false"] {
-        font-weight: normal !important;
-        color: currentColor !important;
-        &:hover,
-        &:focus {
-            color: var(--sl-color-white) !important;
+
+    .top-level
+        > li
+        > a.large:not([aria-current="page"]):not(:hover):not(:focus) {
+        color: var(--sl-color-gray-2);
+    }
+}
+
+@media (min-width: 50rem) {
+    .sidebar-content {
+        padding-bottom: 25vh;
+    }
+    .sidebar-content::after {
+        content: initial;
+    }
+}
+@media (min-width: 72rem) {
+    .right-sidebar-panel {
+        padding-bottom: 25vh;
+    }
+}
+
+.content-panel {
+    border-top: initial;
+    padding-bottom: 0;
+}
+
+#starlight__on-this-page {
+    /* display: none; */
+    /* Align it with the items */
+    padding-inline-start: 0.5rem;
+}
+
+#starlight__mobile-toc {
+    .dropdown {
+        border-color: var(--sl-color-gray-5);
+        background-color: var(--sl-color-bg-nav);
+        .isMobile a {
+            border-color: var(--sl-color-gray-5);
+        }
+        .dropdown > ul > li {
+            &:first-child a {
+                padding-block-start: 1rem;
+            }
+            &:last-child a {
+                padding-block-end: 1rem;
+            }
         }
     }
 }
 
-.sidebar-content {
-    padding-bottom: 2rem;
+.sl-anchor-link {
+    display: inline;
+}
+
+.isMobile a:is(:hover, :focus) {
+    color: white;
+}
+
+@media (max-width: 50rem) {
+    #starlight__on-this-page--mobile {
+        border-bottom: initial;
+    }
+    [aria-labelledby="starlight__on-this-page--mobile"] {
+        top: initial;
+        bottom: 0;
+    }
+    #starlight__mobile-toc {
+        display: grid;
+    }
+    #starlight__on-this-page--mobile {
+        order: 2;
+    }
+    .dropdown {
+        box-shadow: initial;
+    }
+    .main-frame {
+        padding-top: var(--sl-nav-height);
+        padding-bottom: var(--sl-mobile-toc-height);
+    }
+}
+
+.sidebar-content ul ul li {
+    border-color: var(--sl-color-gray-6);
+}
+@media (min-width: 50rem) {
+    .sidebar-content ul ul li {
+        border-color: var(--sl-color-gray-5);
+    }
+}
+
+.social-icons {
+    margin-inline: auto;
+}
+
+.sl-markdown-content {
+    ul,
+    ol {
+        /* Same as `list-inside` but it doesn't have its issues. */
+        padding-inline-start: 1.05em;
+    }
 }
 
 /* Make code block copy button smaller. */
 .expressive-code .copy button {
-    width: 1.5rem !important;
-    height: 1.5rem !important;
+    width: 1.5rem;
+    height: 1.5rem;
 }
