@@ -10,9 +10,13 @@ export default defineConfig({
     integrations: [
         starlight({
             title: "Tailwind CSS Addons",
-            social: {
-                github: "https://github.com/babakfp/tailwindcss-addons",
-            },
+            social: [
+                {
+                    icon: "github",
+                    label: "GitHub",
+                    href: "https://github.com/babakfp/tailwindcss-addons",
+                },
+            ],
             sidebar: [
                 {
                     label: "Get Started",
@@ -20,19 +24,19 @@ export default defineConfig({
                 },
                 {
                     label: "Preflight",
-                    autogenerate: { directory: "preflight" },
+                    items: [{ autogenerate: { directory: "preflight" } }],
                 },
                 {
                     label: "Theme",
-                    autogenerate: { directory: "theme" },
+                    items: [{ autogenerate: { directory: "theme" } }],
                 },
                 {
                     label: "Utilities",
-                    autogenerate: { directory: "utilities" },
+                    items: [{ autogenerate: { directory: "utilities" } }],
                 },
                 {
                     label: "Variants",
-                    autogenerate: { directory: "variants" },
+                    items: [{ autogenerate: { directory: "variants" } }],
                 },
                 {
                     slug: "changelog",
