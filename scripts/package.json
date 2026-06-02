@@ -6,5 +6,6 @@
         "@types/node": "22.13.10"
     },
     "type": "module",
+    "packageManager": "pnpm@11.5.1",
     "private": true
 }

@@ -34,11 +34,5 @@
         "tailwind",
         "tailwindcss"
     ],
-    "pnpm": {
-        "onlyBuiltDependencies": [
-            "esbuild",
-            "sharp"
-        ]
-    },
     "type": "module"
 }
